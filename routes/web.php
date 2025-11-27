@@ -18,15 +18,18 @@ Route::get('/ubicacion', [HomeController::class, 'ubicacion'])->name('ubicacion'
 Route::get('/bolsa-trabajo', [HomeController::class, 'bolsaTrabajo'])->name('bolsa-trabajo');
 
 // Profesiones - Solo las rutas necesarias
-Route::get('/albanil', function() { return app(HomeController::class)->profesion('albanil'); })->name('albanil');
-Route::get('/arquitecto', function() { return app(HomeController::class)->profesion('arquitecto'); })->name('arquitecto');
-Route::get('/carpintero', function() { return app(HomeController::class)->profesion('carpintero'); })->name('carpintero');
-Route::get('/electricista', function() { return app(HomeController::class)->profesion('electricista'); })->name('electricista');
-Route::get('/ingeniero-civil', function() { return app(HomeController::class)->profesion('ingeniero'); })->name('ingeniero-civil');
-Route::get('/jardinero', function() { return app(HomeController::class)->profesion('jardinero'); })->name('jardinero');
-Route::get('/plomero', function() { return app(HomeController::class)->profesion('plomero'); })->name('plomero');
-Route::get('/diseñador-interiores', function() { return app(HomeController::class)->profesion('diseñador'); })->name('diseñador-interiores');
-Route::get('/escultor', function() { return app(HomeController::class)->profesion('escultor'); })->name('escultor');
+Route::get('/profesion/{tipo}', [HomeController::class, 'profesion'])->name('profesion');
+
+// Rutas específicas de profesiones para SEO
+Route::get('/albanil', [HomeController::class, 'profesion'])->defaults('tipo', 'albanil')->name('albanil');
+Route::get('/arquitecto', [HomeController::class, 'profesion'])->defaults('tipo', 'arquitecto')->name('arquitecto');
+Route::get('/carpintero', [HomeController::class, 'profesion'])->defaults('tipo', 'carpintero')->name('carpintero');
+Route::get('/electricista', [HomeController::class, 'profesion'])->defaults('tipo', 'electricista')->name('electricista');
+Route::get('/ingeniero-civil', [HomeController::class, 'profesion'])->defaults('tipo', 'ingeniero')->name('ingeniero-civil');
+Route::get('/jardinero', [HomeController::class, 'profesion'])->defaults('tipo', 'jardinero')->name('jardinero');
+Route::get('/plomero', [HomeController::class, 'profesion'])->defaults('tipo', 'plomero')->name('plomero');
+Route::get('/diseñador-interiores', [HomeController::class, 'profesion'])->defaults('tipo', 'diseñador')->name('diseñador-interiores');
+Route::get('/escultor', [HomeController::class, 'profesion'])->defaults('tipo', 'escultor')->name('escultor');
 
 // ===== RUTAS DE AUTENTICACIÓN =====
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
