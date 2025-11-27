@@ -1,0 +1,72 @@
+/* ==========================================================================
+   CONTACT PAGE CSS - Future Work
+   ========================================================================== */
+
+.contact-header {
+    background: linear-gradient(135deg, var(--fw-primary) 0%, var(--fw-primary-dark) 100%);
+    color: var(--fw-white);
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-content {
+    padding: 4rem 0;
+}
+
+.contact-form .form-control {
+    border-radius: 0.5rem;
+    border: 1px solid var(--fw-gray-300);
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-info {
+    background: var(--fw-gray-50);
+    padding: 2rem;
+    border-radius: 1rem;
+    height: fit-content;
+}
+
+.contact-info h3 {
+    color: var(--fw-gray-900);
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background: var(--fw-primary);
+    color: var(--fw-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .contact-content .row {
+        flex-direction: column-reverse;
+    }
+    
+    .contact-info {
+        margin-bottom: 2rem;
+    }
+}

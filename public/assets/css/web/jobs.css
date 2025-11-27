@@ -1,0 +1,110 @@
+/* ==========================================================================
+   JOBS PAGE CSS - Future Work
+   ========================================================================== */
+
+.jobs-header {
+    background: linear-gradient(135deg, var(--fw-primary) 0%, var(--fw-primary-dark) 100%);
+    color: var(--fw-white);
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+}
+
+.jobs-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.jobs-filters {
+    padding: 2rem 0;
+    background: var(--fw-gray-50);
+}
+
+.filter-form .form-control,
+.filter-form .form-select {
+    border-radius: 0.5rem;
+    border: 1px solid var(--fw-gray-300);
+    padding: 0.75rem;
+}
+
+.jobs-content {
+    padding: 3rem 0;
+}
+
+.job-card {
+    background: var(--fw-white);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--fw-gray-200);
+    transition: all 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.job-header h3 {
+    color: var(--fw-gray-900);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.job-salary {
+    color: var(--fw-primary);
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.job-company,
+.job-location {
+    color: var(--fw-gray-600);
+    margin-bottom: 0.5rem;
+}
+
+.job-description {
+    color: var(--fw-gray-700);
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.job-tags {
+    margin: 1rem 0;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--fw-primary-light);
+    color: var(--fw-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .job-actions {
+        flex-direction: column;
+    }
+}

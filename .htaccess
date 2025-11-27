@@ -1,0 +1,9 @@
+# Redirigir automáticamente a la carpeta sitio_web
+RewriteEngine On
+
+# Si se accede a la raíz, redirigir a sitio_web
+RewriteCond %{REQUEST_URI} ^/pra%202\.1/?$
+RewriteRule ^(.*)$ /pra%202.1/sitio_web/ [R=301,L]
+
+# Si se accede sin especificar archivo, cargar index.php
+DirectoryIndex index.php index.html

@@ -1,0 +1,24 @@
+// ==========================================================================
+// SASS ENTRYPOINT - FUTURE WORK SYSTEM
+// ==========================================================================
+
+// Base styles
+@import 'variables';
+@import 'reset';
+@import 'utilities';
+
+// System components  
+@import 'components/header_system';
+@import 'components/sidebar_system';
+@import 'components/layout_system';
+@import 'components/forms_system';
+@import 'components/tables_system';
+@import 'components/modals_system';
+
+// Dashboard specific
+@import 'dashboard/dashboard_system';
+@import 'dashboard/widgets_system';
+@import 'dashboard/charts_system';
+
+// Responsive
+@import 'responsive/admin_responsive';

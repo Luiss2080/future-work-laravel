@@ -1,0 +1,25 @@
+// ==========================================================================
+// SASS ENTRYPOINT - FUTURE WORK WEB
+// ==========================================================================
+
+// Base styles
+@import 'variables';
+@import 'reset';
+@import 'utilities';
+
+// Web components
+@import 'components/header_web';
+@import 'components/navigation_web';
+@import 'components/footer_web';
+@import 'components/buttons_web';
+@import 'components/forms_web';
+@import 'components/modals_web';
+
+// Page-specific styles
+@import 'pages/home_web';
+@import 'pages/servicios_web';
+@import 'pages/contacto_web';
+
+// Responsive
+@import 'responsive/mobile_web';
+@import 'responsive/tablet_web';
