@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('web.pages.home');
     }
     
     /**
@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function informacion()
     {
-        return view('informacion');
+        return view('web.pages.about');
     }
     
     /**
@@ -29,7 +29,7 @@ class HomeController extends Controller
      */
     public function contacto()
     {
-        return view('contacto');
+        return view('web.pages.contact');
     }
     
     /**
@@ -37,7 +37,7 @@ class HomeController extends Controller
      */
     public function ubicacion()
     {
-        return view('ubicacion');
+        return view('web.pages.ubicacion');
     }
     
     /**
@@ -45,7 +45,7 @@ class HomeController extends Controller
      */
     public function bolsaTrabajo()
     {
-        return view('bolsa-trabajo');
+        return view('web.pages.bolsa-trabajo');
     }
     
     /**
@@ -105,7 +105,7 @@ class HomeController extends Controller
             abort(404);
         }
         
-        return view('profesiones.detalle', [
+        return view('web.profesiones.detalle', [
             'profesion' => $profesiones[$tipo],
             'tipo' => $tipo
         ]);
