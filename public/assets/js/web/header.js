@@ -5,10 +5,8 @@
 class HeaderWeb {
     constructor() {
         this.header = document.querySelector('.header-web');
-        this.mobileToggle = document.querySelector('.mobile-toggle');
+        this.navbarToggler = document.querySelector('.navbar-toggler');
         this.navbarMenu = document.querySelector('.navbar-menu');
-        this.dropdowns = document.querySelectorAll('.dropdown');
-        this.userMenus = document.querySelectorAll('.user-menu');
         this.lastScrollY = window.scrollY;
         
         this.init();
@@ -16,18 +14,64 @@ class HeaderWeb {
 
     init() {
         this.bindEvents();
-        this.initDropdowns();
-        this.initUserMenus();
     }
 
     bindEvents() {
         // Mobile toggle
-        if (this.mobileToggle) {
-            this.mobileToggle.addEventListener('click', () => this.toggleMobileMenu());
+        if (this.navbarToggler) {
+            this.navbarToggler.addEventListener('click', () => this.toggleMobileMenu());
         }
 
-        // Scroll behavior
-        window.addEventListener('scroll', () => this.handleScroll());
+        // Scroll behavior - simplificado para evitar parpadeos
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    this.handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar') && this.navbarMenu?.classList.contains('show')) {
+                this.closeMobileMenu();
+            }
+        });
+    }
+
+    toggleMobileMenu() {
+        if (this.navbarMenu) {
+            this.navbarMenu.classList.toggle('show');
+        }
+    }
+
+    closeMobileMenu() {
+        if (this.navbarMenu) {
+            this.navbarMenu.classList.remove('show');
+        }
+    }
+
+    handleScroll() {
+        const currentScrollY = window.scrollY;
+        
+        // Add/remove scrolled class for shadow effect
+        if (currentScrollY > 50) {
+            this.header?.classList.add('scrolled');
+        } else {
+            this.header?.classList.remove('scrolled');
+        }
+
+        this.lastScrollY = currentScrollY;
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new HeaderWeb();
+});
 
         // Close menus on outside click
         document.addEventListener('click', (e) => this.handleOutsideClick(e));
