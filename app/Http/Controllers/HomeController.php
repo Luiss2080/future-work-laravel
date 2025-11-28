@@ -49,6 +49,54 @@ class HomeController extends Controller
     }
     
     /**
+     * Subir CV - Para Candidatos
+     */
+    public function subirCv()
+    {
+        return view('web.pages.subir-cv');
+    }
+    
+    /**
+     * Consejos de Carrera - Para Candidatos
+     */
+    public function consejosCarrera()
+    {
+        return view('web.pages.consejos-carrera');
+    }
+    
+    /**
+     * Publicar Empleo - Para Empresas
+     */
+    public function publicarEmpleo()
+    {
+        return view('web.pages.publicar-empleo');
+    }
+    
+    /**
+     * Buscar Candidatos - Para Empresas
+     */
+    public function buscarCandidatos()
+    {
+        return view('web.pages.buscar-candidatos');
+    }
+    
+    /**
+     * Planes y Precios - Para Empresas
+     */
+    public function planesPrecios()
+    {
+        return view('web.pages.planes-precios');
+    }
+    
+    /**
+     * Recursos RH - Para Empresas
+     */
+    public function recursosRh()
+    {
+        return view('web.pages.recursos-rh');
+    }
+    
+    /**
      * Mostrar profesiones
      */
     public function profesion($tipo)

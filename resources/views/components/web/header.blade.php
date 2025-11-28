@@ -32,8 +32,8 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('register') }}">Crear Perfil</a></li>
                         <li><a class="dropdown-item" href="{{ route('bolsa-trabajo') }}">Buscar Empleos</a></li>
-                        <li><a class="dropdown-item" href="#">Subir CV</a></li>
-                        <li><a class="dropdown-item" href="#">Consejos de Carrera</a></li>
+                        <li><a class="dropdown-item" href="{{ route('subir-cv') }}">Subir CV</a></li>
+                        <li><a class="dropdown-item" href="{{ route('consejos-carrera') }}">Consejos de Carrera</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -43,10 +43,10 @@
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Publicar Empleo</a></li>
-                        <li><a class="dropdown-item" href="#">Buscar Candidatos</a></li>
-                        <li><a class="dropdown-item" href="#">Planes y Precios</a></li>
-                        <li><a class="dropdown-item" href="#">Recursos RH</a></li>
+                        <li><a class="dropdown-item" href="{{ route('publicar-empleo') }}">Publicar Empleo</a></li>
+                        <li><a class="dropdown-item" href="{{ route('buscar-candidatos') }}">Buscar Candidatos</a></li>
+                        <li><a class="dropdown-item" href="{{ route('planes-precios') }}">Planes y Precios</a></li>
+                        <li><a class="dropdown-item" href="{{ route('recursos-rh') }}">Recursos RH</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -64,17 +64,17 @@
                         <li><a class="dropdown-item" href="{{ route('plomero') }}">Plomero</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('informacion') }}" class="nav-link {{ request()->routeIs('informacion') ? 'active' : '' }}">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
                         <i class="fas fa-info-circle"></i>
-                        Nosotros
+                        Información
+                        <i class="fas fa-chevron-down"></i>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('contacto') }}" class="nav-link {{ request()->routeIs('contacto') ? 'active' : '' }}">
-                        <i class="fas fa-envelope"></i>
-                        Contacto
-                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('informacion') }}">Nosotros</a></li>
+                        <li><a class="dropdown-item" href="{{ route('ubicacion') }}">Ubicación</a></li>
+                        <li><a class="dropdown-item" href="{{ route('contacto') }}">Contacto</a></li>
+                    </ul>
                 </li>
             </ul>
             

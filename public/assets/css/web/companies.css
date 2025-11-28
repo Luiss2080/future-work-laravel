@@ -1,0 +1,388 @@
+/* ==========================================================================
+   COMPANIES PAGES CSS - Future Work (Empresas)
+   ========================================================================== */
+
+/* === JOB POSTING PAGE === */
+.job-form-card {
+    background: var(--fw-white);
+    border-radius: var(--fw-radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    border: 1px solid var(--fw-gray-200);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--fw-gray-200);
+}
+
+.form-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--fw-gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: var(--fw-gray-600);
+    margin: 0;
+}
+
+/* === CANDIDATE SEARCH PAGE === */
+.search-card {
+    background: var(--fw-white);
+    border-radius: var(--fw-radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--fw-gray-200);
+}
+
+.search-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--fw-primary-light);
+}
+
+.search-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--fw-gray-900);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* === CANDIDATES GRID === */
+.candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.candidate-card {
+    background: var(--fw-white);
+    border-radius: var(--fw-radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--fw-gray-200);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.candidate-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.candidate-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 1px solid var(--fw-gray-100);
+}
+
+.candidate-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--fw-primary-light);
+    color: var(--fw-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.candidate-info {
+    flex: 1;
+}
+
+.candidate-info h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--fw-gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.candidate-profession {
+    color: var(--fw-gray-600);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.candidate-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+.candidate-status {
+    flex-shrink: 0;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--fw-radius-full);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.badge.bg-success {
+    background: var(--fw-success);
+    color: var(--fw-white);
+}
+
+.badge.bg-warning {
+    background: var(--fw-warning);
+    color: var(--fw-white);
+}
+
+.candidate-body {
+    padding: 1rem 1.5rem;
+}
+
+.candidate-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--fw-gray-600);
+}
+
+.stat i {
+    color: var(--fw-primary);
+    width: 12px;
+    text-align: center;
+}
+
+.candidate-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-tag {
+    background: var(--fw-primary-light);
+    color: var(--fw-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--fw-radius-full);
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.candidate-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--fw-gray-100);
+    display: flex;
+    gap: 0.75rem;
+}
+
+.candidate-footer .btn {
+    flex: 1;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* === RESULTS HEADER === */
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.results-header h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--fw-gray-900);
+    margin: 0;
+}
+
+.sort-options select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--fw-gray-300);
+    border-radius: var(--fw-radius);
+    font-size: 0.9rem;
+    background: var(--fw-white);
+}
+
+/* === PAGINATION === */
+.pagination-container {
+    margin-top: 3rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-item .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--fw-gray-300);
+    border-radius: var(--fw-radius);
+    color: var(--fw-gray-700);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.page-item .page-link:hover {
+    background: var(--fw-primary);
+    color: var(--fw-white);
+    border-color: var(--fw-primary);
+}
+
+.page-item.active .page-link {
+    background: var(--fw-primary);
+    color: var(--fw-white);
+    border-color: var(--fw-primary);
+}
+
+.page-item.disabled .page-link {
+    color: var(--fw-gray-400);
+    cursor: not-allowed;
+    background: var(--fw-gray-50);
+}
+
+.page-item.disabled .page-link:hover {
+    background: var(--fw-gray-50);
+    color: var(--fw-gray-400);
+    border-color: var(--fw-gray-300);
+}
+
+/* === CTA SECTION === */
+.cta-section {
+    background: var(--fw-gray-50);
+    padding: 4rem 0;
+}
+
+.cta-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--fw-gray-900);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: var(--fw-gray-600);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 992px) {
+    .job-form-card {
+        padding: 2rem;
+    }
+    
+    .candidates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+    
+    .candidate-header {
+        padding: 1rem 1rem 0.75rem 1rem;
+    }
+    
+    .candidate-body {
+        padding: 0.75rem 1rem;
+    }
+    
+    .candidate-footer {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .results-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .sort-options {
+        width: 100%;
+    }
+    
+    .sort-options select {
+        width: 100%;
+    }
+    
+    .candidates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .candidate-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .candidate-footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-card {
+        padding: 1.5rem;
+    }
+    
+    .candidate-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .candidate-info {
+        text-align: center;
+    }
+    
+    .candidate-skills {
+        justify-content: center;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+    
+    .page-item .page-link {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+}

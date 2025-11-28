@@ -17,6 +17,16 @@ Route::get('/contacto', [HomeController::class, 'contacto'])->name('contacto');
 Route::get('/ubicacion', [HomeController::class, 'ubicacion'])->name('ubicacion');
 Route::get('/bolsa-trabajo', [HomeController::class, 'bolsaTrabajo'])->name('bolsa-trabajo');
 
+// ===== RUTAS PARA CANDIDATOS =====
+Route::get('/subir-cv', [HomeController::class, 'subirCv'])->name('subir-cv');
+Route::get('/consejos-carrera', [HomeController::class, 'consejosCarrera'])->name('consejos-carrera');
+
+// ===== RUTAS PARA EMPRESAS =====
+Route::get('/publicar-empleo', [HomeController::class, 'publicarEmpleo'])->name('publicar-empleo');
+Route::get('/buscar-candidatos', [HomeController::class, 'buscarCandidatos'])->name('buscar-candidatos');
+Route::get('/planes-precios', [HomeController::class, 'planesPrecios'])->name('planes-precios');
+Route::get('/recursos-rh', [HomeController::class, 'recursosRh'])->name('recursos-rh');
+
 // Profesiones - Solo las rutas necesarias
 Route::get('/profesion/{tipo}', [HomeController::class, 'profesion'])->name('profesion');
 
@@ -26,10 +36,7 @@ Route::get('/arquitecto', [HomeController::class, 'profesion'])->defaults('tipo'
 Route::get('/carpintero', [HomeController::class, 'profesion'])->defaults('tipo', 'carpintero')->name('carpintero');
 Route::get('/electricista', [HomeController::class, 'profesion'])->defaults('tipo', 'electricista')->name('electricista');
 Route::get('/ingeniero-civil', [HomeController::class, 'profesion'])->defaults('tipo', 'ingeniero')->name('ingeniero-civil');
-Route::get('/jardinero', [HomeController::class, 'profesion'])->defaults('tipo', 'jardinero')->name('jardinero');
 Route::get('/plomero', [HomeController::class, 'profesion'])->defaults('tipo', 'plomero')->name('plomero');
-Route::get('/diseñador-interiores', [HomeController::class, 'profesion'])->defaults('tipo', 'diseñador')->name('diseñador-interiores');
-Route::get('/escultor', [HomeController::class, 'profesion'])->defaults('tipo', 'escultor')->name('escultor');
 
 // ===== RUTAS DE AUTENTICACIÓN =====
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

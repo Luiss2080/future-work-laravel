@@ -23,23 +23,28 @@
                     <ul class="footer-links">
                         <li><a href="{{ route('bolsa-trabajo') }}">Buscar Empleos</a></li>
                         <li><a href="{{ route('register') }}">Crear CV</a></li>
-                        <li><a href="#">Consejos de Carrera</a></li>
-                        <li><a href="#">Guías de Entrevista</a></li>
+                        <li><a href="{{ route('consejos-carrera') }}">Consejos de Carrera</a></li>
+                        <li><a href="{{ route('subir-cv') }}">Subir CV</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Para Empresas</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Publicar Empleos</a></li>
-                        <li><a href="#">Buscar Candidatos</a></li>
-                        <li><a href="#">Planes Empresariales</a></li>
-                        <li><a href="#">Herramientas de Reclutamiento</a></li>
+                        <li><a href="{{ route('publicar-empleo') }}">Publicar Empleos</a></li>
+                        <li><a href="{{ route('buscar-candidatos') }}">Buscar Candidatos</a></li>
+                        <li><a href="{{ route('planes-precios') }}">Planes y Precios</a></li>
+                        <li><a href="{{ route('recursos-rh') }}">Recursos RH</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{ route('contacto') }}">Contactar</a></li>
+                        <li><a href="{{ route('ubicacion') }}">Ubicación</a></li>
+                        <li><a href="{{ route('informacion') }}">Acerca de Nosotros</a></li>
+                    </ul>
                     <ul class="contact-info-list">
                         <li class="contact-info-item">
                             <div class="contact-icon">
@@ -74,9 +79,9 @@
                     <p>&copy; {{ date('Y') }} Future Work. Todos los derechos reservados.</p>
                 </div>
                 <ul class="footer-bottom-links">
-                    <li><a href="#">Términos de Uso</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Cookies</a></li>
+                    <li><a href="{{ route('informacion') }}">Términos de Uso</a></li>
+                    <li><a href="{{ route('contacto') }}">Política de Privacidad</a></li>
+                    <li><a href="{{ route('ubicacion') }}">Cookies</a></li>
                 </ul>
             </div>
         </div>
