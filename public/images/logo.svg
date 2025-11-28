@@ -1,0 +1,16 @@
+<!-- Logo temporal SVG para Future Work -->
+<svg width="150" height="40" viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo del logo -->
+  <rect width="150" height="40" rx="8" fill="#4a90e2"/>
+  
+  <!-- Texto FW -->
+  <text x="15" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">FW</text>
+  
+  <!-- Texto Future Work -->
+  <text x="45" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white">Future</text>
+  <text x="45" y="32" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white">Work</text>
+  
+  <!-- Icono de trabajo (opcional) -->
+  <circle cx="130" cy="20" r="8" fill="rgba(255,255,255,0.2)"/>
+  <rect x="125" y="16" width="10" height="8" rx="1" fill="white"/>
+</svg>

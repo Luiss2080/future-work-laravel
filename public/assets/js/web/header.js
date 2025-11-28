@@ -14,6 +14,7 @@ class HeaderWeb {
 
     init() {
         this.bindEvents();
+        this.setupDropdowns();
     }
 
     bindEvents() {
@@ -22,7 +23,7 @@ class HeaderWeb {
             this.navbarToggler.addEventListener('click', () => this.toggleMobileMenu());
         }
 
-        // Scroll behavior - simplificado para evitar parpadeos
+        // Scroll behavior - optimizado para evitar parpadeos
         let ticking = false;
         window.addEventListener('scroll', () => {
             if (!ticking) {
@@ -40,17 +41,29 @@ class HeaderWeb {
                 this.closeMobileMenu();
             }
         });
+
+        // Close mobile menu on link click
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 992) {
+                    this.closeMobileMenu();
+                }
+            });
+        });
     }
 
     toggleMobileMenu() {
         if (this.navbarMenu) {
             this.navbarMenu.classList.toggle('show');
+            this.navbarToggler.classList.toggle('active');
         }
     }
 
     closeMobileMenu() {
         if (this.navbarMenu) {
             this.navbarMenu.classList.remove('show');
+            this.navbarToggler.classList.remove('active');
         }
     }
 
@@ -58,13 +71,23 @@ class HeaderWeb {
         const currentScrollY = window.scrollY;
         
         // Add/remove scrolled class for shadow effect
-        if (currentScrollY > 50) {
+        if (currentScrollY > 20) {
             this.header?.classList.add('scrolled');
         } else {
             this.header?.classList.remove('scrolled');
         }
 
         this.lastScrollY = currentScrollY;
+    }
+
+    setupDropdowns() {
+        // Setup Bootstrap dropdowns if they exist
+        const dropdownElements = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+        if (dropdownElements.length > 0 && typeof bootstrap !== 'undefined') {
+            dropdownElements.forEach(element => {
+                new bootstrap.Dropdown(element);
+            });
+        }
     }
 }
 
