@@ -1,27 +1,4 @@
 <header class="header-web">
-    <!-- Top Bar con contacto y redes sociales -->
-    <div class="header-top">
-        <div class="container">
-            <div class="top-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>info@futurework.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+52 55 1234 5678</span>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Header principal -->
     <div class="header-main">
         <div class="container">
@@ -48,6 +25,47 @@
                                 Empleos
                             </a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <i class="fas fa-users"></i>
+                                Para Candidatos
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('register') }}">Crear Perfil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('bolsa-trabajo') }}">Buscar Empleos</a></li>
+                                <li><a class="dropdown-item" href="#">Subir CV</a></li>
+                                <li><a class="dropdown-item" href="#">Consejos de Carrera</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <i class="fas fa-building"></i>
+                                Para Empresas
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Publicar Empleo</a></li>
+                                <li><a class="dropdown-item" href="#">Buscar Candidatos</a></li>
+                                <li><a class="dropdown-item" href="#">Planes y Precios</a></li>
+                                <li><a class="dropdown-item" href="#">Recursos RH</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <i class="fas fa-tools"></i>
+                                Profesiones
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('albanil') }}">Albañil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('arquitecto') }}">Arquitecto</a></li>
+                                <li><a class="dropdown-item" href="{{ route('carpintero') }}">Carpintero</a></li>
+                                <li><a class="dropdown-item" href="{{ route('electricista') }}">Electricista</a></li>
+                                <li><a class="dropdown-item" href="{{ route('ingeniero-civil') }}">Ingeniero Civil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('plomero') }}">Plomero</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a href="{{ route('informacion') }}" class="nav-link {{ request()->routeIs('informacion') ? 'active' : '' }}">
                                 <i class="fas fa-info-circle"></i>
@@ -60,13 +78,17 @@
                                 Contacto
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ route('ubicacion') }}" class="nav-link {{ request()->routeIs('ubicacion') ? 'active' : '' }}">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Ubicación
-                            </a>
-                        </li>
                     </ul>
+                    
+                    <!-- Buscador -->
+                    <div class="navbar-search">
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="¿Qué empleo buscas?">
+                            <button class="search-btn" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="navbar-auth">

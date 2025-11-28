@@ -15,6 +15,7 @@ class HeaderWeb {
     init() {
         this.bindEvents();
         this.setupDropdowns();
+        this.setupSearch();
     }
 
     bindEvents() {
@@ -51,6 +52,50 @@ class HeaderWeb {
                 }
             });
         });
+    }
+
+    setupSearch() {
+        const searchInput = document.querySelector('.search-input');
+        const searchBtn = document.querySelector('.search-btn');
+        
+        if (searchInput && searchBtn) {
+            // Search on button click
+            searchBtn.addEventListener('click', () => {
+                this.performSearch(searchInput.value);
+            });
+            
+            // Search on Enter key
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    this.performSearch(searchInput.value);
+                }
+            });
+            
+            // Search suggestions (opcional - puedes implementar después)
+            searchInput.addEventListener('input', (e) => {
+                this.handleSearchInput(e.target.value);
+            });
+        }
+    }
+
+    performSearch(query) {
+        if (!query.trim()) {
+            alert('Por favor ingresa un término de búsqueda');
+            return;
+        }
+        
+        // Redirigir a página de empleos con el término de búsqueda
+        const searchUrl = `/bolsa-trabajo?buscar=${encodeURIComponent(query.trim())}`;
+        window.location.href = searchUrl;
+    }
+
+    handleSearchInput(value) {
+        // Aquí puedes agregar lógica para sugerencias de búsqueda en tiempo real
+        // Por ahora solo limpiamos espacios en blanco
+        if (value.length > 2) {
+            console.log('Buscando sugerencias para:', value);
+            // Implementar sugerencias después si es necesario
+        }
     }
 
     toggleMobileMenu() {
