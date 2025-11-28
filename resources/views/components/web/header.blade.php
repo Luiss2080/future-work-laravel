@@ -24,56 +24,105 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <i class="fas fa-users"></i>
                         Para Candidatos
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('register') }}">Crear Perfil</a></li>
-                        <li><a class="dropdown-item" href="{{ route('bolsa-trabajo') }}">Buscar Empleos</a></li>
-                        <li><a class="dropdown-item" href="{{ route('subir-cv') }}">Subir CV</a></li>
-                        <li><a class="dropdown-item" href="{{ route('consejos-carrera') }}">Consejos de Carrera</a></li>
+                        <li><h6 class="dropdown-header">Crear Perfil</h6></li>
+                        <li><a class="dropdown-item" href="{{ route('register') }}">
+                            <i class="fas fa-user-plus"></i> Registrarse
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('subir-cv') }}">
+                            <i class="fas fa-upload"></i> Subir CV
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Buscar Trabajo</h6></li>
+                        <li><a class="dropdown-item popular" href="{{ route('bolsa-trabajo') }}">
+                            <i class="fas fa-briefcase"></i> Ofertas de Empleo
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('consejos-carrera') }}">
+                            <i class="fas fa-lightbulb"></i> Consejos de Carrera
+                        </a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <i class="fas fa-building"></i>
                         Para Empresas
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('publicar-empleo') }}">Publicar Empleo</a></li>
-                        <li><a class="dropdown-item" href="{{ route('buscar-candidatos') }}">Buscar Candidatos</a></li>
-                        <li><a class="dropdown-item" href="{{ route('planes-precios') }}">Planes y Precios</a></li>
-                        <li><a class="dropdown-item" href="{{ route('recursos-rh') }}">Recursos RH</a></li>
+                        <li><h6 class="dropdown-header">Reclutamiento</h6></li>
+                        <li><a class="dropdown-item new" href="{{ route('publicar-empleo') }}">
+                            <i class="fas fa-bullhorn"></i> Publicar Empleo
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('buscar-candidatos') }}">
+                            <i class="fas fa-search"></i> Buscar Candidatos
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Servicios</h6></li>
+                        <li><a class="dropdown-item popular" href="{{ route('planes-precios') }}">
+                            <i class="fas fa-tags"></i> Planes y Precios
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('recursos-rh') }}">
+                            <i class="fas fa-tools"></i> Recursos de RH
+                        </a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <i class="fas fa-tools"></i>
                         Profesiones
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('albanil') }}">Albañil</a></li>
-                        <li><a class="dropdown-item" href="{{ route('arquitecto') }}">Arquitecto</a></li>
-                        <li><a class="dropdown-item" href="{{ route('carpintero') }}">Carpintero</a></li>
-                        <li><a class="dropdown-item" href="{{ route('electricista') }}">Electricista</a></li>
-                        <li><a class="dropdown-item" href="{{ route('ingeniero-civil') }}">Ingeniero Civil</a></li>
-                        <li><a class="dropdown-item" href="{{ route('plomero') }}">Plomero</a></li>
+                        <li><h6 class="dropdown-header">Construcción</h6></li>
+                        <li><a class="dropdown-item popular" href="{{ route('albanil') }}">
+                            <i class="fas fa-hammer"></i> Albañil
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('carpintero') }}">
+                            <i class="fas fa-saw"></i> Carpintero
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('electricista') }}">
+                            <i class="fas fa-bolt"></i> Electricista
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('plomero') }}">
+                            <i class="fas fa-wrench"></i> Plomero
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Profesional</h6></li>
+                        <li><a class="dropdown-item" href="{{ route('arquitecto') }}">
+                            <i class="fas fa-drafting-compass"></i> Arquitecto
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('ingeniero-civil') }}">
+                            <i class="fas fa-hard-hat"></i> Ingeniero Civil
+                        </a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <i class="fas fa-info-circle"></i>
                         Información
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('informacion') }}">Nosotros</a></li>
-                        <li><a class="dropdown-item" href="{{ route('ubicacion') }}">Ubicación</a></li>
-                        <li><a class="dropdown-item" href="{{ route('contacto') }}">Contacto</a></li>
+                        <li><h6 class="dropdown-header">Conoce Future Work</h6></li>
+                        <li><a class="dropdown-item" href="{{ route('informacion') }}">
+                            <i class="fas fa-building"></i> Nosotros
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('ubicacion') }}">
+                            <i class="fas fa-map-marker-alt"></i> Ubicación
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Soporte</h6></li>
+                        <li><a class="dropdown-item" href="{{ route('contacto') }}">
+                            <i class="fas fa-envelope"></i> Contacto
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('recursos-rh') }}">
+                            <i class="fas fa-question-circle"></i> Centro de Ayuda
+                        </a></li>
                     </ul>
                 </li>
             </ul>

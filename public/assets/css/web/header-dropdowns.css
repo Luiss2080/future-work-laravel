@@ -1,0 +1,244 @@
+/* Header Dropdowns CSS */
+.navbar-nav .dropdown {
+    position: relative;
+}
+
+.navbar-nav .dropdown-toggle {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-toggle::after {
+    display: none; /* Ocultamos el caret por defecto de Bootstrap */
+}
+
+.navbar-nav .dropdown-toggle .fas.fa-chevron-down {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .dropdown.show .dropdown-toggle .fas.fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 220px;
+    padding: 0.5rem 0;
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navbar-nav .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus {
+    color: #16181b;
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+.navbar-nav .dropdown-item i {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+    color: #6c757d;
+}
+
+.navbar-nav .dropdown-item:hover i {
+    color: var(--primary-color);
+}
+
+/* Separadores en dropdown */
+.dropdown-divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Efectos hover para nav-links principales */
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive ajustes */
+@media (max-width: 991.98px) {
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+    
+    .navbar-nav .dropdown-item {
+        padding-left: 2rem;
+        color: #6c757d;
+    }
+}
+
+/* Hamburger Menu Styles */
+.navbar-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.navbar-hamburger-icon {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--primary-color);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.navbar-hamburger.active .navbar-hamburger-icon:first-child {
+    transform: rotate(45deg);
+}
+
+.navbar-hamburger.active .navbar-hamburger-icon:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.navbar-hamburger.active .navbar-hamburger-icon:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-hamburger {
+        display: flex;
+    }
+    
+    .navbar-menu-center {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #eee;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+    
+    .navbar-menu-center.show {
+        display: block;
+    }
+    
+    .navbar-nav-horizontal {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .navbar-search {
+        order: -1;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/* Header profesiones destacadas */
+.dropdown-menu .dropdown-header {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    color: #6c757d;
+    white-space: nowrap;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Subcategorías en dropdowns */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    left: 100%;
+    top: 0;
+    margin-top: -1px;
+}
+
+/* Indicadores visuales */
+.dropdown-item .badge {
+    margin-left: auto;
+    font-size: 0.75rem;
+}
+
+.dropdown-item.new::after {
+    content: 'NUEVO';
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border-radius: 0.25rem;
+}
+
+.dropdown-item.popular::after {
+    content: 'POPULAR';
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffc107;
+    border-radius: 0.25rem;
+}

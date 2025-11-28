@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/utilities.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/web/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/web/header-dropdowns.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/web/footer.css') }}">
     
     @stack('styles')
@@ -82,6 +83,7 @@
     
     <!-- Header JS -->
     <script src="{{ asset('assets/js/web/header.js') }}"></script>
+    <script src="{{ asset('assets/js/web/header-dropdowns.js') }}"></script>
     <script src="{{ asset('assets/js/web/auth.js') }}"></script>
     
     @stack('scripts')
