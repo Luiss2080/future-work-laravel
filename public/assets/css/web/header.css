@@ -18,18 +18,17 @@
 }
 
 /* Main Header */
-.header-main {
-    padding: 1rem 0;
-}
-
-.navbar {
+.main-header {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.navbar-brand {
+.navbar-logo {
     display: flex;
     align-items: center;
     justify-self: start;
@@ -43,7 +42,7 @@
     color: var(--fw-gray-900);
 }
 
-.brand-logo {
+.navbar-logo img {
     height: 45px;
     width: auto;
     max-width: 200px;
@@ -198,6 +197,42 @@
 
 .search-btn:hover {
     background: var(--fw-primary-dark);
+}
+
+/* Hamburger para móvil */
+.navbar-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--fw-gray-700);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0 1rem 0 0;
+    flex-direction: column;
+    gap: 4px;
+    justify-self: end;
+}
+
+.navbar-hamburger-icon {
+    width: 25px;
+    height: 2px;
+    background: var(--fw-gray-700);
+    transition: all 0.3s ease;
+    border-radius: 1px;
+    transform-origin: center;
+}
+
+.navbar-hamburger.active .navbar-hamburger-icon:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-hamburger.active .navbar-hamburger-icon:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-hamburger.active .navbar-hamburger-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Auth Buttons */

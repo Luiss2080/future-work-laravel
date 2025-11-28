@@ -5,7 +5,7 @@
 class HeaderWeb {
     constructor() {
         this.header = document.querySelector('.header-web');
-        this.navbarToggler = document.querySelector('.navbar-toggler');
+        this.navbarHamburger = document.querySelector('.navbar-hamburger');
         this.navbarMenu = document.querySelector('.navbar-menu-center');
         this.lastScrollY = window.scrollY;
         
@@ -20,8 +20,8 @@ class HeaderWeb {
 
     bindEvents() {
         // Mobile toggle
-        if (this.navbarToggler) {
-            this.navbarToggler.addEventListener('click', () => this.toggleMobileMenu());
+        if (this.navbarHamburger) {
+            this.navbarHamburger.addEventListener('click', () => this.toggleMobileMenu());
         }
 
         // Scroll behavior - optimizado para evitar parpadeos
@@ -38,7 +38,7 @@ class HeaderWeb {
 
         // Close mobile menu on outside click
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.navbar') && this.navbarMenu?.classList.contains('show')) {
+            if (!e.target.closest('.main-header') && this.navbarMenu?.classList.contains('show')) {
                 this.closeMobileMenu();
             }
         });
@@ -101,14 +101,14 @@ class HeaderWeb {
     toggleMobileMenu() {
         if (this.navbarMenu) {
             this.navbarMenu.classList.toggle('show');
-            this.navbarToggler.classList.toggle('active');
+            this.navbarHamburger.classList.toggle('active');
         }
     }
 
     closeMobileMenu() {
         if (this.navbarMenu) {
             this.navbarMenu.classList.remove('show');
-            this.navbarToggler.classList.remove('active');
+            this.navbarHamburger.classList.remove('active');
         }
     }
 
