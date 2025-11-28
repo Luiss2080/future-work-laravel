@@ -10,7 +10,7 @@
 
         <!-- Navegación Central -->
         <nav class="navbar-menu-center" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav navbar-nav-horizontal">
                 <li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
                         <i class="fas fa-home"></i>
