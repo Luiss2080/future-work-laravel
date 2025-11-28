@@ -6,7 +6,7 @@ class HeaderWeb {
     constructor() {
         this.header = document.querySelector('.header-web');
         this.navbarToggler = document.querySelector('.navbar-toggler');
-        this.navbarMenu = document.querySelector('.navbar-menu');
+        this.navbarMenu = document.querySelector('.navbar-menu-center');
         this.lastScrollY = window.scrollY;
         
         this.init();

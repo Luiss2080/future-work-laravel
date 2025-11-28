@@ -33,7 +33,8 @@
                     </a>
                 </div>
                 
-                <div class="navbar-menu collapse" id="navbarNav">
+                <!-- Navegación en el centro -->
+                <div class="navbar-menu-center collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">

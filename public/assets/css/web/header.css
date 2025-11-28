@@ -77,16 +77,16 @@
 }
 
 .navbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
 }
 
 .navbar-brand {
     display: flex;
     align-items: center;
-    flex-shrink: 0;
+    justify-self: start;
 }
 
 .brand-link {
@@ -110,12 +110,12 @@
     color: var(--fw-primary);
 }
 
-/* Navigation Menu */
-.navbar-menu {
+/* Navigation Menu - Centrada */
+.navbar-menu-center {
     display: flex;
     align-items: center;
-    flex: 1;
     justify-content: center;
+    justify-self: center;
 }
 
 .navbar-nav {
@@ -159,7 +159,7 @@
     display: flex;
     gap: 0.75rem;
     align-items: center;
-    flex-shrink: 0;
+    justify-self: end;
 }
 
 .navbar-auth .btn {
@@ -290,7 +290,12 @@ body {
         padding-top: 80px; /* Menos espacio sin top bar */
     }
     
-    .navbar-menu {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar-menu-center {
         position: fixed;
         top: 100%;
         left: 0;
@@ -307,7 +312,7 @@ body {
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
     
-    .navbar-menu.show {
+    .navbar-menu-center.show {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
