@@ -65,7 +65,7 @@
             "baseUrl": "{{ url('/') }}",
             "locale": "{{ app()->getLocale() }}",
             "csrfToken": "{{ csrf_token() }}",
-            "user": @json(auth()->check() ? auth()->user()->only('id', 'nombre', 'email', 'tipo_usuario') : null)
+            "user": @json(auth()->check() ? auth()->user()->only('id', 'name', 'email') : null)
         }
     </script>
     

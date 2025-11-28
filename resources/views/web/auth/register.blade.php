@@ -17,7 +17,7 @@
         <form class="auth-form" action="{{ route('register') }}" method="POST">
             @csrf
             <div class="form-group">
-                <input type="text" name="nombre" class="form-control" placeholder="Nombre completo" required>
+                <input type="text" name="name" class="form-control" placeholder="Nombre completo" required>
             </div>
             <div class="form-group">
                 <input type="email" name="email" class="form-control" placeholder="Email" required>
@@ -27,13 +27,6 @@
             </div>
             <div class="form-group">
                 <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar contraseña" required>
-            </div>
-            <div class="form-group">
-                <select name="tipo_usuario" class="form-select" required>
-                    <option value="">Seleccionar tipo de usuario</option>
-                    <option value="candidato">Candidato</option>
-                    <option value="empresa">Empresa</option>
-                </select>
             </div>
             <button type="submit" class="btn btn-primary w-100">
                 Crear Cuenta

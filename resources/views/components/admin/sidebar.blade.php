@@ -61,7 +61,7 @@
                 <i class="fas fa-user"></i>
             </div>
             <div class="user-info">
-                <span class="user-name">{{ auth()->user()->nombre }}</span>
+                <span class="user-name">{{ auth()->user()->name }}</span>
                 <span class="user-role">Administrador</span>
             </div>
         </div>

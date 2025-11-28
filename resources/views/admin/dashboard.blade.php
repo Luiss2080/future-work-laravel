@@ -9,7 +9,7 @@
 @section('content')
 <div class="dashboard-header">
     <h1><i class="fas fa-tachometer-alt me-2"></i>Dashboard</h1>
-    <p>Bienvenido, {{ auth()->user()->nombre }}</p>
+    <p>Bienvenido, {{ auth()->user()->name }}</p>
 </div>
 
 <div class="dashboard-stats">

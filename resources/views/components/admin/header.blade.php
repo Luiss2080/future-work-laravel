@@ -22,7 +22,7 @@
                     <div class="user-avatar me-2">
                         <i class="fas fa-user"></i>
                     </div>
-                    <span>{{ auth()->user()->nombre }}</span>
+                    <span>{{ auth()->user()->name }}</span>
                     <i class="fas fa-chevron-down ms-2"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
