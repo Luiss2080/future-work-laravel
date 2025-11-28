@@ -21,7 +21,7 @@
                 <div class="footer-section">
                     <h3>Para Candidatos</h3>
                     <ul class="footer-links">
-                        <li><a href="{{ route('jobs.index') }}">Buscar Empleos</a></li>
+                        <li><a href="{{ route('bolsa-trabajo') }}">Buscar Empleos</a></li>
                         <li><a href="{{ route('register') }}">Crear CV</a></li>
                         <li><a href="#">Consejos de Carrera</a></li>
                         <li><a href="#">Guías de Entrevista</a></li>

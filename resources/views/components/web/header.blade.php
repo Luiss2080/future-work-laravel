@@ -46,19 +46,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('jobs.index') }}" class="nav-link {{ request()->routeIs('jobs.*') ? 'active' : '' }}">
+                            <a href="{{ route('bolsa-trabajo') }}" class="nav-link {{ request()->routeIs('bolsa-trabajo') ? 'active' : '' }}">
                                 <i class="fas fa-briefcase"></i>
                                 Empleos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('about') }}" class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}">
+                            <a href="{{ route('informacion') }}" class="nav-link {{ request()->routeIs('informacion') ? 'active' : '' }}">
                                 <i class="fas fa-info-circle"></i>
                                 Nosotros
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">
+                            <a href="{{ route('contacto') }}" class="nav-link {{ request()->routeIs('contacto') ? 'active' : '' }}">
                                 <i class="fas fa-envelope"></i>
                                 Contacto
                             </a>
