@@ -26,19 +26,13 @@
             <nav class="navbar">
                 <div class="navbar-brand">
                     <a href="{{ route('home') }}" class="brand-link">
-                        <img src="{{ asset('images/logo.png') }}" alt="Future Work" class="brand-logo">
+                        <span class="brand-logo">FW</span>
                         <span class="brand-text">Future Work</span>
                     </a>
                 </div>
                 
-                <button class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <div class="navbar-menu">
-                    <ul class="navbar-nav">
+                <div class="navbar-menu" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
                                 <i class="fas fa-home"></i>
@@ -67,17 +61,17 @@
                     
                     <div class="navbar-auth">
                         @guest
-                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
                             <i class="fas fa-sign-in-alt"></i>
                             Ingresar
-                        </button>
+                        </a>
                         <a href="{{ route('register') }}" class="btn btn-primary">
                             <i class="fas fa-user-plus"></i>
                             Registrarse
                         </a>
                         @else
                         <div class="user-menu dropdown">
-                            <button class="user-toggle" data-bs-toggle="dropdown">
+                            <button class="user-toggle btn" data-bs-toggle="dropdown">
                                 <div class="user-avatar">
                                     <i class="fas fa-user"></i>
                                 </div>
@@ -106,6 +100,12 @@
                         @endguest
                     </div>
                 </div>
+                
+                <button class="mobile-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </nav>
         </div>
     </div>

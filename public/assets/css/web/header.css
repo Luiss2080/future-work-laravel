@@ -72,13 +72,14 @@
 
 /* Main Header */
 .header-main {
-    padding: 1rem;
+    padding: 0.75rem 0;
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 .navbar-brand {
@@ -95,8 +96,17 @@
 }
 
 .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
     height: 40px;
-    width: auto;
+    background: var(--fw-primary);
+    color: var(--fw-white);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .brand-text {
@@ -140,6 +150,8 @@
 .navbar-menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex: 1;
     gap: 2rem;
 }
 
@@ -148,7 +160,11 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 1rem;
+    gap: 0.5rem;
+}
+
+.navbar-nav.me-auto {
+    margin-right: auto;
 }
 
 .nav-item {
@@ -226,8 +242,42 @@
 /* Auth Buttons */
 .navbar-auth {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: center;
+}
+
+.navbar-auth .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-auth .btn-outline-primary {
+    border: 1px solid var(--fw-primary);
+    color: var(--fw-primary);
+    background: transparent;
+}
+
+.navbar-auth .btn-outline-primary:hover {
+    background: var(--fw-primary);
+    color: var(--fw-white);
+}
+
+.navbar-auth .btn-primary {
+    background: var(--fw-primary);
+    color: var(--fw-white);
+    border: 1px solid var(--fw-primary);
+}
+
+.navbar-auth .btn-primary:hover {
+    background: var(--fw-primary-dark);
+    border-color: var(--fw-primary-dark);
 }
 
 /* User Menu */
