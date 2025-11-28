@@ -17,10 +17,17 @@
         <form class="auth-form" action="{{ route('login') }}" method="POST">
             @csrf
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                <input type="email" name="email" class="form-control" placeholder="Email" 
+                       value="{{ old('email') }}" required>
+                @error('email')
+                    <div class="text-danger small mt-1">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                @error('password')
+                    <div class="text-danger small mt-1">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" name="remember" class="form-check-input" id="remember">

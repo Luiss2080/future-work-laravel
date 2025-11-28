@@ -57,9 +57,6 @@
     <!-- Footer -->
     @include('components.web.footer')
     
-    <!-- Modals -->
-    @include('components.web.modals.auth')
-    
     <!-- Global Configuration -->
     <script type="text/html" id="app-config">
         {

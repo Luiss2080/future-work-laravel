@@ -141,7 +141,7 @@
         <!-- Botones de autenticación -->
         <div class="navbar-auth">
             @guest
-                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <a href="{{ route('login') }}" class="btn btn-outline-primary">
                     <i class="fas fa-sign-in-alt"></i>
                     Ingresar
                 </a>
@@ -183,43 +183,3 @@
     </div>
 </header>
 
-<!-- Modal de Login -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Iniciar Sesión
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form method="POST" action="{{ route('login') }}">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                        <label class="form-check-label" for="remember">
-                            Recordarme
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <p class="text-center w-100">
-                    ¿No tienes cuenta? 
-                    <a href="{{ route('register') }}" data-bs-dismiss="modal">Regístrate aquí</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
