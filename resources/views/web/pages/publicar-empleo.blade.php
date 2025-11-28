@@ -234,8 +234,21 @@
                     <i class="fas fa-headset display-5 text-primary mb-3"></i>
                     <h5>Soporte Profesional</h5>
                     <p>Asistencia personalizada para empresas</p>
+                    <a href="{{ route('recursos-rh') }}" class="btn btn-sm btn-outline-primary mt-2">Ver Recursos</a>
                 </div>
             </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ route('buscar-candidatos') }}" class="btn btn-outline-primary btn-lg me-3">
+                <i class="fas fa-search me-2"></i>
+                Buscar Candidatos
+            </a>
+            <a href="{{ route('planes-precios') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-tags me-2"></i>
+                Ver Planes y Precios
+            </a>
+        </div>
         </div>
     </div>
 </section>

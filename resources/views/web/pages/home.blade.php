@@ -190,9 +190,13 @@
             <p class="cta-description">
                 Únete a miles de profesionales que ya encontraron su empleo ideal con nosotros
             </p>
-            <a href="{{ route('register') }}" class="btn btn-primary btn-lg">
+            <a href="{{ route('register') }}" class="btn btn-primary btn-lg me-3">
                 <i class="fas fa-rocket me-2"></i>
                 Comenzar Ahora
+            </a>
+            <a href="{{ route('subir-cv') }}" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-upload me-2"></i>
+                Subir CV
             </a>
         </div>
     </div>

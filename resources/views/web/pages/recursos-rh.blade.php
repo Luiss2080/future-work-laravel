@@ -330,6 +330,19 @@
                     </div>
                 </form>
                 <small class="text-muted">No spam. Solo contenido de valor para RH.</small>
+                
+                <div class="mt-5">
+                    <h5>¿Necesitas un plan personalizado?</h5>
+                    <p>Contáctanos para crear una solución a medida para tu empresa</p>
+                    <a href="{{ route('contacto') }}" class="btn btn-primary me-3">
+                        <i class="fas fa-phone me-2"></i>
+                        Contactar Ventas
+                    </a>
+                    <a href="{{ route('planes-precios') }}" class="btn btn-outline-primary">
+                        <i class="fas fa-tags me-2"></i>
+                        Ver Planes
+                    </a>
+                </div>
             </div>
         </div>
     </div>

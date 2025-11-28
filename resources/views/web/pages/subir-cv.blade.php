@@ -141,6 +141,16 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Navigation Section -->
+        <div class="text-center mt-5">
+            <h4>¿Necesitas ayuda con tu carrera?</h4>
+            <p class="mb-4">Explora nuestros consejos y recursos para profesionales</p>
+            <a href="{{ route('consejos-carrera') }}" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-lightbulb me-2"></i>
+                Consejos de Carrera
+            </a>
+        </div>
     </div>
 </section>
 @endsection

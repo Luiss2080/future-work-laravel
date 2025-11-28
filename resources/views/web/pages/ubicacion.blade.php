@@ -4,7 +4,8 @@
 @section('description', 'Encuentra nuestra oficina y conoce cómo llegar a Future Work.')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('assets/css/web/pages.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/web/pages-common.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/web/contact.css') }}">
 @endpush
 
 @section('content')

@@ -285,9 +285,13 @@
     <div class="container text-center">
         <h3>¿Necesitas un plan personalizado?</h3>
         <p class="mb-4">Contáctanos para crear una solución a medida para tu empresa</p>
-        <a href="{{ route('contacto') }}" class="btn btn-light btn-lg">
+        <a href="{{ route('contacto') }}" class="btn btn-light btn-lg me-3">
             <i class="fas fa-phone me-2"></i>
             Contactar Ventas
+        </a>
+        <a href="{{ route('recursos-rh') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-tools me-2"></i>
+            Recursos para RH
         </a>
     </div>
 </section>

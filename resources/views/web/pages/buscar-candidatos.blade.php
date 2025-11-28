@@ -262,9 +262,13 @@
     <div class="container text-center">
         <h3>¿No encuentras el candidato ideal?</h3>
         <p class="mb-4">Publica una oferta de empleo y deja que los candidatos te encuentren</p>
-        <a href="{{ route('publicar-empleo') }}" class="btn btn-primary btn-lg">
+        <a href="{{ route('publicar-empleo') }}" class="btn btn-primary btn-lg me-3">
             <i class="fas fa-bullhorn me-2"></i>
             Publicar Empleo
+        </a>
+        <a href="{{ route('planes-precios') }}" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-tags me-2"></i>
+            Ver Planes
         </a>
     </div>
 </section>
