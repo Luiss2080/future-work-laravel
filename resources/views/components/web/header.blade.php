@@ -91,13 +91,22 @@
                         <li><a class="dropdown-item" href="{{ route('plomero') }}">
                             <i class="fas fa-wrench"></i> Plomero
                         </a></li>
+                        <li><a class="dropdown-item" href="{{ route('jardinero') }}">
+                            <i class="fas fa-seedling"></i> Jardinero
+                        </a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><h6 class="dropdown-header">Profesional</h6></li>
+                        <li><h6 class="dropdown-header">Profesional y Creativo</h6></li>
                         <li><a class="dropdown-item" href="{{ route('arquitecto') }}">
                             <i class="fas fa-drafting-compass"></i> Arquitecto
                         </a></li>
                         <li><a class="dropdown-item" href="{{ route('ingeniero-civil') }}">
                             <i class="fas fa-hard-hat"></i> Ingeniero Civil
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('disenador') }}">
+                            <i class="fas fa-paint-brush"></i> Diseñador de Interiores
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{ route('escultor') }}">
+                            <i class="fas fa-chess-rook"></i> Escultor
                         </a></li>
                     </ul>
                 </li>

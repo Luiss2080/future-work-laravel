@@ -101,61 +101,16 @@ class HomeController extends Controller
      */
     public function profesion($tipo)
     {
-        $profesiones = [
-            'albanil' => [
-                'titulo' => 'Albañilería',
-                'descripcion' => 'Profesionales en construcción y reparaciones de estructuras',
-                'icono' => 'fas fa-hard-hat'
-            ],
-            'arquitecto' => [
-                'titulo' => 'Arquitectura',
-                'descripcion' => 'Diseño y planificación de espacios habitacionales',
-                'icono' => 'fas fa-drafting-compass'
-            ],
-            'carpintero' => [
-                'titulo' => 'Carpintería',
-                'descripcion' => 'Trabajos especializados en madera y muebles',
-                'icono' => 'fas fa-hammer'
-            ],
-            'electricista' => [
-                'titulo' => 'Electricista',
-                'descripcion' => 'Instalaciones eléctricas y sistemas de energía',
-                'icono' => 'fas fa-bolt'
-            ],
-            'ingeniero' => [
-                'titulo' => 'Ingeniería Civil',
-                'descripcion' => 'Proyectos de infraestructura y construcción',
-                'icono' => 'fas fa-building'
-            ],
-            'jardinero' => [
-                'titulo' => 'Jardinería',
-                'descripcion' => 'Diseño y mantenimiento de espacios verdes',
-                'icono' => 'fas fa-seedling'
-            ],
-            'plomero' => [
-                'titulo' => 'Plomería',
-                'descripcion' => 'Sistemas hidráulicos y sanitarios',
-                'icono' => 'fas fa-wrench'
-            ],
-            'diseñador' => [
-                'titulo' => 'Diseño de Interiores',
-                'descripcion' => 'Decoración y ambientación de espacios',
-                'icono' => 'fas fa-paint-brush'
-            ],
-            'escultor' => [
-                'titulo' => 'Escultura',
-                'descripcion' => 'Arte en piedra, madera y materiales diversos',
-                'icono' => 'fas fa-chess-rook'
-            ]
-        ];
+        // Mapa de tipos de profesión a nombres de vista
+        // Si el nombre de la vista es igual al tipo, no es necesario agregarlo aquí
+        $vista = $tipo;
         
-        if (!isset($profesiones[$tipo])) {
-            abort(404);
+        // Verificar si existe la vista específica
+        if (view()->exists("web.profesiones.{$vista}")) {
+            return view("web.profesiones.{$vista}");
         }
         
-        return view('web.profesiones.detalle', [
-            'profesion' => $profesiones[$tipo],
-            'tipo' => $tipo
-        ]);
+        // Fallback para profesiones que aún no tienen vista específica (opcional, o 404)
+        abort(404);
     }
 }
