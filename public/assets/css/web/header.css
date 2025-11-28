@@ -61,6 +61,7 @@
     align-items: center;
     justify-content: center;
     justify-self: center;
+    gap: 2rem;
 }
 
 .navbar-nav {
@@ -352,6 +353,10 @@ body {
 
 /* Responsive */
 @media (max-width: 1200px) {
+    .main-header {
+        gap: 1rem;
+    }
+    
     .navbar-nav {
         gap: 0.125rem;
     }
@@ -360,23 +365,35 @@ body {
         padding: 0.6rem 0.8rem;
         font-size: 0.875rem;
     }
+    
+    .search-container {
+        width: 220px;
+    }
+    
+    .navbar-search {
+        margin-left: 1rem;
+    }
 }
 
 @media (max-width: 991px) {
     body {
-        padding-top: 80px; /* Espacio optimizado para móvil */
+        padding-top: 80px;
     }
     
-    .navbar {
+    .main-header {
+        grid-template-columns: auto 1fr auto;
+        gap: 1rem;
+    }
+    
+    .navbar-hamburger {
         display: flex;
-        justify-content: space-between;
     }
     
     .navbar-menu-center {
-        position: fixed;
+        position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        right: 0;
         background: var(--fw-white);
         border-top: 1px solid var(--fw-gray-200);
         flex-direction: column;
@@ -387,6 +404,7 @@ body {
         transition: all 0.3s ease;
         padding: 1rem 0;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        z-index: 999;
     }
     
     .navbar-menu-center.show {
@@ -413,16 +431,24 @@ body {
         justify-content: flex-start;
     }
     
-    .navbar-toggler {
-        display: flex;
+    .navbar-search {
+        margin: 1rem;
+        order: -1;
     }
     
-    .navbar-auth {
-        order: -1;
+    .search-container {
         width: 100%;
-        justify-content: center;
-        padding: 1rem;
-        border-bottom: 1px solid var(--fw-gray-200);
+    }
+    
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: var(--fw-gray-50);
+        margin-left: 1rem;
     }
 }
 
@@ -431,14 +457,18 @@ body {
         display: none;
     }
     
-    .brand-logo {
+    .navbar-logo img {
         height: 35px;
+    }
+    
+    .main-header {
+        padding: 0.75rem 1rem;
     }
 }
 
 @media (max-width: 576px) {
-    .navbar {
-        padding: 0.75rem 0;
+    .main-header {
+        padding: 0.75rem 0.5rem;
     }
     
     .navbar-auth {
@@ -447,6 +477,12 @@ body {
     }
     
     .navbar-auth .btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+}
         width: 100%;
         justify-content: center;
     }

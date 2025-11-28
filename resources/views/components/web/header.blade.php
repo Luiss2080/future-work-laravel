@@ -9,7 +9,7 @@
         </div>
 
         <!-- Navegación Central -->
-        <nav class="navbar-menu-center collapse" id="navbarNav">
+        <nav class="navbar-menu-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
                         <i class="fas fa-users"></i>
                         Para Candidatos
                         <i class="fas fa-chevron-down"></i>
@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
                         <i class="fas fa-building"></i>
                         Para Empresas
                         <i class="fas fa-chevron-down"></i>
@@ -50,7 +50,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
                         <i class="fas fa-tools"></i>
                         Profesiones
                         <i class="fas fa-chevron-down"></i>
