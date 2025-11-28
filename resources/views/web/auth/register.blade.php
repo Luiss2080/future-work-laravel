@@ -17,16 +17,38 @@
         <form class="auth-form" action="{{ route('register') }}" method="POST">
             @csrf
             <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Nombre completo" required>
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre completo" 
+                       value="{{ old('nombre') }}" required>
+                @error('nombre')
+                    <div class="text-danger small mt-1">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                <input type="email" name="email" class="form-control" placeholder="Email" 
+                       value="{{ old('email') }}" required>
+                @error('email')
+                    <div class="text-danger small mt-1">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                @error('password')
+                    <div class="text-danger small mt-1">{{ $message }}</div>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" name="terms" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        Acepto los <a href="#" target="_blank">términos y condiciones</a>
+                    </label>
+                </div>
+                @error('terms')
+                    <div class="text-danger small mt-1">{{ $message }}</div>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary w-100">
                 Crear Cuenta
