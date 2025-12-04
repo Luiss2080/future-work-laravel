@@ -1,0 +1,333 @@
+/* Página Precios - Styles */
+.precios-container {
+    min-height: 100vh;
+}
+
+/* Hero Precios */
+.hero-precios {
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary-light));
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--color-dark);
+}
+
+.hero-precios h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-precios p {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+}
+
+/* Toggle de Planes */
+.toggle-planes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.plan-type {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.descuento {
+    background: var(--color-success);
+    color: var(--color-white);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Switch Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-gray-300);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--color-primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Grid de Planes */
+.planes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de Plan */
+.plan-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    border: 2px solid var(--color-gray-200);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.plan-card.destacado {
+    border-color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+.plan-card.destacado:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+/* Badge Popular */
+.badge-popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Header del Plan */
+.plan-header {
+    margin-bottom: 2rem;
+}
+
+.plan-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.precio-container {
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.periodo {
+    font-size: 1.125rem;
+    color: var(--color-gray-600);
+    margin-left: 0.25rem;
+}
+
+.plan-descripcion {
+    color: var(--color-gray-600);
+    font-size: 1rem;
+}
+
+/* Características */
+.caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.caracteristicas li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-gray-100);
+}
+
+.caracteristicas li:last-child {
+    border-bottom: none;
+}
+
+.caracteristicas i.fa-check {
+    color: var(--color-success);
+}
+
+.caracteristicas i.fa-times {
+    color: var(--color-gray-400);
+}
+
+.caracteristicas li {
+    text-align: left;
+    color: var(--color-gray-700);
+}
+
+/* Botones de Selección */
+.btn-seleccionar {
+    width: 100%;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.plan-card.destacado .btn-seleccionar {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* FAQ Precios */
+.faq-precios {
+    background: var(--color-gray-50);
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+}
+
+.faq-precios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faq-item h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.faq-item p {
+    color: var(--color-gray-600);
+    line-height: 1.6;
+}
+
+/* Estados de precio */
+.precio-anual {
+    position: relative;
+}
+
+.precio-original {
+    text-decoration: line-through;
+    color: var(--color-gray-400);
+    font-size: 1.5rem;
+    position: absolute;
+    top: -0.5rem;
+    right: -2rem;
+}
+
+/* Animaciones */
+@keyframes pulso {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.plan-card.destacado {
+    animation: pulso 2s infinite;
+}
+
+.plan-card:hover {
+    animation: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-precios {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-precios h1 {
+        font-size: 2rem;
+    }
+    
+    .planes-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .plan-card.destacado {
+        transform: none;
+    }
+    
+    .plan-card.destacado:hover {
+        transform: translateY(-10px);
+    }
+    
+    .precio {
+        font-size: 2.5rem;
+    }
+    
+    .faq-precios {
+        padding: 2rem 1rem;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .toggle-planes {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

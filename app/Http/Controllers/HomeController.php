@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('web.pages.home');
+        return view('inicio.inicio');
     }
     
     /**
@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function informacion()
     {
-        return view('web.pages.about');
+        return view('nosotros.nosotros');
     }
     
     /**
@@ -29,7 +29,7 @@ class HomeController extends Controller
      */
     public function contacto()
     {
-        return view('web.pages.contact');
+        return view('contacto.contacto');
     }
     
     /**
@@ -37,7 +37,7 @@ class HomeController extends Controller
      */
     public function ubicacion()
     {
-        return view('web.pages.ubicacion');
+        return view('ubicacion.ubicacion');
     }
     
     /**
@@ -45,7 +45,7 @@ class HomeController extends Controller
      */
     public function bolsaTrabajo()
     {
-        return view('web.pages.bolsa-trabajo');
+        return view('candidatos.empleos');
     }
     
     /**
@@ -53,7 +53,7 @@ class HomeController extends Controller
      */
     public function subirCv()
     {
-        return view('web.pages.subir-cv');
+        return view('candidatos.cv');
     }
     
     /**
@@ -61,7 +61,7 @@ class HomeController extends Controller
      */
     public function consejosCarrera()
     {
-        return view('web.pages.consejos-carrera');
+        return view('candidatos.consejos');
     }
     
     /**
@@ -69,7 +69,7 @@ class HomeController extends Controller
      */
     public function publicarEmpleo()
     {
-        return view('web.pages.publicar-empleo');
+        return view('empresas.publicar');
     }
     
     /**
@@ -77,7 +77,7 @@ class HomeController extends Controller
      */
     public function buscarCandidatos()
     {
-        return view('web.pages.buscar-candidatos');
+        return view('empresas.candidatos');
     }
     
     /**
@@ -85,7 +85,7 @@ class HomeController extends Controller
      */
     public function planesPrecios()
     {
-        return view('web.pages.planes-precios');
+        return view('precios.precios');
     }
     
     /**
@@ -93,7 +93,7 @@ class HomeController extends Controller
      */
     public function recursosRh()
     {
-        return view('web.pages.recursos-rh');
+        return view('empresas.recursos');
     }
     
     /**
@@ -102,15 +102,14 @@ class HomeController extends Controller
     public function profesion($tipo)
     {
         // Mapa de tipos de profesión a nombres de vista
-        // Si el nombre de la vista es igual al tipo, no es necesario agregarlo aquí
         $vista = $tipo;
         
         // Verificar si existe la vista específica
-        if (view()->exists("web.profesiones.{$vista}")) {
-            return view("web.profesiones.{$vista}");
+        if (view()->exists("profesiones.{$vista}")) {
+            return view("profesiones.{$vista}");
         }
         
-        // Fallback para profesiones que aún no tienen vista específica (opcional, o 404)
+        // Fallback para profesiones que aún no tienen vista específica
         abort(404);
     }
 }
