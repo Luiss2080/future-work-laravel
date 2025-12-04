@@ -13,8 +13,8 @@
             <h1>Encuentra tu trabajo ideal</h1>
             <p>Conectamos talento con oportunidades laborales</p>
             <div class="hero-actions">
-                <a href="{{ route('empleos') }}" class="btn btn-primary">Buscar empleos</a>
-                <a href="{{ route('empresas.publicar') }}" class="btn btn-outline">Publicar empleo</a>
+                <a href="{{ route('bolsa-trabajo') }}" class="btn btn-primary">Buscar empleos</a>
+                <a href="{{ route('publicar-empleo') }}" class="btn btn-outline">Publicar empleo</a>
             </div>
         </div>
         <div class="hero-image">
