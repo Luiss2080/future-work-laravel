@@ -1,4 +1,4 @@
-@extends('layouts.web.app')
+@extends('layouts.web-app')
 
 @section('title', 'Nosotros - Future Work')
 
