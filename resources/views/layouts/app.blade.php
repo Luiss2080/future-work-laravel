@@ -20,28 +20,40 @@
     <link rel="stylesheet" href="{{ asset('assets/css/web/shared/header-dropdowns.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/web/shared/pages-common.css') }}">
     
+    <!-- CSS para autenticación -->
+    <link rel="stylesheet" href="{{ asset('assets/css/web/auth/index.css') }}">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS de página específica -->
     @yield('styles')
 </head>
-<body>
-    <!-- Header -->
-    @include('layouts.header')
+<body class="auth-body">
+    <!-- Header simple para auth -->
+    <header class="auth-header">
+        <div class="auth-header-container">
+            <a href="{{ route('home') }}" class="auth-brand">
+                <img src="{{ asset('images/logo.PNG') }}" alt="Future Work">
+                <span>Future Work</span>
+            </a>
+        </div>
+    </header>
     
     <!-- Contenido principal -->
-    <main class="main-content">
+    <main class="auth-main">
         @yield('content')
     </main>
     
-    <!-- Footer -->
-    @include('layouts.footer')
+    <!-- Footer simple -->
+    <footer class="auth-footer">
+        <div class="auth-footer-container">
+            <p>&copy; {{ date('Y') }} Future Work. Todos los derechos reservados.</p>
+        </div>
+    </footer>
     
     <!-- JavaScript Base -->
-    <script src="{{ asset('assets/js/web/shared/header.js') }}"></script>
-    <script src="{{ asset('assets/js/web/shared/header-dropdowns.js') }}"></script>
-    <script src="{{ asset('assets/js/web/shared/information.js') }}"></script>
+    <script src="{{ asset('assets/js/web/auth/index.js') }}"></script>
     
     <!-- JavaScript de página específica -->
     @yield('scripts')
