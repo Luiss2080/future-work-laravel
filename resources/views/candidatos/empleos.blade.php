@@ -9,10 +9,10 @@
 @section('content')
 <div class="empleos-container">
     <div class="filtros-sidebar">
-        <h3>Filtrar empleos</h3>
+        <h3><i class="fas fa-filter" style="color: var(--primary-neon);"></i> Filtrar empleos</h3>
         
         <div class="filtro-grupo">
-            <h4>Ubicación</h4>
+            <h4><i class="fas fa-map-marker-alt"></i> Ubicación</h4>
             <select id="filtro-ubicacion">
                 <option value="">Todas las ciudades</option>
                 <option value="madrid">Madrid</option>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="filtro-grupo">
-            <h4>Categoría</h4>
+            <h4><i class="fas fa-briefcase"></i> Categoría</h4>
             <div class="checkbox-group">
                 <label><input type="checkbox" value="tecnologia"> Tecnología</label>
                 <label><input type="checkbox" value="marketing"> Marketing</label>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="filtro-grupo">
-            <h4>Salario</h4>
+            <h4><i class="fas fa-euro-sign"></i> Salario</h4>
             <select id="filtro-salario">
                 <option value="">Cualquier salario</option>
                 <option value="20-30">€20k - €30k</option>
@@ -42,14 +42,45 @@
             </select>
         </div>
 
+        <div class="filtro-grupo">
+            <h4><i class="fas fa-clock"></i> Experiencia</h4>
+            <select id="filtro-experiencia">
+                <option value="">Cualquier experiencia</option>
+                <option value="junior">Junior (0-2 años)</option>
+                <option value="mid">Mid-Level (2-5 años)</option>
+                <option value="senior">Senior (5+ años)</option>
+            </select>
+        </div>
+
+        <div class="filtro-grupo">
+            <h4><i class="fas fa-building"></i> Modalidad</h4>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="remoto"> 100% Remoto</label>
+                <label><input type="checkbox" value="hibrido"> Híbrido</label>
+                <label><input type="checkbox" value="presencial"> Presencial</label>
+            </div>
+        </div>
+
         <button class="btn btn-primary" id="aplicar-filtros">Aplicar filtros</button>
     </div>
 
     <div class="empleos-main">
         <div class="empleos-header">
-            <h1>Ofertas de empleo</h1>
+            <div class="header-top-row" style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
+                <div>
+                    <h1 style="margin-bottom: 0.5rem;"><i class="fas fa-search-dollar" style="color: var(--primary-neon); margin-right: 15px;"></i>Ofertas de empleo</h1>
+                    <p style="color: var(--text-gray);">Mostrando <span style="color: var(--primary-neon); font-weight: bold;">24</span> vacantes disponibles</p>
+                </div>
+                <div class="sort-box">
+                    <select style="background: transparent; border: 1px solid var(--border-color); color: var(--text-gray); padding: 0.5rem; border-radius: 8px;">
+                        <option>Más recientes</option>
+                        <option>Mejor pagados</option>
+                    </select>
+                </div>
+            </div>
+            
             <div class="busqueda-container">
-                <input type="search" id="buscar-empleos" placeholder="Buscar empleos...">
+                <input type="search" id="buscar-empleos" placeholder="Buscar por cargo, empresa o palabra clave...">
                 <button class="btn-buscar"><i class="fas fa-search"></i></button>
             </div>
         </div>

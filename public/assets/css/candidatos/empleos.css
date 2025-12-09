@@ -1,0 +1,358 @@
+/* =========================================
+   BOLSA DE TRABAJO - DARK NEON THEME
+   ========================================= */
+
+:root {
+    --bg-dark: #020617;
+    --bg-card: #0f172a;
+    --primary-neon: #22d3ee;
+    --primary-cyan: #06b6d4;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: "Inter", sans-serif;
+}
+
+/* --- LAYOUT --- */
+.empleos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 1rem 4rem; /* Clear fixed header (85px + spacing) */
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Filters Side | Main List */
+    gap: 2rem;
+    min-height: 80vh;
+}
+
+/* --- SIDEBAR FILTERS --- */
+.filtros-sidebar {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.filtros-sidebar h3 {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filtro-grupo {
+    margin-bottom: 2rem;
+}
+
+.filtro-grupo h4 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+/* Custom Selects - Advanced */
+.filtro-grupo select {
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2322d3ee' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.filtro-grupo select:hover {
+    border-color: var(--primary-cyan);
+    background-color: rgba(15, 23, 42, 0.9);
+}
+
+.filtro-grupo select:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+}
+
+/* Dark Options */
+.filtro-grupo select option {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    padding: 10px;
+}
+
+/* Custom Checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    transition: color 0.3s;
+}
+
+.checkbox-group label:hover {
+    color: var(--text-white);
+}
+
+.checkbox-group input[type="checkbox"] {
+    accent-color: var(--primary-neon);
+    width: 16px;
+    height: 16px;
+}
+
+/* Apply Filters Button */
+.btn-primary {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-cyan);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-neon);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+/* --- MAIN CONTENT --- */
+.empleos-header {
+    margin-bottom: 2rem;
+}
+
+.empleos-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #fff, var(--text-gray));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.busqueda-container {
+    display: flex;
+    gap: 1rem;
+    background: var(--bg-card);
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.busqueda-container input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.busqueda-container input:focus {
+    outline: none;
+}
+
+.btn-buscar {
+    padding: 0 2rem;
+    background: var(--primary-neon);
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-buscar:active {
+    transform: scale(0.95);
+}
+
+/* --- JOB CARD --- */
+.empleos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.empleo-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.empleo-card:hover {
+    border-color: var(--primary-neon);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.empleo-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-neon);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.empleo-card:hover::before {
+    transform: scaleY(1);
+}
+
+.empresa-logo {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.empresa-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.empleo-info {
+    flex: 1;
+}
+
+.empleo-info h3 {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin-bottom: 0.5rem;
+}
+
+.empleo-info p {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.empresa {
+    color: var(--text-gray);
+    font-weight: 500;
+}
+.ubicacion {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+.salario {
+    color: var(--primary-neon);
+    font-weight: 700;
+}
+
+.empleo-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.empleo-tags span {
+    background: rgba(34, 211, 238, 0.1);
+    color: var(--primary-neon);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.empleo-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 140px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-gray);
+    padding: 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-neon);
+    color: var(--primary-neon);
+}
+
+/* --- PAGINATION --- */
+.paginacion {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.pagina-actual {
+    color: var(--text-gray);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .empleos-container {
+        grid-template-columns: 1fr; /* Stack sidebar above content */
+    }
+
+    .filtros-sidebar {
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .empleo-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .empleo-actions {
+        width: 100%;
+        flex-direction: row;
+    }
+    .empleo-actions button {
+        flex: 1;
+    }
+}
