@@ -9,20 +9,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     
-    <!-- CSS Base -->
-    <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/variables.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/utilities.css') }}">
     
-    <!-- CSS Compartidos -->
-    <link rel="stylesheet" href="{{ asset('assets/css/comun/header-premium.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/comun/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/comun/header-dropdowns.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/comun/pages-common.css') }}">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <!-- CSS Componentes -->
+    <link rel="stylesheet" href="{{ asset('assets/css/components/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/components/footer.css') }}">
+
     <!-- CSS de página específica -->
     @yield('styles')
 </head>
