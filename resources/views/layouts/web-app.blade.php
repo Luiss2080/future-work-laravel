@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/utilities.css') }}">
     
     <!-- CSS Compartidos -->
-    <link rel="stylesheet" href="{{ asset('assets/css/comun/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/comun/header-premium.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/comun/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/comun/header-dropdowns.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/comun/pages-common.css') }}">

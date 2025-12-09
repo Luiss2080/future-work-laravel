@@ -135,52 +135,53 @@
                     </ul>
                 </li>
             </ul>
-            
-            <!-- Buscador -->
+        </nav>
+
+        <!-- Acciones Derecha (Buscador + Auth) -->
+        <div class="header-right-actions">
             <div class="navbar-search">
                 <div class="search-container">
-                    <input type="text" class="search-input" placeholder="¿Qué empleo buscas?">
+                    <input type="text" class="search-input" placeholder="Buscar empleo...">
                     <button class="search-btn" type="button">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
             </div>
-        </nav>
 
-        <!-- Botones de autenticación -->
-        <div class="navbar-auth">
-            @guest
-                <a href="{{ route('login') }}" class="btn btn-outline-primary">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Ingresar
-                </a>
-                <a href="{{ route('register') }}" class="btn btn-primary">
-                    <i class="fas fa-user-plus"></i>
-                    Registrarse
-                </a>
-            @else
-                <div class="user-menu dropdown">
-                    <button class="user-toggle dropdown-toggle" data-bs-toggle="dropdown">
-                        <div class="user-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <span>{{ Auth::user()->name }}</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li>
-                            <form action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="dropdown-item" type="submit">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                    Cerrar Sesión
-                                </button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            @endguest
+            <div class="navbar-auth">
+                @guest
+                    <a href="{{ route('login') }}" class="btn btn-outline-primary">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Ingresar
+                    </a>
+                    <a href="{{ route('register') }}" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Registrarse
+                    </a>
+                @else
+                    <div class="user-menu dropdown">
+                        <button class="user-toggle dropdown-toggle" data-bs-toggle="dropdown">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>{{ Auth::user()->name }}</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item" type="submit">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        Cerrar Sesión
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                @endguest
+            </div>
         </div>
 
         <!-- Hamburger para móvil -->
