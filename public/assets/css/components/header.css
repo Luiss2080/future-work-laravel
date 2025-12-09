@@ -252,6 +252,15 @@
     border-radius: 8px;
     transition: all 0.2s ease;
     border-left: 2px solid transparent; /* Prepare for hover border */
+    gap: 0.8rem; /* Use gap for flex spacing */
+}
+
+/* Icon separation */
+.dropdown-item i {
+    width: 20px; /* Fixed width for better alignment */
+    text-align: center;
+    color: var(--primary-neon); /* Ensure icon is neon */
+    transition: transform 0.3s ease;
 }
 
 .dropdown-item:hover {
