@@ -54,7 +54,7 @@
             <!-- Article 2 -->
             <div class="article-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="article-thumb">
-                    <img src="https://images.unsplash.com/photo-1507208773393-40d9fc9f600e?q=80&w=2070&auto=format&fit=crop" alt="Keywords">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" alt="Keywords">
                     <span class="article-category">Estrategia</span>
                 </div>
                 <div class="article-content">
