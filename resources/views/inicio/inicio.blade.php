@@ -7,126 +7,183 @@
 @endsection
 
 @section('content')
-<div class="inicio-container">
-    {{-- Hero Section --}}
+<div class="inicio-wrapper">
+
+    {{-- 1. HERO SECTION --}}
     <section class="hero-section">
         <div class="hero-bg">
-            <div class="hero-overlay"></div>
-            <img src="{{ asset('images/hero-trabajo.jpg') }}" alt="Background" class="hero-bg-img">
+            {{-- Ideally this is a high-quality video or image of people working --}}
+            <img src="{{ asset('images/hero-trabajo.jpg') }}" alt="Future Work Hero">
         </div>
+        <div class="hero-overlay"></div>
+        
         <div class="container hero-content">
-            <div class="hero-text">
-                <span class="hero-badge">01 / FUTURE WORK</span>
-                <h1 class="animate-reveal">CONSTRUYE <br> TU FUTURO HOY</h1>
-                <p class="animate-reveal delay-1">
-                    La plataforma inteligente que conecta talento con oportunidades mediante algoritmos de precisión.
+            <h1>CONSTRUYE TU <br> <span class="highlight">FUTURO HOY</span></h1>
+            <p>La plataforma #1 en Latinoamérica que conecta profesionales, oficios y empresas en un solo ecosistema inteligente.</p>
+            <div class="hero-actions">
+                <a href="{{ route('bolsa-trabajo') }}" class="btn-neon">
+                    Explorar Empleos <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {{-- 2. SERVICIOS EXTRAS (TRADES GRID) --}}
+    <section class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Soluciones Integrales</span>
+                <h2>Nuestros Servicios</h2>
+                <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto;">
+                    No solo conectamos empresas con empleados. También ofrecemos una red confiable de oficios esenciales para tu hogar o negocio.
                 </p>
-                <div class="hero-actions animate-reveal delay-2">
-                    <a href="{{ route('bolsa-trabajo') }}" class="btn-premium primary">EXPLORAR EMPLEOS</a>
-                    <a href="{{ route('publicar-empleo') }}" class="btn-premium outline">PARA EMPRESAS</a>
+            </div>
+
+            <div class="services-grid">
+                <!-- Bolsa de Trabajo -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Bolsa de Trabajo</h3>
+                    <p>Miles de vacantes corporativas y remotas actualizadas diariamente. Tu próximo salto profesional está aquí.</p>
+                </div>
+
+                <!-- Carpintería -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Carpintería</h3>
+                    <p>Muebles a medida, reparaciones y estructuras de madera. Carpinteros certificados y calificados.</p>
+                </div>
+
+                <!-- Plomería -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Plomería</h3>
+                    <p>Soluciones rápidas para fugas, instalaciones y mantenimiento de tuberías residencial y comercial.</p>
+                </div>
+
+                <!-- Electricidad -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Electricidad</h3>
+                    <p>Instalaciones seguras, cableado estructurado y reparaciones eléctricas por profesionales.</p>
+                </div>
+
+                <!-- Jardinería -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Jardinería</h3>
+                    <p>Diseño de paisajes, mantenimiento de áreas verdes y poda profesional para tu espacio.</p>
+                </div>
+
+                <!-- Albañilería -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-trowel"></i>
+                    </div>
+                    <h3>Albañilería</h3>
+                    <p>Construcción, remodelaciones y acabados de alta calidad para transformar tus espacios.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- Algoritmos de Retroalimentación --}}
-    <section class="features-section" id="algoritmos">
+    {{-- 3. JOB BOARD PREVIEW --}}
+    <section class="job-board-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">TECNOLOGÍA</span>
-                <h2>ALGORITMOS DE <span class="highlight">RETROALIMENTACIÓN</span></h2>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card glass-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+            <div class="job-preview-container">
+                <div class="job-text">
+                    <div class="section-title" style="text-align: left;">
+                        <span>Para Candidatos</span>
+                        <h2>Encuentra el <br> Trabajo Ideal</h2>
                     </div>
-                    <h3>Análisis de Perfil</h3>
-                    <p>Nuestro sistema escanea tus habilidades y experiencia para detectar áreas de mejora.</p>
+                    <p style="color: var(--text-gray); margin-bottom: 2rem; font-size: 1.1rem;">
+                        Nuestro algoritmo inteligente analiza tu perfil y te empareja con las ofertas que mejor se adaptan a tus habilidades y aspiraciones salariales.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--text-gray);">
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--primary-neon); margin-right: 10px;"></i> Alertas de empleo en tiempo real</li>
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--primary-neon); margin-right: 10px;"></i> Constructor de CV profesional</li>
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: var(--primary-neon); margin-right: 10px;"></i> Conexión directa con reclutadores</li>
+                    </ul>
+                    <a href="{{ route('register') }}" class="btn-neon" style="background: transparent; border: 1px solid var(--primary-neon); color: var(--primary-neon);">
+                        Crear Perfil Gratis
+                    </a>
                 </div>
-                <div class="feature-card glass-card active">
-                    <div class="feature-visual">
-                        <div class="scan-line"></div>
-                        <div class="data-points">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <div class="feature-icon-lg">
-                            <i class="fas fa-brain"></i>
-                        </div>
+                
+                <div class="job-visual">
+                    <!-- Floating Cards Animation -->
+                    <div class="floating-card card-1">
+                        <div style="font-size: 0.8rem; color: var(--text-gray);">Nueva Vacante</div>
+                        <h4 style="margin: 0.5rem 0; color: white;">Desarrollador Senior</h4>
+                        <div style="color: var(--primary-neon); font-weight: bold;">$45,000 - $60,000</div>
                     </div>
-                    <h3>Detección de Fallas</h3>
-                    <p>Identificamos brechas en tu CV y te sugerimos correcciones en tiempo real.</p>
-                </div>
-                <div class="feature-card glass-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-arrow-up"></i>
+                    
+                    <div class="floating-card card-2">
+                        <div style="font-size: 0.8rem; color: var(--text-gray);">Contratado</div>
+                        <h4 style="margin: 0.5rem 0; color: white;">Arq. Luis Méndez</h4>
+                        <div style="color: var(--accent-purple); font-weight: bold;">Constructora Global</div>
                     </div>
-                    <h3>Optimización</h3>
-                    <p>Recibe sugerencias personalizadas para aumentar tu empleabilidad al 100%.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    {{-- Servicios Extras --}}
-    <section class="services-section" id="servicios">
-        <div class="container">
-            <div class="row no-gutters services-wrapper">
-                <div class="col-lg-4 service-info">
-                    <span class="section-subtitle">SERVICIOS</span>
-                    <h2>NUESTRAS <br> ESPECIALIDADES</h2>
-                    <p>Desde trabajos profesionales hasta oficios esenciales. Todo en un solo lugar.</p>
-                    <div class="service-list">
-                        <div class="service-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>Bolsa de Trabajo</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-leaf"></i>
-                            <span>Jardinería</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-tools"></i>
-                            <span>Plomería</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-hammer"></i>
-                            <span>Carpintería</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 service-visual">
-                    <div class="service-image">
-                       {{-- Placeholder image, ideally user would upload a collage --}}
-                         <div class="overlay-gradient"></div>
+                    <div class="floating-card card-3">
+                        <div style="font-size: 0.8rem; color: var(--text-gray);">Solicitud Aceptada</div>
+                        <h4 style="margin: 0.5rem 0; color: white;">Jardinero Exprés</h4>
+                        <div style="color: var(--gold); font-weight: bold;">Disponible Hoy</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- Espacio Publicitario --}}
-    <section class="ads-section" id="publicidad">
+    {{-- 4. ADS SECTION --}}
+    <section class="ads-section">
         <div class="container">
-            <div class="ad-banner glass-card">
+            <div class="ad-banner">
                 <div class="ad-content">
-                    <span class="ad-label">ESPACIO PUBLICITARIO</span>
-                    <h3>TU EMPRESA AQUÍ</h3>
-                    <p>Destaca tus servicios ante miles de candidatos y contratistas cada mes.</p>
-                    <button class="btn-premium text-only">CONTACTAR VENTAS <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="ad-visual">
-                    {{-- Abstract geometric shapes for 'ad' visualization --}}
-                    <div class="geo-shape shape-1"></div>
-                    <div class="geo-shape shape-2"></div>
+                    <span class="ad-badge">Espacio Publicitario</span>
+                    <h3>Impulsa tu Marca con Future Work</h3>
+                    <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 2rem auto;">
+                        Llega a más de 50,000 profesionales y empresas activas cada mes. Alquila este espacio y haz crecer tu negocio hoy mismo.
+                    </p>
+                    <a href="{{ route('contacto') }}" class="btn-neon">
+                        Contactar Ventas
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+
 </div>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('assets/js/inicio/inicio.js') }}"></script>
+    {{-- Simple Scroll Reveal Script --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.service-card, .section-title, .hero-content').forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.8s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
 @endsection
