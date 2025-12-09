@@ -28,6 +28,30 @@
         </div>
     </section>
 
+    {{-- 1.5 REAL-TIME STATS --}}
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>15K+</h3>
+                    <p>Empleos Activos</p>
+                </div>
+                <div class="stat-card">
+                    <h3>8.5K</h3>
+                    <p>Empresas Verificadas</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p>Tasa de Éxito</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24h</h3>
+                    <p>Tiempo Promedio de Contratación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- 2. SERVICIOS EXTRAS (TRADES GRID) --}}
     <section class="services-section">
         <div class="container">
@@ -97,6 +121,71 @@
         </div>
     </section>
 
+    {{-- 2.5 PROCESS SECTION --}}
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Simplicidad</span>
+                <h2>Cómo Funciona</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Crea tu Perfil</h3>
+                    <p>Regístrate en segundos. Si eres candidato, sube tu CV. Si eres empresa, publica tu primera vacante.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Conecta</h3>
+                    <p>Nuestro algoritmo te sugiere las mejores coincidencias automáticamente según tus habilidades.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Empieza</h3>
+                    <p>Cierra el trato directamente. Sin intermediarios, sin comisiones ocultas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- 2.8 TESTIMONIALS SECTION --}}
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Historias de Éxito</span>
+                <h2>Lo que dicen de nosotros</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="testimonial-content">
+                        "Encontré un plomero certificado en menos de 2 horas para una emergencia en mi restaurante. Servicio impecable."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: url('https://i.pravatar.cc/150?img=11'); background-size: cover;"></div>
+                        <div class="author-info">
+                            <h4>Carlos Ruiz</h4>
+                            <span>Gerente de Operaciones</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="testimonial-content">
+                        "Como carpintera independiente, Future Work ha duplicado mi cartera de clientes. Es la mejor plataforma para oficios."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: url('https://i.pravatar.cc/150?img=5'); background-size: cover;"></div>
+                        <div class="author-info">
+                            <h4>Ana Martínez</h4>
+                            <span>Carpintera Profesional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- 3. JOB BOARD PREVIEW --}}
     <section class="job-board-section">
         <div class="container">
@@ -139,6 +228,19 @@
                         <div style="color: var(--gold); font-weight: bold;">Disponible Hoy</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- 3.5 BRANDS SECTION --}}
+    <section class="brands-section">
+        <div class="container">
+            <div class="brands-grid">
+                <div class="brand-item">TECHNO</div>
+                <div class="brand-item">CONSTRUMEX</div>
+                <div class="brand-item">INOVA</div>
+                <div class="brand-item">GLOBAL</div>
+                <div class="brand-item">STARTUP</div>
             </div>
         </div>
     </section>
