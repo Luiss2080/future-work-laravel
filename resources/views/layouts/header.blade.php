@@ -139,14 +139,7 @@
 
         <!-- Acciones Derecha (Buscador + Auth) -->
         <div class="header-right-actions">
-            <div class="navbar-search">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Buscar empleo...">
-                    <button class="search-btn" type="button">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
+
 
             <div class="navbar-auth">
                 @guest

@@ -126,63 +126,74 @@
     min-width: 0;
 }
 
-/* Search */
-.search-container {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 0.4rem 0.8rem;
-    display: flex;
-    align-items: center;
-    width: 220px;
-}
+/* Search Removed */
 
-.search-input {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 0.9rem;
-    width: 100%;
-    outline: none;
-}
-
-/* Auth Buttons */
+/* Modern Auth Buttons */
 .navbar-auth {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
 }
 
 .btn {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1.2rem;
-    height: 40px;
-    font-size: 0.85rem;
+    gap: 0.6rem;
+    padding: 0 1.8rem; /* Wider click area */
+    height: 44px; /* Taller for modern feel */
+    font-size: 0.9rem;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 50px; /* Modern Pill Shape */
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    letter-spacing: 0.05em;
 }
 
+/* Icon Animation */
+.btn i {
+    transition: transform 0.3s ease;
+}
+.btn:hover i {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/* LOGIN (Outline) */
 .btn-outline-primary {
-    border: 1px solid var(--primary-neon);
-    color: var(--primary-neon);
     background: transparent;
+    border: 2px solid var(--primary-neon); /* Thicker for visibility */
+    color: var(--primary-neon);
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.1);
 }
 
+.btn-outline-primary:hover {
+    background: rgba(34, 211, 238, 0.1);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4); /* Neon Glow */
+    transform: translateY(-2px);
+    color: #fff;
+    border-color: #fff;
+}
+
+/* REGISTER (Solid Gradient) */
 .btn-primary {
-    background: var(--primary-neon);
-    padding-left: 0.5rem;
-    font-weight: 800;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 0.3rem;
-    display: block; /* Ensure it takes line */
+    background: linear-gradient(
+        135deg,
+        var(--primary-cyan),
+        var(--primary-neon)
+    );
+    border: none;
+    color: #000; /* Dark text for contrast */
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
 }
 
-    border: 1px solid var(--primary-neon);
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.6); /* Expansion Glow */
+    color: #000;
 }
 
 /* Dropdowns */
@@ -197,8 +208,7 @@
     background: #0f172a; /* Solid Background */
     border: 1px solid rgba(34, 211, 238, 0.3); /* Neon Border */
     border-radius: 16px; /* Smooth card */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 
-                0 0 20px rgba(34, 211, 238, 0.1); /* Neon Inner Glow */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(34, 211, 238, 0.1); /* Neon Inner Glow */
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px) scale(0.95);
