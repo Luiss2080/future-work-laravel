@@ -10,8 +10,11 @@
 <div class="auth-container">
     <div class="auth-card">
         <div class="auth-header">
-            <h2><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</h2>
-            <p>Bienvenido de nuevo a Future Work</p>
+            <div class="security-badge">
+                <i class="fas fa-shield-alt"></i> Portal Seguro
+            </div>
+            <h2>Bienvenido de nuevo</h2>
+            <p>Ingresa a tu cuenta para continuar</p>
         </div>
         
         <form class="auth-form" action="{{ route('login') }}" method="POST">
@@ -42,7 +45,7 @@
                 @enderror
             </div>
             
-            <!-- Remember Me & Forgot Password -->
+            <!-- Remember & Forgot -->
             <div class="auth-options">
                 <div class="form-check">
                     <input type="checkbox" name="remember" id="remember" class="form-check-input" {{ old('remember') ? 'checked' : '' }}>
@@ -50,26 +53,27 @@
                 </div>
                 
                 @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a>
+                    <a href="{{ route('password.request') }}" class="forgot-link">¿Olvidaste tu contraseña?</a>
                 @endif
             </div>
             
             <button type="submit" class="btn-auth-submit">
-                Ingresar
+                INICIAR SESIÓN
             </button>
         </form>
 
-        <div class="social-login">
-            <p class="social-label">O inicia sesión con</p>
-            <div class="social-buttons">
-                <button class="btn-social"><i class="fab fa-google"></i></button>
-                <button class="btn-social"><i class="fab fa-linkedin-in"></i></button>
-                <button class="btn-social"><i class="fab fa-github"></i></button>
-            </div>
+        <div class="auth-divider">
+            <span>O continúa con</span>
+        </div>
+
+        <div class="social-buttons">
+            <button class="btn-social" title="Google"><i class="fab fa-google"></i></button>
+            <button class="btn-social" title="LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+            <button class="btn-social" title="GitHub"><i class="fab fa-github"></i></button>
         </div>
         
         <div class="auth-footer">
-            <p>¿No tienes cuenta? <a href="{{ route('register') }}">Regístrate aquí</a></p>
+            <p>¿Aún no tienes cuenta? <a href="{{ route('register') }}">Regístrate gratis</a></p>
         </div>
     </div>
 </div>
