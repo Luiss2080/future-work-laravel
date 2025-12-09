@@ -1,117 +1,98 @@
 @extends('layouts.web-app')
 
-@section('title', 'Contacto - Future Work')
+@section('title', 'Contáctanos - Future Work')
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/contacto/contacto.css') }}">
 @endsection
 
 @section('content')
-<div class="contacto-container">
-    <section class="hero-contacto">
-        <h1>Contáctanos</h1>
-        <p>Estamos aquí para ayudarte a encontrar tu próxima oportunidad</p>
-    </section>
 
-    <div class="contacto-content">
-        <div class="formulario-contacto">
-            <h2>Envíanos un mensaje</h2>
-            <form id="form-contacto">
-                <div class="form-grupo">
-                    <label for="nombre">Nombre completo *</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                
-                <div class="form-grupo">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-grupo">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono">
-                </div>
-                
-                <div class="form-grupo">
-                    <label for="asunto">Asunto *</label>
-                    <select id="asunto" name="asunto" required>
-                        <option value="">Selecciona un asunto</option>
-                        <option value="candidato">Soy candidato</option>
-                        <option value="empresa">Soy empresa</option>
-                        <option value="soporte">Soporte técnico</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                
-                <div class="form-grupo">
-                    <label for="mensaje">Mensaje *</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Describe tu consulta..."></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-            </form>
-        </div>
+<!-- Hero Section -->
+<section class="contact-hero">
+    <div class="container hero-content">
+        <h1 data-aos="fade-down">Hablemos de Futuro</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            ¿Tienes preguntas o propuestas? Estamos aquí para escucharte y construir juntos.
+        </p>
+    </div>
+</section>
 
-        <div class="info-contacto">
-            <h2>Información de contacto</h2>
+<!-- Content Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
             
-            <div class="contacto-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                    <h4>Dirección</h4>
-                    <p>Calle Gran Vía 123<br>28013 Madrid, España</p>
-                </div>
-            </div>
-            
-            <div class="contacto-item">
-                <i class="fas fa-phone"></i>
-                <div>
-                    <h4>Teléfono</h4>
-                    <p>+34 900 123 456</p>
-                </div>
-            </div>
-            
-            <div class="contacto-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <h4>Email</h4>
-                    <p>info@futurework.es</p>
-                </div>
-            </div>
-            
-            <div class="contacto-item">
-                <i class="fas fa-clock"></i>
-                <div>
-                    <h4>Horario</h4>
-                    <p>Lunes - Viernes<br>9:00 - 18:00</p>
-                </div>
+            <!-- Contact Form -->
+            <div class="contact-form-card" data-aos="fade-right">
+                <h2 class="form-title">Envíanos un mensaje</h2>
+                <form action="#" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="juan@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <select id="subject" name="subject" class="form-control">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="soporte">Soporte Técnico</option>
+                            <option value="ventas">Ventas / Empresas</option>
+                            <option value="prensa">Prensa</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Describe tu consulta..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
             </div>
 
-            <div class="redes-sociales">
-                <h4>Síguenos</h4>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <!-- Info Sidebar -->
+            <div class="info-sidebar">
+                <!-- Address -->
+                <div class="info-card" data-aos="fade-left">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Visítanos</h4>
+                    <p>Av. Principal 123, Piso 4<br>Edificio Future Tower<br>Madrid, España</p>
+                </div>
+
+                <!-- Phone -->
+                <div class="info-card" data-aos="fade-left" data-aos-delay="100">
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h4>Llámanos</h4>
+                    <p>Atención 24/7</p>
+                    <p><a href="tel:+34911234567">+34 91 123 4567</a></p>
+                </div>
+
+                <!-- Email -->
+                <div class="info-card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Escríbenos</h4>
+                    <p>Consultas generales:</p>
+                    <p><a href="mailto:hola@futurework.com">hola@futurework.com</a></p>
+                </div>
+
+                <!-- Socials -->
+                <div class="info-card" data-aos="fade-left" data-aos-delay="300">
+                    <div class="info-icon"><i class="fas fa-share-alt"></i></div>
+                    <h4>Síguenos</h4>
+                    <p>Encuéntranos en redes sociales para las últimas novedades.</p>
                 </div>
             </div>
+
         </div>
     </div>
+</section>
 
-    <div class="mapa-ubicacion">
-        <h2>Nuestra ubicación</h2>
-        <div class="mapa-container">
-            <!-- Aquí iría el mapa de Google Maps o similar -->
-            <div class="mapa-placeholder">
-                <i class="fas fa-map"></i>
-                <p>Mapa interactivo</p>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
-
-@section('scripts')
-    <script src="{{ asset('assets/js/contacto/contacto.js') }}"></script>
 @endsection
