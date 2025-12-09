@@ -7,164 +7,177 @@
 @endsection
 
 @section('content')
-<div class="publicar-container">
-    <section class="hero-publicar">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Publica tu empleo</h1>
-                <p>Encuentra el candidato perfecto para tu empresa</p>
-                <div class="stats-mini">
-                    <span>+5,000 candidatos activos</span>
-                    <span>95% efectividad</span>
+<div class="publicar-wrapper">
+    
+    <!-- LEFT COLUMN: INTRO & BENEFITS -->
+    <div class="publicar-intro">
+        <div class="intro-sticky-content">
+            <span class="intro-subtitle" data-aos="fade-down">Para Empresas</span>
+            <h1 class="intro-title" data-aos="fade-up" data-aos-delay="100">
+                Encuentra al Talento Perfecto
+            </h1>
+            <p class="intro-text" data-aos="fade-up" data-aos-delay="200">
+                Publica tu oferta en minutos y accede a una red global de profesionales verificados.
+            </p>
+
+            <!-- Stats -->
+            <div class="intro-stats" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-card">
+                    <span class="stat-number">+5k</span>
+                    <span class="stat-label">Candidatos Activos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Tasa de Éxito</span>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="benefits-list">
+                <div class="benefit-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="benefit-content">
+                        <h4>Matching Inteligente</h4>
+                        <p>Nuestra IA te sugiere los mejores perfiles automáticamente.</p>
+                    </div>
+                </div>
+                <div class="benefit-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="benefit-icon"><i class="fas fa-globe"></i></div>
+                    <div class="benefit-content">
+                        <h4>Alcance Global</h4>
+                        <p>Tu oferta visible para candidatos de todo el mundo.</p>
+                    </div>
+                </div>
+                <div class="benefit-item" data-aos="fade-right" data-aos-delay="600">
+                    <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="benefit-content">
+                        <h4>Garantía de Calidad</h4>
+                        <p>Solo pagas si encuentras al candidato ideal (Planes Premium).</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="formulario-empleo">
-        <div class="container">
+    <!-- RIGHT COLUMN: JOB FORM -->
+    <div class="publicar-form-section">
+        <div class="form-card" data-aos="fade-left">
             <form id="empleoForm" class="empleo-form">
-                <div class="form-section">
-                    <h3>Información del Empleo</h3>
+                @csrf
+                
+                <!-- Section 1: Job Details -->
+                <div class="section-block">
+                    <h3 class="section-title"><i class="fas fa-briefcase"></i> Detalles del Empleo</h3>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="titulo">Título del Empleo *</label>
-                            <input type="text" id="titulo" name="titulo" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="categoria">Categoría *</label>
-                            <select id="categoria" name="categoria" required>
-                                <option value="">Seleccionar categoría</option>
-                                <option value="construccion">Construcción</option>
-                                <option value="tecnologia">Tecnología</option>
-                                <option value="administracion">Administración</option>
-                                <option value="ventas">Ventas</option>
-                                <option value="educacion">Educación</option>
-                                <option value="salud">Salud</option>
-                                <option value="otros">Otros</option>
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <label for="titulo">Título de la Oferta *</label>
+                        <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Ej. Senior React Developer" required>
                     </div>
 
-                    <div class="form-row">
+                    <div class="form-grid">
                         <div class="form-group">
-                            <label for="ubicacion">Ubicación *</label>
-                            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad, País" required>
+                            <label for="categoria">Categoría Profesional *</label>
+                            <select id="categoria" name="categoria" class="form-control" required>
+                                <option value="">Selecciona...</option>
+                                <option value="tecnologia">Tecnología / Desarrollo</option>
+                                <option value="diseno">Diseño / Creativo</option>
+                                <option value="marketing">Marketing Digital</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="finanzas">Finanzas</option>
+                                <option value="rrhh">Recursos Humanos</option>
+                            </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="tipo_empleo">Tipo de Empleo *</label>
-                            <select id="tipo_empleo" name="tipo_empleo" required>
-                                <option value="">Seleccionar tipo</option>
-                                <option value="tiempo_completo">Tiempo Completo</option>
-                                <option value="medio_tiempo">Medio Tiempo</option>
-                                <option value="freelance">Freelance</option>
-                                <option value="temporal">Temporal</option>
-                                <option value="practicas">Prácticas</option>
+                            <label for="tipo_empleo">Tipo de Contrato *</label>
+                            <select id="tipo_empleo" name="tipo_empleo" class="form-control" required>
+                                <option value="full_time">Tiempo Completo</option>
+                                <option value="part_time">Medio Tiempo</option>
+                                <option value="freelance">Freelance / Proyectos</option>
+                                <option value="internship">Prácticas</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="descripcion">Descripción del Empleo *</label>
-                        <textarea id="descripcion" name="descripcion" rows="6" placeholder="Describe las responsabilidades, requisitos y beneficios..." required></textarea>
+                        <label for="ubicacion">Ubicación (Ciudad o Remoto) *</label>
+                        <input type="text" id="ubicacion" name="ubicacion" class="form-control" placeholder="Ej. Madrid, España (o Remoto)" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descripcion">Descripción del Puesto *</label>
+                        <textarea id="descripcion" name="descripcion" class="form-control" rows="6" placeholder="Detalla las responsabilidades, requisitos y lo que ofreces..." required></textarea>
                     </div>
                 </div>
 
-                <div class="form-section">
-                    <h3>Información de la Empresa</h3>
+                <!-- Section 2: Company Details -->
+                <div class="section-block" style="margin-top: 3rem;">
+                    <h3 class="section-title"><i class="fas fa-building"></i> Sobre la Empresa</h3>
                     
-                    <div class="form-row">
+                    <div class="form-grid">
                         <div class="form-group">
                             <label for="empresa">Nombre de la Empresa *</label>
-                            <input type="text" id="empresa" name="empresa" required>
+                            <input type="text" id="empresa" name="empresa" class="form-control" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="email">Email de Contacto *</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email de Contacto (Privado) *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h3>Detalles del Salario</h3>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="salario_min">Salario Mínimo</label>
-                            <input type="number" id="salario_min" name="salario_min" placeholder="€">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="salario_max">Salario Máximo</label>
-                            <input type="number" id="salario_max" name="salario_max" placeholder="€">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="frecuencia">Frecuencia</label>
-                            <select id="frecuencia" name="frecuencia">
-                                <option value="mensual">Por mes</option>
-                                <option value="anual">Por año</option>
-                                <option value="por_hora">Por hora</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="negociable" id="negociable">
-                            <span class="checkmark"></span>
-                            Salario negociable
-                        </label>
+                    <div class="form-group">
+                        <label for="website">Sitio Web (Opcional)</label>
+                        <input type="url" id="website" name="website" class="form-control" placeholder="https://tuempresa.com">
                     </div>
                 </div>
 
+                <!-- Section 3: Salary -->
+                <div class="section-block" style="margin-top: 3rem;">
+                    <h3 class="section-title"><i class="fas fa-coins"></i> Rango Salarial (Opcional)</h3>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="salario_min">Mínimo</label>
+                            <input type="number" id="salario_min" name="salario_min" class="form-control" placeholder="Ej. 30000">
+                        </div>
+                        <div class="form-group">
+                            <label for="salario_max">Máximo</label>
+                            <input type="number" id="salario_max" name="salario_max" class="form-control" placeholder="Ej. 50000">
+                        </div>
+                    </div>
+                    
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="negociable">
+                        <span>Salario a convenir / Negociable</span>
+                    </label>
+                </div>
+
+                <!-- Actions -->
                 <div class="form-actions">
-                    <button type="button" class="btn btn-secondary">Guardar Borrador</button>
-                    <button type="submit" class="btn btn-primary">Publicar Empleo</button>
+                    <button type="button" class="btn-draft">Guardar Borrador</button>
+                    <button type="submit" class="btn-publish">
+                        PUBLICAR AHORA <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
+
             </form>
         </div>
-    </section>
-
-    <section class="beneficios-publicar">
-        <div class="container">
-            <h2>¿Por qué publicar en Future Work?</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-card">
-                    <i class="fas fa-users"></i>
-                    <h4>Base amplia de candidatos</h4>
-                    <p>Acceso a miles de profesionales calificados</p>
-                </div>
-                <div class="beneficio-card">
-                    <i class="fas fa-target"></i>
-                    <h4>Segmentación precisa</h4>
-                    <p>Encuentra candidatos específicos para tu industria</p>
-                </div>
-                <div class="beneficio-card">
-                    <i class="fas fa-clock"></i>
-                    <h4>Publicación rápida</h4>
-                    <p>Tu empleo estará visible en menos de 24 horas</p>
-                </div>
-                <div class="beneficio-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Analytics detallados</h4>
-                    <p>Estadísticas completas de tu publicación</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 </div>
 @endsection
 
 @section('scripts')
     <script src="{{ asset('assets/js/empresas/publicar.js') }}"></script>
+    <script>
+        // Simple mock script for form submission effect
+        document.getElementById('empleoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.btn-publish');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
+            setTimeout(() => {
+                alert('¡Oferta publicada con éxito! (Demo)');
+                btn.innerHTML = originalText;
+            }, 1500);
+        });
+    </script>
 @endsection

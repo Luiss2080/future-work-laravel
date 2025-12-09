@@ -1,0 +1,295 @@
+/* =========================================
+   POST JOB (PUBLICAR) - NEON DARK SPLIT LAYOUT
+   ========================================= */
+
+:root {
+    --bg-dark: #020617;
+    --bg-card: #0f172a;
+    --primary-neon: #22d3ee;
+    --primary-cyan: #06b6d4;
+    --primary-purple: #8b5cf6;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(15, 23, 42, 0.8);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- MAIN WRAPPER (SPLIT SCREEN) --- */
+.publicar-wrapper {
+    display: grid;
+    grid-template-columns: 35% 65%; /* Similar to CV page */
+    min-height: calc(100vh - 80px);
+    max-width: 100%;
+    margin: 0;
+}
+
+/* --- LEFT COLUMN: INTRO & BENEFITS --- */
+.publicar-intro {
+    background: linear-gradient(rgba(2, 6, 23, 0.9), rgba(2, 6, 23, 0.95)),
+        url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-right: 1px solid var(--border-color);
+    padding: 3rem;
+}
+
+.intro-sticky-content {
+    position: sticky;
+    top: 2rem;
+}
+
+.intro-subtitle {
+    display: inline-block;
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--primary-cyan);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.intro-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* STATS GRID */
+.intro-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-neon);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+/* BENEFITS LIST */
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.benefit-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--primary-purple);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.benefit-content h4 {
+    margin: 0 0 0.3rem;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.benefit-content p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* --- RIGHT COLUMN: FORM --- */
+.publicar-form-section {
+    padding: 3rem 4rem;
+    background: var(--bg-dark);
+}
+
+.form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.section-title i {
+    color: var(--primary-neon);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-neon);
+    outline: none;
+    background: rgba(15, 23, 42, 1);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+/* CHECKBOX */
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-gray);
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.checkbox-option input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-neon);
+}
+
+/* ACTION BUTTONS */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-draft {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-gray);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-draft:hover {
+    border-color: white;
+    color: white;
+}
+
+.btn-publish {
+    background: linear-gradient(
+        135deg,
+        var(--primary-cyan),
+        var(--primary-neon)
+    );
+    color: black;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-publish:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(34, 211, 238, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .publicar-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .publicar-intro {
+        padding: 3rem 2rem;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .publicar-form-section {
+        padding: 2rem;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
