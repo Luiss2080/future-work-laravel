@@ -7,287 +7,135 @@
 @endsection
 
 @section('content')
-<div class="consejos-container">
-    <section class="hero-consejos">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Consejos para tu Carrera</h1>
-                <p>Guías y recursos para potenciar tu desarrollo profesional</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="categorias-consejos">
-        <div class="container">
-            <div class="consejos-tabs">
-                <button class="tab-btn active" data-tab="cv">CV y Currículum</button>
-                <button class="tab-btn" data-tab="entrevistas">Entrevistas</button>
-                <button class="tab-btn" data-tab="networking">Networking</button>
-                <button class="tab-btn" data-tab="desarrollo">Desarrollo</button>
-            </div>
+<!-- Hero Section -->
+<section class="consejos-hero">
+    <div class="container hero-content">
+        <h1 data-aos="fade-down">Tu Carrera al Siguiente Nivel</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            Descubre guías prácticas, secretos de expertos y herramientas para destacar en el mercado laboral actual.
+        </p>
+    </div>
+</section>
 
-            <!-- CV y Currículum -->
-            <div class="tab-content active" id="cv">
-                <div class="consejos-grid">
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Cómo estructurar tu CV perfecto</h3>
-                            <p>Aprende la estructura ideal para destacar tus fortalezas y experiencia profesional.</p>
-                            <ul>
-                                <li>Información personal y contacto</li>
-                                <li>Resumen profesional impactante</li>
-                                <li>Experiencia laboral relevante</li>
-                                <li>Educación y certificaciones</li>
-                                <li>Habilidades técnicas y blandas</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline">Ver ejemplos</a>
-                        </div>
-                    </article>
-
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-magic"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Palabras clave que destacan</h3>
-                            <p>Incluye términos relevantes para superar los filtros de ATS y llamar la atención de reclutadores.</p>
-                            <div class="keywords-ejemplo">
-                                <span class="keyword">Liderazgo</span>
-                                <span class="keyword">Innovación</span>
-                                <span class="keyword">Resultados</span>
-                                <span class="keyword">Eficiencia</span>
-                            </div>
-                            <a href="#" class="btn btn-outline">Lista completa</a>
-                        </div>
-                    </article>
-
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Cuantifica tus logros</h3>
-                            <p>Usa números y métricas para demostrar el impacto de tu trabajo.</p>
-                            <div class="ejemplos-logros">
-                                <div class="logro-ejemplo">
-                                    <strong>Antes:</strong> "Mejoré las ventas del equipo"
-                                </div>
-                                <div class="logro-ejemplo destacado">
-                                    <strong>Después:</strong> "Incrementé las ventas en un 35% durante 6 meses"
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-outline">Más ejemplos</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Entrevistas -->
-            <div class="tab-content" id="entrevistas">
-                <div class="consejos-grid">
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Preparación para entrevistas</h3>
-                            <p>Estrategias para llegar confiado y preparado a tu entrevista laboral.</p>
-                            <div class="checklist">
-                                <div class="check-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>Investiga sobre la empresa</span>
-                                </div>
-                                <div class="check-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>Practica respuestas comunes</span>
-                                </div>
-                                <div class="check-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>Prepara preguntas inteligentes</span>
-                                </div>
-                                <div class="check-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>Planifica tu vestimenta</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-question-circle"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Preguntas frecuentes y cómo responderlas</h3>
-                            <p>Las preguntas más comunes en entrevistas y estrategias para responderlas efectivamente.</p>
-                            <div class="preguntas-frecuentes">
-                                <div class="pregunta-item">
-                                    <strong>"Háblame de ti"</strong>
-                                    <p>Enfócate en tu trayectoria profesional relevante</p>
-                                </div>
-                                <div class="pregunta-item">
-                                    <strong>"¿Por qué quieres trabajar aquí?"</strong>
-                                    <p>Muestra conocimiento sobre la empresa y alineación con sus valores</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Entrevistas virtuales</h3>
-                            <p>Consejos específicos para destacar en entrevistas por videollamada.</p>
-                            <ul>
-                                <li>Prueba tu tecnología previamente</li>
-                                <li>Encuentra un espacio iluminado y silencioso</li>
-                                <li>Mantén contacto visual con la cámara</li>
-                                <li>Ten agua y notas a mano</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Networking -->
-            <div class="tab-content" id="networking">
-                <div class="consejos-grid">
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Optimiza tu perfil de LinkedIn</h3>
-                            <p>Haz que tu perfil profesional destaque y atraiga oportunidades.</p>
-                            <div class="linkedin-tips">
-                                <div class="tip-item">
-                                    <i class="fas fa-camera"></i>
-                                    <span>Foto profesional de calidad</span>
-                                </div>
-                                <div class="tip-item">
-                                    <i class="fas fa-pencil-alt"></i>
-                                    <span>Titular llamativo y específico</span>
-                                </div>
-                                <div class="tip-item">
-                                    <i class="fas fa-align-left"></i>
-                                    <span>Resumen que cuenta tu historia</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Construye tu red profesional</h3>
-                            <p>Estrategias para crear y mantener contactos profesionales valiosos.</p>
-                            <ul>
-                                <li>Participa en eventos de tu industria</li>
-                                <li>Únete a grupos profesionales</li>
-                                <li>Mantén contacto regular con tu red</li>
-                                <li>Ofrece ayuda antes de pedirla</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Desarrollo -->
-            <div class="tab-content" id="desarrollo">
-                <div class="consejos-grid">
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Educación continua</h3>
-                            <p>Mantente actualizado en tu campo profesional.</p>
-                            <div class="recursos-educacion">
-                                <a href="#" class="recurso-link">
-                                    <i class="fas fa-book"></i>
-                                    <span>Cursos online recomendados</span>
-                                </a>
-                                <a href="#" class="recurso-link">
-                                    <i class="fas fa-certificate"></i>
-                                    <span>Certificaciones valiosas</span>
-                                </a>
-                                <a href="#" class="recurso-link">
-                                    <i class="fas fa-podcast"></i>
-                                    <span>Podcasts de desarrollo profesional</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="consejo-card">
-                        <div class="consejo-icon">
-                            <i class="fas fa-target"></i>
-                        </div>
-                        <div class="consejo-content">
-                            <h3>Planifica tu carrera</h3>
-                            <p>Define objetivos claros y crea un plan para alcanzarlos.</p>
-                            <div class="plan-carrera">
-                                <div class="paso">
-                                    <span class="numero">1</span>
-                                    <span>Evalúa tu situación actual</span>
-                                </div>
-                                <div class="paso">
-                                    <span class="numero">2</span>
-                                    <span>Define tus objetivos</span>
-                                </div>
-                                <div class="paso">
-                                    <span class="numero">3</span>
-                                    <span>Identifica las brechas</span>
-                                </div>
-                                <div class="paso">
-                                    <span class="numero">4</span>
-                                    <span>Crea un plan de acción</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="herramientas-carrera">
-        <div class="container">
-            <h2>Herramientas gratuitas</h2>
-            <div class="herramientas-grid">
-                <div class="herramienta">
-                    <i class="fas fa-file-download"></i>
-                    <h4>Plantillas de CV</h4>
-                    <p>Descarga plantillas profesionales gratuitas</p>
-                    <a href="#" class="btn btn-primary">Descargar</a>
-                </div>
-                
-                <div class="herramienta">
-                    <i class="fas fa-clipboard-check"></i>
-                    <h4>Checklist de búsqueda</h4>
-                    <p>Lista completa para organizar tu búsqueda de empleo</p>
-                    <a href="#" class="btn btn-primary">Obtener</a>
-                </div>
-                
-                <div class="herramienta">
-                    <i class="fas fa-chart-pie"></i>
-                    <h4>Test de personalidad laboral</h4>
-                    <p>Descubre qué tipo de trabajo se adapta mejor a ti</p>
-                    <a href="#" class="btn btn-primary">Realizar test</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Topics Navigation -->
+<div class="container">
+    <div class="topics-nav" data-aos="fade-up" data-aos-delay="200">
+        <a href="#cv" class="topic-btn active"><i class="far fa-file-alt"></i> CV Perfecto</a>
+        <a href="#entrevistas" class="topic-btn"><i class="far fa-comments"></i> Entrevistas</a>
+        <a href="#networking" class="topic-btn"><i class="fas fa-users"></i> Networking</a>
+        <a href="#desarrollo" class="topic-btn"><i class="fas fa-chart-line"></i> Desarrollo</a>
+    </div>
 </div>
-@endsection
 
-@section('scripts')
-    <script src="{{ asset('assets/js/candidatos/consejos.js') }}"></script>
+<!-- Main Content -->
+<section class="articles-section">
+    <div class="container">
+
+        <!-- CATEGORY: CV & CURRICULUM -->
+        <h2 class="category-title" id="cv">Optimización de CV</h2>
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <div class="article-card" data-aos="fade-up">
+                <div class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop" alt="CV Structure">
+                    <span class="article-category">Guía Básica</span>
+                </div>
+                <div class="article-content">
+                    <h3>Cómo estructurar tu CV para el 2025</h3>
+                    <p>La estructura ideal ha cambiado. Aprende qué secciones priorizar para captar la atención de los reclutadores en 6 segundos.</p>
+                    <div class="article-footer">
+                        <span class="read-time"><i class="far fa-clock"></i> 5 min</span>
+                        <a href="#" class="btn-read-more">Leer Artículo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1507208773393-40d9fc9f600e?q=80&w=2070&auto=format&fit=crop" alt="Keywords">
+                    <span class="article-category">Estrategia</span>
+                </div>
+                <div class="article-content">
+                    <h3>Palabras clave para vencer a los ATS</h3>
+                    <p>Cómo optimizar tu currículum para que los algoritmos de selección automática no te descarten antes de tiempo.</p>
+                    <div class="article-footer">
+                        <span class="read-time"><i class="far fa-clock"></i> 8 min</span>
+                        <a href="#" class="btn-read-more">Leer Artículo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" alt="Achievements">
+                    <span class="article-category">Tips Pro</span>
+                </div>
+                <div class="article-content">
+                    <h3>Cuantifica tus logros</h3>
+                    <p>No digas qué hiciste, di qué lograste. Aprende a convertir responsabilidades en métricas de éxito impactantes.</p>
+                    <div class="article-footer">
+                        <span class="read-time"><i class="far fa-clock"></i> 6 min</span>
+                        <a href="#" class="btn-read-more">Leer Artículo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CATEGORY: ENTREVISTAS -->
+        <h2 class="category-title" id="entrevistas">Maestría en Entrevistas</h2>
+        <div class="articles-grid">
+             <!-- Article 4 -->
+             <div class="article-card" data-aos="fade-up">
+                <div class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2069&auto=format&fit=crop" alt="Interview">
+                    <span class="article-category">Soft Skills</span>
+                </div>
+                <div class="article-content">
+                    <h3>Preguntas trampa y cómo responderlas</h3>
+                    <p>Descubre qué hay detrás de preguntas como "¿Cuál es tu mayor debilidad?" y cómo responder con inteligencia emocional.</p>
+                    <div class="article-footer">
+                        <span class="read-time"><i class="far fa-clock"></i> 10 min</span>
+                        <a href="#" class="btn-read-more">Leer Artículo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="article-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="article-thumb">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" alt="Negotiation">
+                    <span class="article-category">Negociación</span>
+                </div>
+                <div class="article-content">
+                    <h3>Negociación salarial para principiantes</h3>
+                    <p>Guía paso a paso para investigar el mercado, esperar el momento justo y pedir lo que vales sin miedo.</p>
+                    <div class="article-footer">
+                        <span class="read-time"><i class="far fa-clock"></i> 12 min</span>
+                        <a href="#" class="btn-read-more">Leer Artículo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Featured Tip Box -->
+            <div class="featured-tip" data-aos="zoom-in" data-aos-delay="200">
+                <div class="tip-content">
+                    <h2>¿Listo para el siguiente paso?</h2>
+                    <p>Sube tu CV actualizado hoy mismo y deja que nuestra IA encuentre las vacantes ideales para tu nuevo perfil.</p>
+                    <a href="{{ route('subir-cv') }}" class="btn-read-more" style="font-size: 1.2rem; background: var(--primary-neon); color: black; padding: 0.8rem 2rem; border-radius: 50px; display: inline-block;">
+                        Subir mi CV Ahora
+                    </a>
+                </div>
+                <div class="tip-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 @endsection
