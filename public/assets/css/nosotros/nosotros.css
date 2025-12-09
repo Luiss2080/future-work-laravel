@@ -225,13 +225,14 @@ body {
 /* --- TEAM SECTION --- */
 .team-section {
     padding: 6rem 0;
-    background: rgba(15, 23, 42, 0.3); /* Subtle backdrop */
+    background: rgba(15, 23, 42, 0.3);
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
+    padding-bottom: 2rem;
 }
 
 .team-card {
@@ -240,65 +241,108 @@ body {
     overflow: hidden;
     border: 1px solid var(--border-color);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    height: 100%; /* Ensure full height in grid */
+}
+
+/* Gradient Border Bottom Effect */
+.team-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--primary-cyan),
+        var(--primary-neon)
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
 }
 
 .team-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-neon);
+    transform: translateY(-15px);
+    border-color: rgba(34, 211, 238, 0.5);
+    box-shadow: 0 20px 40px rgba(34, 211, 238, 0.15);
+}
+
+.team-card:hover::after {
+    transform: scaleX(1);
 }
 
 .team-img-wrapper {
-    height: 250px;
+    height: 300px; /* Taller for better portrait view */
     overflow: hidden;
     position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .team-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    object-position: top center; /* CRITICAL: Faces visible */
+    transition: transform 0.8s ease;
 }
 
 .team-card:hover .team-img-wrapper img {
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(5px);
 }
 
 .team-info {
-    padding: 1.5rem;
+    padding: 1.8rem;
 }
+
 .team-info h3 {
     margin: 0;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
+
 .team-info span {
     color: var(--primary-neon);
     font-size: 0.9rem;
     font-weight: 600;
     display: block;
     margin-top: 0.5rem;
-}
-.team-socials {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.team-socials a {
-    color: var(--text-gray);
-    transition: color 0.3s;
-}
-.team-socials a:hover {
-    color: var(--primary-neon);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
-/* --- FAQ SECTION (Accordion) --- */
-.faq-section {
-    padding: 6rem 0;
-    max-width: 800px;
-    margin: 0 auto;
+.team-socials {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.team-socials a {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%; /* Circular icons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    transition: all 0.3s;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+.team-socials a:hover {
+    color: black;
+    background: var(--primary-neon);
+    border-color: var(--primary-neon);
+    transform: translateY(-3px) rotate(15deg); /* Playful rotation */
 }
 
 details {

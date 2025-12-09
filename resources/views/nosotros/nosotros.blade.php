@@ -118,8 +118,10 @@
                     <h3>Augusto</h3>
                     <span>CEO & Fundador</span>
                     <div class="team-socials">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Portfolio"><i class="fas fa-globe"></i></a>
+                        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -133,8 +135,10 @@
                     <h3>Jenny</h3>
                     <span>Directora de Marketing</span>
                     <div class="team-socials">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
+                        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -148,8 +152,10 @@
                     <h3>José</h3>
                     <span>Desarrollador Lead</span>
                     <div class="team-socials">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="StackOverflow"><i class="fab fa-stack-overflow"></i></a>
+                        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -163,13 +169,15 @@
                     <h3>Ronaldo</h3>
                     <span>Jefe de Operaciones</span>
                     <div class="team-socials">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Medium"><i class="fab fa-medium"></i></a>
+                        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Team Member 5: Jose (Sin Lentes) - Assuming a distinct role or person -->
+            <!-- Team Member 5: Jose (Sin Lentes) -->
             <div class="team-card" data-aos="flip-left" data-aos-delay="400">
                 <div class="team-img-wrapper">
                     <img src="{{ asset('images/JoseSinLentes.jpg') }}" alt="Jose Alternativo">
@@ -178,8 +186,10 @@
                     <h3>José (CM)</h3>
                     <span>Community Manager</span>
                     <div class="team-socials">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
