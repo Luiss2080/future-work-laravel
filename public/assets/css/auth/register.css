@@ -1,0 +1,180 @@
+/* =========================================
+   REGISTER PAGE - NEON DARK (RESTORED)
+   ========================================= */
+
+:root {
+    --bg-dark: #020617;
+    --bg-card: #0f172a;
+    --primary-neon: #22d3ee;
+    --primary-cyan: #06b6d4;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure body background matches theme */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+}
+
+/* --- CONTAINER (Centering Fix) --- */
+.auth-container {
+    width: 100%;
+    max-width: 480px; /* Strict width constraint */
+    margin: 140px auto 4rem; /* Top margin clears header, auto centers horizontally */
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- CARD --- */
+.auth-card {
+    background-color: #0f172a; /* Solid dark color just in case blur fails */
+    background: rgba(15, 23, 42, 0.95); /* High opacity for legibility */
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Neon Top Border */
+.auth-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--primary-cyan),
+        var(--primary-neon)
+    );
+}
+
+/* --- HEADER --- */
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.auth-header h2 i {
+    color: var(--primary-neon);
+}
+
+.auth-header p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* --- FORM INPUTS --- */
+.form-group {
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+/* Wrapper for relative positioning of icon */
+.input-icon-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* The Icon inside the input */
+.input-icon-wrapper i,
+.form-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    pointer-events: none; /* Let clicks pass through */
+    transition: color 0.3s ease;
+    z-index: 5;
+}
+
+/* The Input Field */
+.form-control {
+    width: 100%;
+    background: rgba(2, 6, 23, 0.6); /* Dark background */
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 0.9rem 1rem 0.9rem 2.8rem; /* Padding left for icon */
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Crucial for width */
+}
+
+/* Focus State */
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+    background: rgba(2, 6, 23, 0.9);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+}
+
+.auth-footer a {
+    color: var(--primary-neon);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- ALERTS --- */
+.alert {
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.alert-danger {
+    background: rgba(220, 38, 38, 0.1);
+    color: #f87171;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+/* --- CHECKBOX --- */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-top: 0.5rem;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-neon);
+    cursor: pointer;
+}

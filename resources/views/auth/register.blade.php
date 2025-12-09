@@ -1,10 +1,10 @@
-@extends('layouts.web.app')
+@extends('layouts.web-app')
 
 @section('title', 'Registro - Future Work')
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('assets/css/web/auth.css') }}">
-@endpush
+@section('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/auth/register.css') }}">
+@endsection
 
 @section('content')
 <div class="auth-container">
@@ -32,33 +32,52 @@
         
         <form class="auth-form" action="{{ route('register') }}" method="POST">
             @csrf
+            
+            <!-- Nombre -->
             <div class="form-group">
-                <input type="text" name="nombre" class="form-control" placeholder="Nombre completo" 
-                       value="{{ old('nombre') }}" required autocomplete="name">
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre completo" 
+                           value="{{ old('nombre') }}" required autocomplete="name">
+                </div>
                 @error('nombre')
                     <div class="text-danger small mt-1">{{ $message }}</div>
                 @enderror
             </div>
             
+            <!-- Email -->
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Correo electrónico" 
-                       value="{{ old('email') }}" required autocomplete="email">
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico" 
+                           value="{{ old('email') }}" required autocomplete="email">
+                </div>
                 @error('email')
                     <div class="text-danger small mt-1">{{ $message }}</div>
                 @enderror
             </div>
             
+            <!-- Password -->
             <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Contraseña" 
-                       required autocomplete="new-password">
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" 
+                           required autocomplete="new-password">
+                    <i class="fas fa-eye password-toggle" onclick="togglePassword('password', this)" style="left: auto; right: 1rem; cursor: pointer; pointer-events: auto;"></i>
+                </div>
                 @error('password')
                     <div class="text-danger small mt-1">{{ $message }}</div>
                 @enderror
             </div>
             
+            <!-- Confirm Password -->
             <div class="form-group">
-                <input type="password" name="password_confirmation" class="form-control" 
-                       placeholder="Confirmar contraseña" required autocomplete="new-password">
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-shield-alt"></i>
+                    <input type="password" name="password_confirmation" id="password_confirm" class="form-control" 
+                           placeholder="Confirmar contraseña" required autocomplete="new-password">
+                    <i class="fas fa-eye password-toggle" onclick="togglePassword('password_confirm', this)" style="left: auto; right: 1rem; cursor: pointer; pointer-events: auto;"></i>
+                </div>
             </div>
             
             <div class="form-group">
@@ -73,14 +92,38 @@
                 @enderror
             </div>
             
-            <button type="submit" class="btn btn-primary w-100">
+            <button type="submit" class="btn-auth-submit">
                 Crear Cuenta
             </button>
         </form>
+
+        <div class="social-login">
+            <p class="social-label">O regístrate con</p>
+            <div class="social-buttons">
+                <button class="btn-social"><i class="fab fa-google"></i></button>
+                <button class="btn-social"><i class="fab fa-linkedin-in"></i></button>
+                <button class="btn-social"><i class="fab fa-github"></i></button>
+            </div>
+        </div>
         
         <div class="auth-footer">
             <p>¿Ya tienes cuenta? <a href="{{ route('login') }}">Inicia sesión aquí</a></p>
         </div>
     </div>
 </div>
+
+<script>
+function togglePassword(inputId, icon) {
+    const input = document.getElementById(inputId);
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        input.type = "password";
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}
+</script>
 @endsection
