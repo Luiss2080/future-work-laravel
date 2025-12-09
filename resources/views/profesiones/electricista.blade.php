@@ -1,210 +1,162 @@
-@extends('layouts.web.app')
+@extends('layouts.web-app')
 
 @section('title', 'Electricista - Future Work')
-@section('description', 'Conoce más sobre la profesión de Electricista: Instalaciones eléctricas y sistemas de energía')
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('assets/css/web/profession.css') }}">
-@endpush
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/profesiones/electricista.css') }}">
+@endsection
 
 @section('content')
-<!-- Page Header -->
-<section class="page-header profession-header text-center py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="profession-icon mb-4">
-                    <i class="fas fa-bolt text-primary" style="font-size: 4rem;"></i>
-                </div>
-                <h1 class="page-title display-4 fw-bold mb-3">Electricista</h1>
-                <p class="page-subtitle lead text-muted mb-4">Instalaciones eléctricas y sistemas de energía</p>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}" class="text-decoration-none">Inicio</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}#profesiones" class="text-decoration-none">Profesiones</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Electricista</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+<!-- HERO SECTION -->
+<section class="profession-hero">
+    <div class="hero-content">
+        <span class="hero-badge" data-aos="fade-down">Energía & Sistemas</span>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-bolt"></i> Electricista
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Expertos en la gestión, instalación y mantenimiento de energía. 
+            Iluminando y conectando el mundo de manera segura y eficiente.
+        </p>
     </div>
 </section>
 
-<!-- Profession Details -->
-<section class="profession-details py-5">
-    <div class="container">
-        <div class="row g-5">
-            <!-- Main Content -->
-            <div class="col-lg-8">
-                <div class="profession-content">
-                    <div class="section-block mb-5">
-                        <h2 class="mb-4">¿Qué hace un electricista?</h2>
-                        <p class="lead mb-4">Los electricistas se especializan en la instalación, mantenimiento y reparación de sistemas eléctricos en residencias, oficinas, fábricas y otros edificios.</p>
-                        
-                        <h3 class="mt-5 mb-3">Responsabilidades Principales</h3>
-                        <ul class="custom-list list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Instalación de sistemas eléctricos y de iluminación</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Mantenimiento y reparación de equipos eléctricos</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Diagnóstico de problemas eléctricos</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Cumplimiento de códigos de seguridad eléctrica</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Instalación de sistemas de automatización</li>
-                        </ul>
-                    </div>
+<!-- MAIN CONTAINER -->
+<div class="profession-container">
+    
+    <!-- LEFT CONTENT -->
+    <div class="main-content">
+        
+        <!-- DESCRIPTION -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> ¿Qué hace un Electricista?</h2>
+            <p class="text-content">
+                Los electricistas diseñan, instalan y mantienen sistemas eléctricos en todo tipo de edificaciones.
+                Desde cableado residencial hasta complejos sistemas industriales, su labor es crítica para
+                garantizar el suministro de energía seguro y continuo.
+            </p>
+        </section>
 
-                    <!-- Skills Section -->
-                    <div class="section-block mb-5">
-                        <h3 class="mb-4">Habilidades Requeridas</h3>
-                        <div class="skills-grid row g-3">
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-tools text-primary me-2"></i>
-                                    Habilidades técnicas especializadas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-eye text-primary me-2"></i>
-                                    Atención al detalle
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-clock text-primary me-2"></i>
-                                    Gestión del tiempo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-users text-primary me-2"></i>
-                                    Trabajo en equipo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-lightbulb text-primary me-2"></i>
-                                    Resolución de problemas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-shield-alt text-primary me-2"></i>
-                                    Conocimientos de seguridad
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- RESPONSIBILITIES -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> Responsabilidades Principales</h2>
+            <div class="responsibility-list">
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Instalación de cableado y componentes eléctricos.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Diagnóstico y resolución de fallos en circuitos.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Interpretación de planos y esquemas eléctricos.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Mantenimiento preventivo de equipos y generadores.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Cumplimiento estricto de normativas de seguridad (RETIE).</span>
                 </div>
             </div>
+        </section>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <div class="profession-sidebar sticky-top" style="top: 2rem;">
-                    <!-- Quick Stats -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Información General</h4>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Empleos disponibles:</span>
-                                <span class="stat-value fw-bold text-primary">{{ rand(15, 120) }}+</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Salario promedio:</span>
-                                <span class="stat-value fw-bold text-success">${{ number_format(rand(8000, 35000)) }} MXN</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between">
-                                <span class="stat-label text-muted">Experiencia requerida:</span>
-                                <span class="stat-value fw-bold">1-5 años</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Related Jobs -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Empleos Relacionados</h4>
-                            <div class="job-links d-flex flex-column gap-2">
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-bolt me-2 text-primary"></i>
-                                    Electricista Junior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-bolt me-2 text-primary"></i>
-                                    Electricista Senior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-bolt me-2 text-primary"></i>
-                                    Supervisor de Electricista
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA -->
-                    <div class="sidebar-card card border-0 shadow-sm bg-primary text-white">
-                        <div class="card-body text-center">
-                            <h4 class="card-title mb-3">¿Te Interesa?</h4>
-                            <p class="card-text mb-4 opacity-75">Explora las oportunidades disponibles en Electricista</p>
-                            <a href="{{ route('bolsa-trabajo') }}" class="btn btn-light w-100 mb-2 fw-bold text-primary">
-                                <i class="fas fa-search me-2"></i>Ver Empleos
-                            </a>
-                            <a href="{{ route('contacto') }}" class="btn btn-outline-light w-100">
-                                <i class="fas fa-envelope me-2"></i>Contactar
-                            </a>
-                        </div>
-                    </div>
+        <!-- SKILLS -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-microchip"></i> Habilidades Clave</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h4>Lectura de Esquemas</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h4>Normativa y Seguridad</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tools"></i>
+                    <h4>Manejo de Herramientas</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Resolución Lógica</h4>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
-</section>
 
-<!-- Related Professions -->
-<section class="related-professions py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="fw-bold">Otras Profesiones</h2>
-                <p class="text-muted">Explora más oportunidades profesionales</p>
+    <!-- RIGHT SIDEBAR -->
+    <aside class="profession-sidebar" data-aos="fade-left">
+        
+        <!-- STATS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Datos del Mercado</h3>
+            <div class="stat-row">
+                <span class="stat-label">Salario Promedio</span>
+                <span class="stat-value"><i class="fas fa-dollar-sign"></i> 25k - 45k /mes</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Demanda Laboral</span>
+                <span class="stat-value" style="color: #22c55e;">Muy Alta <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Vacantes Activas</span>
+                <span class="stat-value">156 Puestos</span>
             </div>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-hard-hat text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Albañilería</h5>
-                    <a href="{{ route('albanil') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
+
+        <!-- JOBS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Empleos Relacionados</h3>
+            <div class="job-links">
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Técnico en Refrigeración
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Instalador de Paneles Solares
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Ingeniero Eléctrico
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Mantenimiento Industrial
+                </a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-hammer text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Carpintería</h5>
-                    <a href="{{ route('carpintero') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-wrench text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Plomería</h5>
-                    <a href="{{ route('plomero') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
+        </div>
+
+        <!-- CTA WIDGET -->
+        <div class="sidebar-widget" style="text-align: center; border-color: var(--primary-neon);">
+            <h3 class="widget-title" style="color: var(--primary-neon);">¿Eres Electricista?</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1.5rem;">Cientos de empresas buscan tu talento ahora mismo.</p>
+            <a href="{{ route('register') }}" class="btn-sidebar btn-neon">CREAR PERFIL</a>
+            <a href="{{ route('bolsa-trabajo') }}" class="btn-sidebar btn-outline">VER EMPLEOS</a>
+        </div>
+
+    </aside>
+</div>
+
+<!-- RELATED PROFESSIONS -->
+<section class="related-section">
+    <div style="text-align: center;">
+        <h2 style="color: white; font-size: 2rem;">Otras Profesiones</h2>
+        <p style="color: var(--text-gray);">Explora carreras similares en el sector</p>
+    </div>
+    <div class="related-grid">
+        <div class="skill-card">
+            <i class="fas fa-robot"></i>
+            <h4>Mecatrónico</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-wifi"></i>
+            <h4>Tecnología (TI)</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-hammer"></i>
+            <h4>Carpintero</h4>
         </div>
     </div>
 </section>
