@@ -1,221 +1,137 @@
 @extends('layouts.web-app')
 
-@section('title', 'Recursos RH - Future Work')
+@section('title', 'Recursos para RR.HH. - Future Work')
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/empresas/recursos.css') }}">
 @endsection
 
 @section('content')
-<div class="recursos-container">
-    <section class="hero-recursos">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Recursos para Recursos Humanos</h1>
-                <p>Herramientas, guías y consejos para optimizar tus procesos de contratación</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="categorias-recursos">
-        <div class="container">
-            <div class="tabs-recursos">
-                <button class="tab-btn active" data-tab="guias">Guías de Contratación</button>
-                <button class="tab-btn" data-tab="templates">Plantillas</button>
-                <button class="tab-btn" data-tab="herramientas">Herramientas</button>
-                <button class="tab-btn" data-tab="blog">Blog RH</button>
-            </div>
+<!-- Hero Section -->
+<section class="resources-hero">
+    <div class="container hero-content">
+        <h1 data-aos="fade-down">Centro de Recursos RH</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            Herramientas, guías y estrategias para optimizar tus procesos de contratación
+            y gestión de talento en la era digital.
+        </p>
+    </div>
+</section>
 
-            <!-- Guías de Contratación -->
-            <div class="tab-content active" id="guias">
-                <div class="recursos-grid">
-                    <article class="recurso-card">
-                        <div class="recurso-image">
-                            <img src="{{ asset('images/guia-entrevistas.jpg') }}" alt="Guía de entrevistas">
-                        </div>
-                        <div class="recurso-content">
-                            <h3>Cómo realizar entrevistas efectivas</h3>
-                            <p>Aprende técnicas para evaluar candidatos de manera objetiva y eficiente.</p>
-                            <div class="recurso-meta">
-                                <span class="tipo">Guía PDF</span>
-                                <span class="tiempo">15 min lectura</span>
-                            </div>
-                            <a href="#" class="btn btn-outline btn-sm">Descargar</a>
-                        </div>
-                    </article>
-
-                    <article class="recurso-card">
-                        <div class="recurso-image">
-                            <img src="{{ asset('images/descripcion-puestos.jpg') }}" alt="Descripción de puestos">
-                        </div>
-                        <div class="recurso-content">
-                            <h3>Redactar descripciones de puesto atractivas</h3>
-                            <p>Consejos para crear ofertas de empleo que atraigan al mejor talento.</p>
-                            <div class="recurso-meta">
-                                <span class="tipo">Artículo</span>
-                                <span class="tiempo">8 min lectura</span>
-                            </div>
-                            <a href="#" class="btn btn-outline btn-sm">Leer más</a>
-                        </div>
-                    </article>
-
-                    <article class="recurso-card">
-                        <div class="recurso-image">
-                            <img src="{{ asset('images/onboarding.jpg') }}" alt="Onboarding">
-                        </div>
-                        <div class="recurso-content">
-                            <h3>Proceso de onboarding exitoso</h3>
-                            <p>Guía completa para integrar nuevos empleados de manera efectiva.</p>
-                            <div class="recurso-meta">
-                                <span class="tipo">Webinar</span>
-                                <span class="tiempo">45 min</span>
-                            </div>
-                            <a href="#" class="btn btn-outline btn-sm">Ver webinar</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Plantillas -->
-            <div class="tab-content" id="templates">
-                <div class="recursos-grid">
-                    <div class="template-card">
-                        <div class="template-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <h4>Plantilla de entrevista estructurada</h4>
-                        <p>Preguntas organizadas por competencias y niveles de experiencia.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Descargar Word</a>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-icon">
-                            <i class="fas fa-clipboard-list"></i>
-                        </div>
-                        <h4>Checklist de onboarding</h4>
-                        <p>Lista de verificación para los primeros 90 días del empleado.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Descargar PDF</a>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h4>Matriz de evaluación de candidatos</h4>
-                        <p>Sistema de puntuación para comparar candidatos objetivamente.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Descargar Excel</a>
-                    </div>
-
-                    <div class="template-card">
-                        <div class="template-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Emails de comunicación con candidatos</h4>
-                        <p>Plantillas para cada etapa del proceso de selección.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Ver plantillas</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Herramientas -->
-            <div class="tab-content" id="herramientas">
-                <div class="herramientas-grid">
-                    <div class="herramienta-card">
-                        <div class="herramienta-header">
-                            <i class="fas fa-calculator"></i>
-                            <h4>Calculadora de costos de contratación</h4>
-                        </div>
-                        <p>Calcula el costo real de contratar un nuevo empleado.</p>
-                        <button class="btn btn-primary" onclick="abrirCalculadora()">Usar calculadora</button>
-                    </div>
-
-                    <div class="herramienta-card">
-                        <div class="herramienta-header">
-                            <i class="fas fa-clock"></i>
-                            <h4>Planificador de procesos de selección</h4>
-                        </div>
-                        <p>Organiza y programa todas las etapas de tu proceso de contratación.</p>
-                        <button class="btn btn-primary">Crear planificación</button>
-                    </div>
-
-                    <div class="herramienta-card">
-                        <div class="herramienta-header">
-                            <i class="fas fa-users"></i>
-                            <h4>Generador de perfiles de puesto</h4>
-                        </div>
-                        <p>Crea perfiles detallados basados en competencias y requisitos.</p>
-                        <button class="btn btn-primary">Generar perfil</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Blog RH -->
-            <div class="tab-content" id="blog">
-                <div class="blog-grid">
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="{{ asset('images/tendencias-rh.jpg') }}" alt="Tendencias RH 2024">
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="fecha">15 Nov 2024</span>
-                                <span class="categoria">Tendencias</span>
-                            </div>
-                            <h3>Tendencias en Recursos Humanos para 2024</h3>
-                            <p>Descubre las principales tendencias que están transformando el mundo de RH este año.</p>
-                            <a href="#" class="btn btn-outline btn-sm">Leer artículo</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="{{ asset('images/trabajo-remoto.jpg') }}" alt="Trabajo remoto">
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="fecha">08 Nov 2024</span>
-                                <span class="categoria">Gestión</span>
-                            </div>
-                            <h3>Gestión efectiva de equipos remotos</h3>
-                            <p>Estrategias para liderar y motivar equipos de trabajo distribuidos.</p>
-                            <a href="#" class="btn btn-outline btn-sm">Leer artículo</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-image">
-                            <img src="{{ asset('images/diversidad-inclusion.jpg') }}" alt="Diversidad e inclusión">
-                        </div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="fecha">01 Nov 2024</span>
-                                <span class="categoria">Diversidad</span>
-                            </div>
-                            <h3>Construyendo equipos diversos e inclusivos</h3>
-                            <p>Cómo implementar estrategias de diversidad e inclusión en tu organización.</p>
-                            <a href="#" class="btn btn-outline btn-sm">Leer artículo</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="newsletter-recursos">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Mantente actualizado</h2>
-                <p>Recibe recursos exclusivos, tendencias y consejos de RH directamente en tu email</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Tu email profesional" required>
-                    <button type="submit" class="btn btn-primary">Suscribirse</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<!-- Category Tabs -->
+<div class="container">
+    <div class="category-tabs" data-aos="fade-up" data-aos-delay="200">
+        <a href="#guias" class="tab-btn active">Guías de Contratación</a>
+        <a href="#plantillas" class="tab-btn">Plantillas</a>
+        <a href="#herramientas" class="tab-btn">Herramientas</a>
+        <a href="#blog" class="tab-btn">Blog RH</a>
+    </div>
 </div>
-@endsection
 
-@section('scripts')
-    <script src="{{ asset('assets/js/empresas/recursos.js') }}"></script>
+<!-- Main Content -->
+<section class="resources-section">
+    <div class="container">
+        
+        <!-- GUÍAS -->
+        <h2 class="section-label">Guías Destacadas</h2>
+        <div class="resources-grid">
+            <!-- Resource 1 -->
+            <div class="resource-card" data-aos="fade-up">
+                <div class="resource-img">
+                    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=2070&auto=format&fit=crop" alt="Entrevistas">
+                    <span class="resource-tag">Guía PDF</span>
+                </div>
+                <div class="resource-content">
+                    <h3>Cómo realizar entrevistas efectivas</h3>
+                    <p>Aprende técnicas modernas para evaluar soft skills y fit cultural sin sesgos inconscientes.</p>
+                    <div class="resource-meta">
+                        <span><i class="far fa-clock"></i> 15 min lectura</span>
+                        <span>Actualizado 2024</span>
+                    </div>
+                    <a href="#" class="btn-download"><i class="fas fa-download"></i> Descargar Guía</a>
+                </div>
+            </div>
+
+            <!-- Resource 2 -->
+            <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="resource-img">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2070&auto=format&fit=crop" alt="Onboarding">
+                    <span class="resource-tag">Webinar</span>
+                </div>
+                <div class="resource-content">
+                    <h3>Proceso de Onboarding Exitoso</h3>
+                    <p>Estrategias para aumentar la retención de empleados en los primeros 90 días.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-video"></i> 45 min</span>
+                        <span>Video Clase</span>
+                    </div>
+                    <a href="#" class="btn-download"><i class="fas fa-play"></i> Ver Webinar</a>
+                </div>
+            </div>
+
+            <!-- Resource 3 -->
+            <div class="resource-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="resource-img">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Descripciones">
+                    <span class="resource-tag">Artículo</span>
+                </div>
+                <div class="resource-content">
+                    <h3>Redactar ofertas irresistibles</h3>
+                    <p>Consejos de copywriting para atraer al mejor talento pasivo del mercado.</p>
+                    <div class="resource-meta">
+                        <span><i class="far fa-file-alt"></i> 8 min lectura</span>
+                        <span>Blog Post</span>
+                    </div>
+                    <a href="#" class="btn-download"><i class="fas fa-arrow-right"></i> Leer Artículo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLANTILLAS -->
+        <h2 class="section-label">Plantillas y Herramientas</h2>
+        <div class="resources-grid">
+            <!-- Template 1 -->
+            <div class="resource-card" data-aos="fade-up">
+                <div class="resource-img">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop" alt="Checklist">
+                    <span class="resource-tag">Excel</span>
+                </div>
+                <div class="resource-content">
+                    <h3>Calculadora de Costos de Contratación</h3>
+                    <p>Plantilla automatizada para estimar el ROI de tus nuevos empleados.</p>
+                    <a href="#" class="btn-download"><i class="fas fa-file-excel"></i> Descargar Excel</a>
+                </div>
+            </div>
+
+            <!-- Template 2 -->
+            <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="resource-img">
+                    <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070&auto=format&fit=crop" alt="Evaluación">
+                    <span class="resource-tag">Word</span>
+                </div>
+                <div class="resource-content">
+                    <h3>Formato de Evaluación de Desempeño</h3>
+                    <p>Matriz de competencias lista para usar en tus evaluaciones trimestrales.</p>
+                    <a href="#" class="btn-download"><i class="fas fa-file-word"></i> Descargar Plantilla</a>
+                </div>
+            </div>
+
+             <!-- Template 3 -->
+             <div class="resource-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="resource-img">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop" alt="Kit Bienvenida">
+                    <span class="resource-tag">PDF Kit</span>
+                </div>
+                <div class="resource-content">
+                    <h3>Kit de Bienvenida Digital</h3>
+                    <p>Checklist y documentos esenciales para enviar antes del primer día.</p>
+                    <a href="#" class="btn-download"><i class="fas fa-file-pdf"></i> Descargar Kit</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 @endsection
