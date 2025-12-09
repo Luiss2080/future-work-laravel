@@ -1,69 +1,71 @@
-@extends('layouts.web.app')
+@extends('layouts.web-app')
 
-@section('title', 'Login - Future Work')
+@section('title', 'Iniciar Sesión - Future Work')
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('assets/css/web/auth.css') }}">
-@endpush
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/auth/login.css') }}">
+@endsection
 
 @section('content')
 <div class="auth-container">
     <div class="auth-card">
         <div class="auth-header">
-            <h2><i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión</h2>
-            <p>Accede a tu cuenta de Future Work</p>
+            <h2><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</h2>
+            <p>Bienvenido de nuevo a Future Work</p>
         </div>
-
-        <!-- Mostrar errores de validación -->
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <i class="fas fa-exclamation-triangle me-2"></i>
-                {{ $errors->first() }}
-            </div>
-        @endif
-
-        <!-- Mostrar mensaje de éxito -->
-        @if(session('success'))
-            <div class="alert alert-success">
-                <i class="fas fa-check-circle me-2"></i>
-                {{ session('success') }}
-            </div>
-        @endif
         
         <form class="auth-form" action="{{ route('login') }}" method="POST">
             @csrf
+            
+            <!-- Email -->
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Correo electrónico" 
-                       value="{{ old('email') }}" required autocomplete="email">
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico" 
+                           value="{{ old('email') }}" required autocomplete="email" autofocus>
+                </div>
                 @error('email')
                     <div class="text-danger small mt-1">{{ $message }}</div>
                 @enderror
             </div>
             
+            <!-- Password -->
             <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Contraseña" 
-                       required autocomplete="current-password">
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" 
+                           required autocomplete="current-password">
+                    <i class="fas fa-eye password-toggle" onclick="togglePassword('password', this)"></i>
+                </div>
                 @error('password')
                     <div class="text-danger small mt-1">{{ $message }}</div>
                 @enderror
             </div>
             
-            <div class="form-group form-check">
-                <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                <label class="form-check-label" for="remember">Recordarme</label>
+            <!-- Remember Me & Forgot Password -->
+            <div class="auth-options">
+                <div class="form-check">
+                    <input type="checkbox" name="remember" id="remember" class="form-check-input" {{ old('remember') ? 'checked' : '' }}>
+                    <label class="form-check-label" for="remember">Recuérdame</label>
+                </div>
+                
+                @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a>
+                @endif
             </div>
             
-            <button type="submit" class="btn btn-primary w-100">
-                Iniciar Sesión
+            <button type="submit" class="btn-auth-submit">
+                Ingresar
             </button>
         </form>
 
-        <div class="auth-divider">
-            <span>¿Olvidaste tu contraseña?</span>
-        </div>
-
-        <div class="text-center mb-3">
-            <a href="#" class="text-decoration-none">Recuperar contraseña</a>
+        <div class="social-login">
+            <p class="social-label">O inicia sesión con</p>
+            <div class="social-buttons">
+                <button class="btn-social"><i class="fab fa-google"></i></button>
+                <button class="btn-social"><i class="fab fa-linkedin-in"></i></button>
+                <button class="btn-social"><i class="fab fa-github"></i></button>
+            </div>
         </div>
         
         <div class="auth-footer">
@@ -71,4 +73,19 @@
         </div>
     </div>
 </div>
+
+<script>
+function togglePassword(inputId, icon) {
+    const input = document.getElementById(inputId);
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        input.type = "password";
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}
+</script>
 @endsection

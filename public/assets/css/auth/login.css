@@ -1,0 +1,289 @@
+/* =========================================
+   LOGIN PAGE - NEON DARK
+   ========================================= */
+
+:root {
+    --bg-dark: #020617;
+    --bg-card: #0f172a;
+    --primary-neon: #22d3ee;
+    --primary-cyan: #06b6d4;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure body background matches theme */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- CONTAINER --- */
+.auth-container {
+    width: 100%;
+    max-width: 450px; /* Slightly narrower for Login */
+    margin: 140px auto 4rem;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* --- CARD --- */
+.auth-card {
+    background-color: #0f172a;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Neon Top Border */
+.auth-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--primary-cyan),
+        var(--primary-neon)
+    );
+}
+
+/* --- HEADER --- */
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.auth-header h2 i {
+    color: var(--primary-neon);
+}
+
+.auth-header p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* --- FORM INPUTS --- */
+.form-group {
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+/* Wrapper for relative positioning of icon */
+.input-icon-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Icons inside input */
+.input-icon-wrapper i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    pointer-events: none;
+    transition: color 0.3s ease;
+    z-index: 5;
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Password Toggle Eye */
+.input-icon-wrapper .password-toggle {
+    pointer-events: auto;
+    cursor: pointer;
+    left: auto;
+    right: 1rem;
+}
+
+.input-icon-wrapper .password-toggle:hover {
+    color: var(--primary-neon);
+}
+
+/* Input Styles */
+.form-control {
+    width: 100%;
+    background: rgba(2, 6, 23, 0.6);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 0.9rem 1rem 0.9rem 2.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+    background: rgba(2, 6, 23, 0.9);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-icon-wrapper:focus-within > i:not(.password-toggle) {
+    color: var(--primary-neon);
+}
+
+/* --- OPTIONS (Remember & Forgot) --- */
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-gray);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.form-check-input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-neon);
+    cursor: pointer;
+}
+
+.auth-options a {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.auth-options a:hover {
+    color: var(--primary-neon);
+}
+
+/* --- BUTTONS --- */
+.btn-auth-submit {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(
+        135deg,
+        var(--primary-cyan),
+        var(--primary-neon)
+    );
+    border: none;
+    border-radius: 50px;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+}
+
+.btn-auth-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(34, 211, 238, 0.5);
+    background: linear-gradient(135deg, #22d3ee, #06b6d4);
+}
+
+/* --- SOCIAL LOGIN --- */
+.social-login {
+    margin-top: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.social-label {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-social {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    background: var(--primary-neon);
+    color: black;
+    border-color: var(--primary-neon);
+    transform: translateY(-3px) rotate(360deg);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+}
+
+/* --- FOOTER --- */
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.auth-footer a {
+    color: var(--primary-neon);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+    color: #67e8f9;
+}
