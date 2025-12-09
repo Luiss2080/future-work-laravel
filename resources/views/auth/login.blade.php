@@ -7,73 +7,115 @@
 @endsection
 
 @section('content')
-<div class="auth-container">
-    <div class="auth-card">
-        <div class="auth-header">
-            <div class="security-badge">
-                <i class="fas fa-shield-alt"></i> Portal Seguro
+<div class="login-wrapper">
+
+    <!-- LEFT SIDE: INTRO CONTENT -->
+    <div class="login-intro">
+        <div class="intro-content">
+            <span class="intro-subtitle" data-aos="fade-down">Bienvenido de Nuevo</span>
+            <h1 class="intro-title" data-aos="fade-up" data-aos-delay="100">
+                Tu Próxima Gran <span>Oportunidad</span> Te Espera
+            </h1>
+            <p class="intro-text" data-aos="fade-up" data-aos-delay="200">
+                Accede a tu panel de control personalizado y continúa tu búsqueda hacia el éxito profesional.
+            </p>
+
+            <div class="login-features">
+                <div class="feature-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="feature-text">
+                        <h4>Seguimiento en Vivo</h4>
+                        <p>Revisa el estado de tus postulaciones al instante.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <div class="feature-text">
+                        <h4>Alerta de Empleos</h4>
+                        <p>Notificaciones personalizadas según tus preferencias.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <div class="feature-text">
+                        <h4>Acceso Seguro</h4>
+                        <p>Tus datos protegidos con encriptación de grado bancario.</p>
+                    </div>
+                </div>
             </div>
-            <h2>Bienvenido de nuevo</h2>
-            <p>Ingresa a tu cuenta para continuar</p>
         </div>
-        
-        <form class="auth-form" action="{{ route('login') }}" method="POST">
-            @csrf
-            
-            <!-- Email -->
-            <div class="form-group">
-                <div class="input-icon-wrapper">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico" 
-                           value="{{ old('email') }}" required autocomplete="email" autofocus>
+    </div>
+
+    <!-- RIGHT SIDE: FORM -->
+    <div class="login-form-section">
+        <div class="auth-card" data-aos="zoom-in">
+            <div class="auth-header">
+                <div class="portal-badge">
+                    <i class="fas fa-shield-alt"></i> Portal Seguro
                 </div>
-                @error('email')
-                    <div class="text-danger small mt-1">{{ $message }}</div>
-                @enderror
+                <h2>Iniciar Sesión</h2>
+                <p>Ingresa tus credenciales para continuar</p>
             </div>
-            
-            <!-- Password -->
-            <div class="form-group">
-                <div class="input-icon-wrapper">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" 
-                           required autocomplete="current-password">
-                    <i class="fas fa-eye password-toggle" onclick="togglePassword('password', this)"></i>
-                </div>
-                @error('password')
-                    <div class="text-danger small mt-1">{{ $message }}</div>
-                @enderror
-            </div>
-            
-            <!-- Remember & Forgot -->
-            <div class="auth-options">
-                <div class="form-check">
-                    <input type="checkbox" name="remember" id="remember" class="form-check-input" {{ old('remember') ? 'checked' : '' }}>
-                    <label class="form-check-label" for="remember">Recuérdame</label>
+
+            <form class="auth-form" action="{{ route('login') }}" method="POST">
+                @csrf
+                
+                <!-- Email -->
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" class="form-control" placeholder="Correo electrónico" 
+                               value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    </div>
+                    @error('email')
+                        <div class="text-danger small mt-1">{{ $message }}</div>
+                    @enderror
                 </div>
                 
-                @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" class="forgot-link">¿Olvidaste tu contraseña?</a>
-                @endif
+                <!-- Password -->
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" 
+                               required autocomplete="current-password">
+                        <i class="fas fa-eye password-toggle" onclick="togglePassword('password', this)"></i>
+                    </div>
+                    @error('password')
+                        <div class="text-danger small mt-1">{{ $message }}</div>
+                    @enderror
+                </div>
+                
+                <!-- Options -->
+                <div class="auth-options">
+                    <label class="form-check">
+                        <input type="checkbox" name="remember" class="form-check-input" {{ old('remember') ? 'checked' : '' }}>
+                        <span>Recuérdame</span>
+                    </label>
+                    
+                    @if (Route::has('password.request'))
+                        <a href="{{ route('password.request') }}" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    @endif
+                </div>
+                
+                <button type="submit" class="btn-auth-submit">
+                    Ingresar
+                </button>
+            </form>
+
+            <div class="social-login">
+                <p class="social-label">O continúa con</p>
+                <div class="social-buttons">
+                    <button class="btn-social"><i class="fab fa-google"></i></button>
+                    <button class="btn-social"><i class="fab fa-linkedin-in"></i></button>
+                    <button class="btn-social"><i class="fab fa-github"></i></button>
+                </div>
             </div>
             
-            <button type="submit" class="btn-auth-submit">
-                INICIAR SESIÓN
-            </button>
-        </form>
-
-        <div class="auth-divider">
-            <span>O continúa con</span>
-        </div>
-
-        <div class="social-buttons">
-            <button class="btn-social" title="Google"><i class="fab fa-google"></i></button>
-            <button class="btn-social" title="LinkedIn"><i class="fab fa-linkedin-in"></i></button>
-            <button class="btn-social" title="GitHub"><i class="fab fa-github"></i></button>
-        </div>
-        
-        <div class="auth-footer">
-            <p>¿Aún no tienes cuenta? <a href="{{ route('register') }}">Regístrate gratis</a></p>
+            <div class="auth-footer">
+                <p>¿Aún no tienes cuenta? <a href="{{ route('register') }}">Regístrate gratis</a></p>
+            </div>
         </div>
     </div>
 </div>
