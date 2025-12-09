@@ -3,124 +3,146 @@
 @section('title', 'Precios - Future Work')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/precios/precios.css') }}">
+    <!-- Updated path to the new organized CSS file -->
+    <link rel="stylesheet" href="{{ asset('assets/css/empresas/planes.css') }}">
 @endsection
 
 @section('content')
 <div class="precios-container">
+    
+    <!-- HERO -->
     <section class="hero-precios">
-        <h1>Planes y Precios</h1>
-        <p>Encuentra el plan que mejor se adapte a las necesidades de tu empresa</p>
+        <h1 data-aos="fade-down">Planes Flexibles para Hacer Crecer tu Equipo</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Escala tu reclutamiento con herramientas de IA y acceso a talento premium.</p>
     </section>
 
-    <div class="toggle-planes">
-        <span class="plan-type">Mensual</span>
+    <!-- TOGGLE -->
+    <div class="toggle-planes" data-aos="fade-up" data-aos-delay="200">
+        <span class="plan-type active" id="label-mensual">Mensual</span>
         <label class="switch">
-            <input type="checkbox" id="toggle-anual">
+            <input type="checkbox" id="toggle-anual" onchange="togglePrecios()">
             <span class="slider"></span>
         </label>
-        <span class="plan-type">Anual <span class="descuento">-20%</span></span>
+        <span class="plan-type" id="label-anual">Anual <span class="descuento">-20%</span></span>
     </div>
 
+    <!-- PRICING GRID -->
     <div class="planes-grid">
-        <!-- Plan Básico -->
-        <div class="plan-card plan-basico">
+        
+        <!-- CARD 1: STARTUP -->
+        <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
             <div class="plan-header">
-                <h3>Básico</h3>
+                <h3>Startup</h3>
                 <div class="precio-container">
-                    <span class="precio" data-mensual="29" data-anual="278">€29</span>
+                    <span class="precio" data-mensual="49" data-anual="39">€49</span>
                     <span class="periodo">/mes</span>
                 </div>
-                <p class="plan-descripcion">Ideal para pequeñas empresas</p>
+                <p class="plan-descripcion">Para equipos pequeños que inician.</p>
             </div>
             
             <ul class="caracteristicas">
-                <li><i class="fas fa-check"></i> Hasta 5 ofertas activas</li>
-                <li><i class="fas fa-check"></i> Acceso básico a candidatos</li>
-                <li><i class="fas fa-check"></i> Soporte por email</li>
-                <li><i class="fas fa-check"></i> Panel básico de estadísticas</li>
-                <li><i class="fas fa-times"></i> Sin destacados premium</li>
-                <li><i class="fas fa-times"></i> Sin búsqueda avanzada</li>
+                <li><i class="fas fa-check"></i> <strong>3</strong> Ofertas de empleo activas</li>
+                <li><i class="fas fa-check"></i> Acceso básico a CVs</li>
+                <li><i class="fas fa-check"></i> Soporte por Email 48h</li>
+                <li><i class="fas fa-times"></i> Sin filtro de IA</li>
             </ul>
             
-            <button class="btn btn-outline btn-seleccionar" data-plan="basico">Comenzar ahora</button>
+            <button class="btn-seleccionar btn-outline">Empezar Gratis</button>
         </div>
 
-        <!-- Plan Profesional -->
-        <div class="plan-card plan-profesional destacado">
-            <div class="badge-popular">Más popular</div>
+        <!-- CARD 2: SCALE (POPULAR) -->
+        <div class="plan-card destacado" data-aos="fade-up" data-aos-delay="200">
+            <div class="badge-popular">RECOMENDADO</div>
             <div class="plan-header">
-                <h3>Profesional</h3>
+                <h3>Scale</h3>
                 <div class="precio-container">
-                    <span class="precio" data-mensual="79" data-anual="758">€79</span>
+                    <span class="precio" data-mensual="99" data-anual="79">€99</span>
                     <span class="periodo">/mes</span>
                 </div>
-                <p class="plan-descripcion">Perfecto para empresas en crecimiento</p>
+                <p class="plan-descripcion">Potencia tu crecimiento con IA.</p>
             </div>
             
             <ul class="caracteristicas">
-                <li><i class="fas fa-check"></i> Ofertas ilimitadas</li>
-                <li><i class="fas fa-check"></i> Acceso completo a candidatos</li>
-                <li><i class="fas fa-check"></i> Soporte prioritario</li>
-                <li><i class="fas fa-check"></i> Estadísticas avanzadas</li>
-                <li><i class="fas fa-check"></i> 3 destacados premium</li>
-                <li><i class="fas fa-check"></i> Búsqueda avanzada</li>
+                <li><i class="fas fa-check"></i> <strong>10</strong> Ofertas de empleo activas</li>
+                <li><i class="fas fa-check"></i> Acceso Ilimitado a CVs</li>
+                <li><i class="fas fa-check"></i> Algoritmo de Matching IA</li>
+                <li><i class="fas fa-check"></i> Soporte Prioritario 24h</li>
+                <li><i class="fas fa-check"></i> Branding de Empresa</li>
             </ul>
             
-            <button class="btn btn-primary btn-seleccionar" data-plan="profesional">Comenzar ahora</button>
+            <button class="btn-seleccionar btn-primary">Seleccionar Plan</button>
         </div>
 
-        <!-- Plan Empresa -->
-        <div class="plan-card plan-empresa">
+        <!-- CARD 3: ENTERPRISE -->
+        <div class="plan-card" data-aos="fade-up" data-aos-delay="300">
             <div class="plan-header">
-                <h3>Empresa</h3>
+                <h3>Enterprise</h3>
                 <div class="precio-container">
-                    <span class="precio" data-mensual="149" data-anual="1430">€149</span>
+                    <span class="precio" data-mensual="299" data-anual="249">€299</span>
                     <span class="periodo">/mes</span>
                 </div>
-                <p class="plan-descripcion">Para grandes empresas</p>
+                <p class="plan-descripcion">Soluciones a medida para corporaciones.</p>
             </div>
             
             <ul class="caracteristicas">
-                <li><i class="fas fa-check"></i> Todo del plan Profesional</li>
-                <li><i class="fas fa-check"></i> Gestor de cuenta dedicado</li>
-                <li><i class="fas fa-check"></i> Soporte 24/7</li>
-                <li><i class="fas fa-check"></i> Reportes personalizados</li>
-                <li><i class="fas fa-check"></i> Destacados premium ilimitados</li>
-                <li><i class="fas fa-check"></i> API personalizada</li>
+                <li><i class="fas fa-check"></i> Ofertas <strong>Ilimitadas</strong></li>
+                <li><i class="fas fa-check"></i> API de Integración (ATS)</li>
+                <li><i class="fas fa-check"></i> Account Manager Dedicado</li>
+                <li><i class="fas fa-check"></i> Analytics Avanzados</li>
+                <li><i class="fas fa-check"></i> Headhunting Personalizado</li>
             </ul>
             
-            <button class="btn btn-outline btn-seleccionar" data-plan="empresa">Contactar ventas</button>
+            <button class="btn-seleccionar btn-outline">Contactar Ventas</button>
         </div>
     </div>
 
-    <section class="faq-precios">
-        <h2>Preguntas frecuentes</h2>
+    <!-- FAQ -->
+    <section class="faq-precios" data-aos="fade-up">
+        <h2>Preguntas Frecuentes</h2>
         <div class="faq-grid">
             <div class="faq-item">
-                <h4>¿Puedo cambiar de plan en cualquier momento?</h4>
-                <p>Sí, puedes actualizar o degradar tu plan en cualquier momento desde tu panel de control.</p>
+                <h4>¿Puedo cambiar de plan?</h4>
+                <p>Sí, puedes actualizar o cancelar tu suscripción en cualquier momento desde tu panel.</p>
             </div>
-            
             <div class="faq-item">
-                <h4>¿Hay período de prueba?</h4>
-                <p>Ofrecemos 14 días de prueba gratuita en todos nuestros planes.</p>
+                <h4>¿Qué incluye el Matching IA?</h4>
+                <p>Nuestro algoritmo analiza tus requisitos y te sugiere automáticamente los candidatos con mayor afinidad (Hard & Soft Skills).</p>
             </div>
-            
             <div class="faq-item">
-                <h4>¿Qué métodos de pago aceptan?</h4>
-                <p>Aceptamos tarjetas de crédito/débito, transferencias bancarias y PayPal.</p>
+                <h4>¿Facturan a empresas?</h4>
+                <p>Sí, generamos facturas fiscales automáticas válidas para la UE y LATAM.</p>
             </div>
-            
             <div class="faq-item">
-                <h4>¿Hay descuentos por pago anual?</h4>
-                <p>Sí, obtienes un 20% de descuento al pagar anualmente.</p>
+                <h4>¿Hay descuentos por volumen?</h4>
+                <p>Contáctanos para paquetes de más de 5 licencias Enterprise.</p>
             </div>
         </div>
     </section>
 </div>
+
+<script>
+    function togglePrecios() {
+        const toggle = document.getElementById('toggle-anual');
+        const precios = document.querySelectorAll('.precio');
+        const isAnual = toggle.checked;
+
+        // Toggle Labels
+        document.getElementById('label-mensual').classList.toggle('active', !isAnual);
+        document.getElementById('label-anual').classList.toggle('active', isAnual);
+
+        // Animate Prices
+        precios.forEach(precio => {
+            precio.style.opacity = 0;
+            setTimeout(() => {
+                const valor = isAnual ? precio.dataset.anual : precio.dataset.mensual;
+                precio.innerHTML = '€' + valor;
+                precio.style.opacity = 1;
+            }, 200);
+        });
+    }
+</script>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('assets/js/precios/precios.js') }}"></script>
+    <!-- Inline script added above for simplicity -->
 @endsection
