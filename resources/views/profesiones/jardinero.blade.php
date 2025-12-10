@@ -1,210 +1,162 @@
-@extends('layouts.web.app')
+@extends('layouts.web-app')
 
 @section('title', 'Jardinería - Future Work')
-@section('description', 'Conoce más sobre la profesión de Jardinería: Diseño y mantenimiento de espacios verdes')
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('assets/css/web/profession.css') }}">
-@endpush
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/profesiones/jardinero.css') }}">
+@endsection
 
 @section('content')
-<!-- Page Header -->
-<section class="page-header profession-header text-center py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="profession-icon mb-4">
-                    <i class="fas fa-seedling text-primary" style="font-size: 4rem;"></i>
-                </div>
-                <h1 class="page-title display-4 fw-bold mb-3">Jardinería</h1>
-                <p class="page-subtitle lead text-muted mb-4">Diseño y mantenimiento de espacios verdes</p>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}" class="text-decoration-none">Inicio</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}#profesiones" class="text-decoration-none">Profesiones</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Jardinería</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+<!-- HERO SECTION -->
+<section class="profession-hero">
+    <div class="hero-content">
+        <span class="hero-badge" data-aos="fade-down">Paisajismo & Cuidado</span>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-leaf"></i> Jardinería
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Artistas de la naturaleza y expertos en crecimiento. 
+            Transformando espacios exteriores en oasis de vida y color.
+        </p>
     </div>
 </section>
 
-<!-- Profession Details -->
-<section class="profession-details py-5">
-    <div class="container">
-        <div class="row g-5">
-            <!-- Main Content -->
-            <div class="col-lg-8">
-                <div class="profession-content">
-                    <div class="section-block mb-5">
-                        <h2 class="mb-4">¿Qué hace un jardinero?</h2>
-                        <p class="lead mb-4">Los jardineros diseñan, crean y mantienen espacios verdes, desde jardines residenciales hasta parques públicos y áreas comerciales.</p>
-                        
-                        <h3 class="mt-5 mb-3">Responsabilidades Principales</h3>
-                        <ul class="custom-list list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Diseño y planificación de espacios verdes</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Plantación y cuidado de plantas, árboles y césped</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Mantenimiento de jardines y áreas verdes</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Instalación de sistemas de riego</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Poda y tratamiento de plantas</li>
-                        </ul>
-                    </div>
+<!-- MAIN CONTAINER -->
+<div class="profession-container">
+    
+    <!-- LEFT CONTENT -->
+    <div class="main-content">
+        
+        <!-- DESCRIPTION -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-seedling"></i> ¿Qué hace un Jardinero?</h2>
+            <p class="text-content">
+                Los jardineros son responsables del diseño, cultivo y mantenimiento de espacios verdes.
+                Desde la poda ornamental hasta la gestión de sistemas de riego complejos, su labor
+                embellece el entorno y promueve la salud ambiental.
+            </p>
+        </section>
 
-                    <!-- Skills Section -->
-                    <div class="section-block mb-5">
-                        <h3 class="mb-4">Habilidades Requeridas</h3>
-                        <div class="skills-grid row g-3">
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-tools text-primary me-2"></i>
-                                    Habilidades técnicas especializadas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-eye text-primary me-2"></i>
-                                    Atención al detalle
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-clock text-primary me-2"></i>
-                                    Gestión del tiempo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-users text-primary me-2"></i>
-                                    Trabajo en equipo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-lightbulb text-primary me-2"></i>
-                                    Resolución de problemas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-shield-alt text-primary me-2"></i>
-                                    Conocimientos de seguridad
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- RESPONSIBILITIES -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> Responsabilidades Principales</h2>
+            <div class="responsibility-list">
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Diseño y mantenimiento de jardines y parques.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Instalación de sistemas de riego automatizados.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Control de plagas y fertilización orgánica.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Poda de árboles y arbustos ornamentales.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Selección de especies vegetales adecuadas al clima.</span>
                 </div>
             </div>
+        </section>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <div class="profession-sidebar sticky-top" style="top: 2rem;">
-                    <!-- Quick Stats -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Información General</h4>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Empleos disponibles:</span>
-                                <span class="stat-value fw-bold text-primary">{{ rand(15, 120) }}+</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Salario promedio:</span>
-                                <span class="stat-value fw-bold text-success">${{ number_format(rand(8000, 35000)) }} MXN</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between">
-                                <span class="stat-label text-muted">Experiencia requerida:</span>
-                                <span class="stat-value fw-bold">1-5 años</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Related Jobs -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Empleos Relacionados</h4>
-                            <div class="job-links d-flex flex-column gap-2">
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-seedling me-2 text-primary"></i>
-                                    Jardinero Junior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-seedling me-2 text-primary"></i>
-                                    Jardinero Senior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-seedling me-2 text-primary"></i>
-                                    Paisajista
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA -->
-                    <div class="sidebar-card card border-0 shadow-sm bg-primary text-white">
-                        <div class="card-body text-center">
-                            <h4 class="card-title mb-3">¿Te Interesa?</h4>
-                            <p class="card-text mb-4 opacity-75">Explora las oportunidades disponibles en Jardinería</p>
-                            <a href="{{ route('bolsa-trabajo') }}" class="btn btn-light w-100 mb-2 fw-bold text-primary">
-                                <i class="fas fa-search me-2"></i>Ver Empleos
-                            </a>
-                            <a href="{{ route('contacto') }}" class="btn btn-outline-light w-100">
-                                <i class="fas fa-envelope me-2"></i>Contactar
-                            </a>
-                        </div>
-                    </div>
+        <!-- SKILLS -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-spa"></i> Habilidades Clave</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-tree"></i>
+                    <h4>Botánica</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tint"></i>
+                    <h4>Riego</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h4>Paisajismo</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Cuidado</h4>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
-</section>
 
-<!-- Related Professions -->
-<section class="related-professions py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="fw-bold">Otras Profesiones</h2>
-                <p class="text-muted">Explora más oportunidades profesionales</p>
+    <!-- RIGHT SIDEBAR -->
+    <aside class="profession-sidebar" data-aos="fade-left">
+        
+        <!-- STATS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Datos del Mercado</h3>
+            <div class="stat-row">
+                <span class="stat-label">Salario Promedio</span>
+                <span class="stat-value"><i class="fas fa-dollar-sign"></i> 15k - 28k /mes</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Demanda Laboral</span>
+                <span class="stat-value" style="color: #22c55e;">Estacional <i class="fas fa-calendar-alt"></i></span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Vacantes Activas</span>
+                <span class="stat-value">64 Puestos</span>
             </div>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-drafting-compass text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Arquitectura</h5>
-                    <a href="{{ route('arquitecto') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
+
+        <!-- JOBS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Empleos Relacionados</h3>
+            <div class="job-links">
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Paisajista
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Mantenimiento de Campos
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Viverista
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Técnico en Riego
+                </a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-hard-hat text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Albañilería</h5>
-                    <a href="{{ route('albanil') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-tree text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Agricultura</h5>
-                    <a href="#" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
+        </div>
+
+        <!-- CTA WIDGET -->
+        <div class="sidebar-widget" style="text-align: center; border-color: var(--primary-neon);">
+            <h3 class="widget-title" style="color: var(--primary-neon);">¿Eres Jardinero?</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1.5rem;">Cientos de empresas buscan tu talento ahora mismo.</p>
+            <a href="{{ route('register') }}" class="btn-sidebar btn-neon">CREAR PERFIL</a>
+            <a href="{{ route('bolsa-trabajo') }}" class="btn-sidebar btn-outline">VER EMPLEOS</a>
+        </div>
+
+    </aside>
+</div>
+
+<!-- RELATED PROFESSIONS -->
+<section class="related-section">
+    <div style="text-align: center;">
+        <h2 style="color: white; font-size: 2rem;">Otras Profesiones</h2>
+        <p style="color: var(--text-gray);">Explora carreras similares en el sector</p>
+    </div>
+    <div class="related-grid">
+        <div class="skill-card">
+            <i class="fas fa-hard-hat"></i>
+            <h4>Albañil</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-hammer"></i>
+            <h4>Carpintero</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-water"></i>
+            <h4>Plomero</h4>
         </div>
     </div>
 </section>
