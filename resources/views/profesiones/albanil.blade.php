@@ -16,7 +16,7 @@
         </h1>
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
             Profesionales expertos en la construcción, reparación y modelado de estructuras. 
-            La base fundamental de cualquier obra exitosa.
+            La base fundamental de cualquier obra exitosa..
         </p>
     </div>
 </section>

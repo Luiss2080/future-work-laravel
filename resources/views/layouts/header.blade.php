@@ -83,7 +83,7 @@
                             <i class="fas fa-trowel"></i> Albañil
                         </a></li>
                         <li><a class="dropdown-item" href="{{ route('carpintero') }}">
-                            <i class="fas fa-hammer"></i> Carpintero
+                            <i class="fas fa-hammer"></i> Carpinteroo
                         </a></li>
                         <li><a class="dropdown-item" href="{{ route('electricista') }}">
                             <i class="fas fa-bolt"></i> Electricista
