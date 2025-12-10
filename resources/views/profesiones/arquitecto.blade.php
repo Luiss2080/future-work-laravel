@@ -1,210 +1,162 @@
-@extends('layouts.web.app')
+@extends('layouts.web-app')
 
 @section('title', 'Arquitectura - Future Work')
-@section('description', 'Conoce más sobre la profesión de Arquitectura: Diseño y planificación de espacios habitacionales')
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('assets/css/web/profession.css') }}">
-@endpush
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/profesiones/arquitecto.css') }}">
+@endsection
 
 @section('content')
-<!-- Page Header -->
-<section class="page-header profession-header text-center py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="profession-icon mb-4">
-                    <i class="fas fa-drafting-compass text-primary" style="font-size: 4rem;"></i>
-                </div>
-                <h1 class="page-title display-4 fw-bold mb-3">Arquitectura</h1>
-                <p class="page-subtitle lead text-muted mb-4">Diseño y planificación de espacios habitacionales</p>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}" class="text-decoration-none">Inicio</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}#profesiones" class="text-decoration-none">Profesiones</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Arquitectura</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+<!-- HERO SECTION -->
+<section class="profession-hero">
+    <div class="hero-content">
+        <span class="hero-badge" data-aos="fade-down">Diseño & Construcción</span>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-drafting-compass"></i> Arquitectura
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Visionarios del espacio y la forma. 
+            Diseñando el futuro de nuestras ciudades y hogares.
+        </p>
     </div>
 </section>
 
-<!-- Profession Details -->
-<section class="profession-details py-5">
-    <div class="container">
-        <div class="row g-5">
-            <!-- Main Content -->
-            <div class="col-lg-8">
-                <div class="profession-content">
-                    <div class="section-block mb-5">
-                        <h2 class="mb-4">¿Qué hace un arquitecto?</h2>
-                        <p class="lead mb-4">Los arquitectos diseñan y planifican espacios habitacionales, comerciales e institucionales, combinando funcionalidad, estética y sostenibilidad en sus proyectos.</p>
-                        
-                        <h3 class="mt-5 mb-3">Responsabilidades Principales</h3>
-                        <ul class="custom-list list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Diseño conceptual y desarrollo de proyectos arquitectónicos</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Elaboración de planos y especificaciones técnicas</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Supervisión de construcción y obras</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Consultoría en normativas y códigos de construcción</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Coordinación con ingenieros y otros profesionales</li>
-                        </ul>
-                    </div>
+<!-- MAIN CONTAINER -->
+<div class="profession-container">
+    
+    <!-- LEFT CONTENT -->
+    <div class="main-content">
+        
+        <!-- DESCRIPTION -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-city"></i> ¿Qué hace un Arquitecto?</h2>
+            <p class="text-content">
+                Los arquitectos imaginan y crean espacios que combinan funcionalidad, belleza y sostenibilidad.
+                Desde la planificación urbana hasta el diseño residencial, su trabajo da forma al entorno
+                en el que vivimos y trabajamos.
+            </p>
+        </section>
 
-                    <!-- Skills Section -->
-                    <div class="section-block mb-5">
-                        <h3 class="mb-4">Habilidades Requeridas</h3>
-                        <div class="skills-grid row g-3">
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-tools text-primary me-2"></i>
-                                    Habilidades técnicas especializadas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-eye text-primary me-2"></i>
-                                    Atención al detalle
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-clock text-primary me-2"></i>
-                                    Gestión del tiempo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-users text-primary me-2"></i>
-                                    Trabajo en equipo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-lightbulb text-primary me-2"></i>
-                                    Resolución de problemas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-shield-alt text-primary me-2"></i>
-                                    Conocimientos de seguridad
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- RESPONSIBILITIES -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> Responsabilidades Principales</h2>
+            <div class="responsibility-list">
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Diseño conceptual y desarrollo de planos técnicos.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Coordinación de equipos de ingeniería y construcción.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Supervisión de obras y cumplimiento de normativas.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Investigación de materiales sostenibles e innovadores.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Gestión de presupuestos y plazos de ejecución.</span>
                 </div>
             </div>
+        </section>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <div class="profession-sidebar sticky-top" style="top: 2rem;">
-                    <!-- Quick Stats -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Información General</h4>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Empleos disponibles:</span>
-                                <span class="stat-value fw-bold text-primary">{{ rand(15, 120) }}+</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Salario promedio:</span>
-                                <span class="stat-value fw-bold text-success">${{ number_format(rand(8000, 35000)) }} MXN</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between">
-                                <span class="stat-label text-muted">Experiencia requerida:</span>
-                                <span class="stat-value fw-bold">1-5 años</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Related Jobs -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Empleos Relacionados</h4>
-                            <div class="job-links d-flex flex-column gap-2">
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-drafting-compass me-2 text-primary"></i>
-                                    Arquitecto Junior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-drafting-compass me-2 text-primary"></i>
-                                    Arquitecto Senior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-drafting-compass me-2 text-primary"></i>
-                                    Supervisor de Arquitectura
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA -->
-                    <div class="sidebar-card card border-0 shadow-sm bg-primary text-white">
-                        <div class="card-body text-center">
-                            <h4 class="card-title mb-3">¿Te Interesa?</h4>
-                            <p class="card-text mb-4 opacity-75">Explora las oportunidades disponibles en Arquitectura</p>
-                            <a href="{{ route('bolsa-trabajo') }}" class="btn btn-light w-100 mb-2 fw-bold text-primary">
-                                <i class="fas fa-search me-2"></i>Ver Empleos
-                            </a>
-                            <a href="{{ route('contacto') }}" class="btn btn-outline-light w-100">
-                                <i class="fas fa-envelope me-2"></i>Contactar
-                            </a>
-                        </div>
-                    </div>
+        <!-- SKILLS -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-pencil-ruler"></i> Habilidades Clave</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-cube"></i>
+                    <h4>Modelado 3D</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-calculator"></i>
+                    <h4>Cálculo</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-eye"></i>
+                    <h4>Estética</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Gestión</h4>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
-</section>
 
-<!-- Related Professions -->
-<section class="related-professions py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="fw-bold">Otras Profesiones</h2>
-                <p class="text-muted">Explora más oportunidades profesionales</p>
+    <!-- RIGHT SIDEBAR -->
+    <aside class="profession-sidebar" data-aos="fade-left">
+        
+        <!-- STATS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Datos del Mercado</h3>
+            <div class="stat-row">
+                <span class="stat-label">Salario Promedio</span>
+                <span class="stat-value"><i class="fas fa-dollar-sign"></i> 30k - 60k /mes</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Demanda Laboral</span>
+                <span class="stat-value" style="color: #22c55e;">Alta <i class="fas fa-chart-line"></i></span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Vacantes Activas</span>
+                <span class="stat-value">85 Puestos</span>
             </div>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-building text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Ingeniería Civil</h5>
-                    <a href="{{ route('ingeniero-civil') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
+
+        <!-- JOBS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Empleos Relacionados</h3>
+            <div class="job-links">
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Diseñador de Interiores
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Ingeniero Civil
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Delineante
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Paisajista
+                </a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-paint-brush text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Diseño de Interiores</h5>
-                    <a href="{{ route('profesion', 'diseñador') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-hard-hat text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Albañilería</h5>
-                    <a href="{{ route('albanil') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
+        </div>
+
+        <!-- CTA WIDGET -->
+        <div class="sidebar-widget" style="text-align: center; border-color: var(--primary-neon);">
+            <h3 class="widget-title" style="color: var(--primary-neon);">¿Eres Arquitecto?</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1.5rem;">Cientos de empresas buscan tu talento ahora mismo.</p>
+            <a href="{{ route('register') }}" class="btn-sidebar btn-neon">CREAR PERFIL</a>
+            <a href="{{ route('bolsa-trabajo') }}" class="btn-sidebar btn-outline">VER EMPLEOS</a>
+        </div>
+
+    </aside>
+</div>
+
+<!-- RELATED PROFESSIONS -->
+<section class="related-section">
+    <div style="text-align: center;">
+        <h2 style="color: white; font-size: 2rem;">Otras Profesiones</h2>
+        <p style="color: var(--text-gray);">Explora carreras similares en el sector</p>
+    </div>
+    <div class="related-grid">
+        <div class="skill-card">
+            <i class="fas fa-hard-hat"></i>
+            <h4>Ingeniero Civil</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-hammer"></i>
+            <h4>Albañil</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-leaf"></i>
+            <h4>Paisajista</h4>
         </div>
     </div>
 </section>
