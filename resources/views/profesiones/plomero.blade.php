@@ -1,210 +1,162 @@
-@extends('layouts.web.app')
+@extends('layouts.web-app')
 
 @section('title', 'Plomería - Future Work')
-@section('description', 'Conoce más sobre la profesión de Plomería: Sistemas hidráulicos y sanitarios')
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('assets/css/web/profession.css') }}">
-@endpush
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/profesiones/plomero.css') }}">
+@endsection
 
 @section('content')
-<!-- Page Header -->
-<section class="page-header profession-header text-center py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="profession-icon mb-4">
-                    <i class="fas fa-wrench text-primary" style="font-size: 4rem;"></i>
-                </div>
-                <h1 class="page-title display-4 fw-bold mb-3">Plomería</h1>
-                <p class="page-subtitle lead text-muted mb-4">Sistemas hidráulicos y sanitarios</p>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}" class="text-decoration-none">Inicio</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="{{ route('home') }}#profesiones" class="text-decoration-none">Profesiones</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Plomería</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+<!-- HERO SECTION -->
+<section class="profession-hero">
+    <div class="hero-content">
+        <span class="hero-badge" data-aos="fade-down">Hidráulica & Mantenimiento</span>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-wrench"></i> Plomería
+        </h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Expertos en sistemas vitales de agua y saneamiento. 
+            Garantizando funcionalidad y salud en cada instalación.
+        </p>
     </div>
 </section>
 
-<!-- Profession Details -->
-<section class="profession-details py-5">
-    <div class="container">
-        <div class="row g-5">
-            <!-- Main Content -->
-            <div class="col-lg-8">
-                <div class="profession-content">
-                    <div class="section-block mb-5">
-                        <h2 class="mb-4">¿Qué hace un plomero?</h2>
-                        <p class="lead mb-4">Los plomeros instalan, mantienen y reparan sistemas de tuberías, agua, drenaje y gas en edificios residenciales, comerciales e industriales.</p>
-                        
-                        <h3 class="mt-5 mb-3">Responsabilidades Principales</h3>
-                        <ul class="custom-list list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Instalación de sistemas de tuberías y drenaje</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Reparación de fugas y problemas de plomería</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Mantenimiento de calentadores y equipos hidráulicos</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Instalación de accesorios sanitarios</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Diagnóstico de problemas en sistemas hidráulicos</li>
-                        </ul>
-                    </div>
+<!-- MAIN CONTAINER -->
+<div class="profession-container">
+    
+    <!-- LEFT CONTENT -->
+    <div class="main-content">
+        
+        <!-- DESCRIPTION -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-water"></i> ¿Qué hace un Plomero?</h2>
+            <p class="text-content">
+                Los plomeros son especialistas en la instalación y reparación de redes de tuberías para
+                la distribución de agua potable y la evacuación de aguas residuales. Su trabajo es esencial
+                para el funcionamiento higiénico y eficiente de hogares e industrias.
+            </p>
+        </section>
 
-                    <!-- Skills Section -->
-                    <div class="section-block mb-5">
-                        <h3 class="mb-4">Habilidades Requeridas</h3>
-                        <div class="skills-grid row g-3">
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-tools text-primary me-2"></i>
-                                    Habilidades técnicas especializadas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-eye text-primary me-2"></i>
-                                    Atención al detalle
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-clock text-primary me-2"></i>
-                                    Gestión del tiempo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-users text-primary me-2"></i>
-                                    Trabajo en equipo
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-lightbulb text-primary me-2"></i>
-                                    Resolución de problemas
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="skill-item p-3 border rounded bg-light">
-                                    <i class="fas fa-shield-alt text-primary me-2"></i>
-                                    Conocimientos de seguridad
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- RESPONSIBILITIES -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-tasks"></i> Responsabilidades Principales</h2>
+            <div class="responsibility-list">
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Instalación de redes hidráulicas y sanitarias.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Detección y reparación de fugas (Gas y Agua).</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Mantenimiento de calentadores y bombas.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Montaje de grifería y sanitarios de alta gama.</span>
+                </div>
+                <div class="resp-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Interpretación de planos isométricos.</span>
                 </div>
             </div>
+        </section>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <div class="profession-sidebar sticky-top" style="top: 2rem;">
-                    <!-- Quick Stats -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Información General</h4>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Empleos disponibles:</span>
-                                <span class="stat-value fw-bold text-primary">{{ rand(15, 120) }}+</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between mb-3">
-                                <span class="stat-label text-muted">Salario promedio:</span>
-                                <span class="stat-value fw-bold text-success">${{ number_format(rand(8000, 35000)) }} MXN</span>
-                            </div>
-                            <div class="stat-item d-flex justify-content-between">
-                                <span class="stat-label text-muted">Experiencia requerida:</span>
-                                <span class="stat-value fw-bold">1-5 años</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Related Jobs -->
-                    <div class="sidebar-card card border-0 shadow-sm mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4">Empleos Relacionados</h4>
-                            <div class="job-links d-flex flex-column gap-2">
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-wrench me-2 text-primary"></i>
-                                    Plomero Junior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-wrench me-2 text-primary"></i>
-                                    Plomero Senior
-                                </a>
-                                <a href="#" class="job-link text-decoration-none p-2 rounded hover-bg-light">
-                                    <i class="fas fa-wrench me-2 text-primary"></i>
-                                    Supervisor de Plomería
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA -->
-                    <div class="sidebar-card card border-0 shadow-sm bg-primary text-white">
-                        <div class="card-body text-center">
-                            <h4 class="card-title mb-3">¿Te Interesa?</h4>
-                            <p class="card-text mb-4 opacity-75">Explora las oportunidades disponibles en Plomería</p>
-                            <a href="{{ route('bolsa-trabajo') }}" class="btn btn-light w-100 mb-2 fw-bold text-primary">
-                                <i class="fas fa-search me-2"></i>Ver Empleos
-                            </a>
-                            <a href="{{ route('contacto') }}" class="btn btn-outline-light w-100">
-                                <i class="fas fa-envelope me-2"></i>Contactar
-                            </a>
-                        </div>
-                    </div>
+        <!-- SKILLS -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-tools"></i> Habilidades Clave</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-faucet"></i>
+                    <h4>Hidráulica</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-search-location"></i>
+                    <h4>Diagnóstico</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-ruler-vertical"></i>
+                    <h4>Precisión</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Seguridad</h4>
                 </div>
             </div>
-        </div>
+        </section>
+
     </div>
-</section>
 
-<!-- Related Professions -->
-<section class="related-professions py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="fw-bold">Otras Profesiones</h2>
-                <p class="text-muted">Explora más oportunidades profesionales</p>
+    <!-- RIGHT SIDEBAR -->
+    <aside class="profession-sidebar" data-aos="fade-left">
+        
+        <!-- STATS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Datos del Mercado</h3>
+            <div class="stat-row">
+                <span class="stat-label">Salario Promedio</span>
+                <span class="stat-value"><i class="fas fa-dollar-sign"></i> 18k - 35k /mes</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Demanda Laboral</span>
+                <span class="stat-value" style="color: #22c55e;">Constante <i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Vacantes Activas</span>
+                <span class="stat-value">92 Puestos</span>
             </div>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-hard-hat text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Albañilería</h5>
-                    <a href="{{ route('albanil') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
+
+        <!-- JOBS WIDGET -->
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Empleos Relacionados</h3>
+            <div class="job-links">
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Fontanero Industrial
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Técnico en Gas
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Instalador de Bombas
+                </a>
+                <a href="#" class="job-link">
+                    <i class="fas fa-chevron-right"></i> Mantenimiento General
+                </a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-bolt text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Electricista</h5>
-                    <a href="{{ route('electricista') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="profession-card card h-100 border-0 shadow-sm hover-lift text-center p-4">
-                    <div class="profession-icon mb-3">
-                        <i class="fas fa-hammer text-primary fa-3x"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Carpintería</h5>
-                    <a href="{{ route('carpintero') }}" class="btn btn-outline-primary btn-sm stretched-link">
-                        Ver Detalles
-                    </a>
-                </div>
-            </div>
+        </div>
+
+        <!-- CTA WIDGET -->
+        <div class="sidebar-widget" style="text-align: center; border-color: var(--primary-neon);">
+            <h3 class="widget-title" style="color: var(--primary-neon);">¿Eres Plomero?</h3>
+            <p style="color: var(--text-gray); margin-bottom: 1.5rem;">Cientos de empresas buscan tu talento ahora mismo.</p>
+            <a href="{{ route('register') }}" class="btn-sidebar btn-neon">CREAR PERFIL</a>
+            <a href="{{ route('bolsa-trabajo') }}" class="btn-sidebar btn-outline">VER EMPLEOS</a>
+        </div>
+
+    </aside>
+</div>
+
+<!-- RELATED PROFESSIONS -->
+<section class="related-section">
+    <div style="text-align: center;">
+        <h2 style="color: white; font-size: 2rem;">Otras Profesiones</h2>
+        <p style="color: var(--text-gray);">Explora carreras similares en el sector</p>
+    </div>
+    <div class="related-grid">
+        <div class="skill-card">
+            <i class="fas fa-hammer"></i>
+            <h4>Albañil</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-hard-hat"></i>
+            <h4>Ingeniero Civil</h4>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-bolt"></i>
+            <h4>Electricista</h4>
         </div>
     </div>
 </section>
