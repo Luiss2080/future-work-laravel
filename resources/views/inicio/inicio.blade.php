@@ -3,6 +3,8 @@
 @section('title', 'Inicio - Future Work')
 
 @section('styles')
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/inicio/inicio.css') }}">
 @endsection
 
@@ -13,7 +15,7 @@
     <div class="hero-container">
         
         <!-- Text Content -->
-        <div class="hero-text">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
             <span>CONECTANDO TALENTO & OPORTUNIDAD</span>
             <h1>CONSTRUYE TU <br> <span class="highlight">FUTURO HOY</span></h1>
             <p>
@@ -31,7 +33,7 @@
         </div>
 
         <!-- Visual Content -->
-        <div class="hero-visual">
+        <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
             <div class="hero-image-main"></div>
             
             <!-- Floating Card 1 -->
@@ -59,23 +61,87 @@
     </div>
 </section>
 
-<!-- 2. STATS SECTION -->
+<!-- 2. TRUST BANNER (MARQUEE) -->
+<div class="trust-section">
+    <div class="marquee-wrapper">
+        <!-- Content duplicated for infinite scroll effect -->
+        <div class="trust-logo"><i class="fab fa-aws"></i> AMAZON</div>
+        <div class="trust-logo"><i class="fab fa-google"></i> GOOGLE</div>
+        <div class="trust-logo"><i class="fab fa-microsoft"></i> MICROSOFT</div>
+        <div class="trust-logo"><i class="fab fa-airbnb"></i> AIRBNB</div>
+        <div class="trust-logo"><i class="fab fa-uber"></i> UBER</div>
+        <div class="trust-logo"><i class="fas fa-building"></i> CEMEX</div>
+        <div class="trust-logo"><i class="fas fa-hard-hat"></i> GRUPO CARSO</div>
+        <!-- Specs Clone -->
+        <div class="trust-logo"><i class="fab fa-aws"></i> AMAZON</div>
+        <div class="trust-logo"><i class="fab fa-google"></i> GOOGLE</div>
+        <div class="trust-logo"><i class="fab fa-microsoft"></i> MICROSOFT</div>
+        <div class="trust-logo"><i class="fab fa-airbnb"></i> AIRBNB</div>
+        <div class="trust-logo"><i class="fab fa-uber"></i> UBER</div>
+        <div class="trust-logo"><i class="fas fa-building"></i> CEMEX</div>
+        <div class="trust-logo"><i class="fas fa-hard-hat"></i> GRUPO CARSO</div>
+    </div>
+</div>
+
+<!-- 3. HOW IT WORKS (NEW) -->
+<section class="steps-section">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Proceso Simple</span>
+            <h2>Cómo Funciona</h2>
+        </div>
+        
+        <div class="steps-container">
+            <!-- Step 1 -->
+            <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-icon">
+                    <i class="fas fa-user-plus"></i>
+                    <div class="step-number">1</div>
+                </div>
+                <h3>Crea tu Perfil</h3>
+                <p style="color: var(--text-gray);">Regístrate gratis y completa tu perfil profesional o de empresa en menos de 2 minutos.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-icon">
+                    <i class="fas fa-search"></i>
+                    <div class="step-number">2</div>
+                </div>
+                <h3>Conecta</h3>
+                <p style="color: var(--text-gray);">Explora vacantes o candidatos. Nuestro algoritmo inteligente te sugiere las mejores opciones.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-icon">
+                    <i class="fas fa-handshake"></i>
+                    <div class="step-number">3</div>
+                </div>
+                <h3>Trabaja</h3>
+                <p style="color: var(--text-gray);">Cierra el trato directamente y comienza a trabajar. Sin intermediarios molestos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. STATS SECTION -->
 <section class="stats-section">
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-item">
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
                 <h3>15K+</h3>
                 <p>Candidatos Activos</p>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
                 <h3>8.5K</h3>
                 <p>Empresas Confían</p>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
                 <h3>98%</h3>
                 <p>Tasa de Éxito</p>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
                 <h3>24h</h3>
                 <p>Tiempo Promedio</p>
             </div>
@@ -83,10 +149,10 @@
     </div>
 </section>
 
-<!-- 3. PROFESSIONS GRID -->
+<!-- 5. PROFESSIONS GRID -->
 <section class="professions-section">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up">
             <span>Explora Categorías</span>
             <h2>Profesiones Destacadas</h2>
         </div>
@@ -94,7 +160,7 @@
         <div class="professions-grid">
             
             <!-- Arquitecto -->
-            <a href="{{ route('arquitecto') }}" class="profession-card">
+            <a href="{{ route('arquitecto') }}" class="profession-card" data-aos="fade-up">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2689&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-drafting-compass"></i></div>
@@ -104,7 +170,7 @@
             </a>
 
             <!-- Ingeniero Civil -->
-            <a href="{{ route('ingeniero-civil') }}" class="profession-card">
+            <a href="{{ route('ingeniero-civil') }}" class="profession-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2670&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-building"></i></div>
@@ -114,7 +180,7 @@
             </a>
 
             <!-- Diseñador -->
-            <a href="{{ route('disenador') }}" class="profession-card">
+            <a href="{{ route('disenador') }}" class="profession-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2600&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
@@ -124,8 +190,8 @@
             </a>
 
             <!-- Escultor -->
-            <a href="{{ route('escultor') }}" class="profession-card">
-                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1549887534-1541e9326642?q=80&w=2670&auto=format&fit=crop');"></div>
+            <a href="{{ route('escultor') }}" class="profession-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1569420842238-f909d9db5582?q=80&w=2576&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-hammer"></i></div>
                     <h3>Escultor</h3>
@@ -134,7 +200,7 @@
             </a>
 
             <!-- Albañil -->
-            <a href="{{ route('albanil') }}" class="profession-card">
+            <a href="{{ route('albanil') }}" class="profession-card" data-aos="fade-up">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2670&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-trowel"></i></div>
@@ -144,7 +210,7 @@
             </a>
 
             <!-- Electricista -->
-            <a href="{{ route('electricista') }}" class="profession-card">
+            <a href="{{ route('electricista') }}" class="profession-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2669&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-bolt"></i></div>
@@ -154,7 +220,7 @@
             </a>
 
             <!-- Plomero -->
-            <a href="{{ route('plomero') }}" class="profession-card">
+            <a href="{{ route('plomero') }}" class="profession-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=2670&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-wrench"></i></div>
@@ -164,7 +230,7 @@
             </a>
 
             <!-- Jardinero -->
-            <a href="{{ route('jardinero') }}" class="profession-card">
+            <a href="{{ route('jardinero') }}" class="profession-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1557429287-b2e26467fc2b?q=80&w=2574&auto=format&fit=crop');"></div>
                 <div class="card-content">
                     <div class="card-icon"><i class="fas fa-leaf"></i></div>
@@ -177,107 +243,33 @@
     </div>
 </section>
 
-<!-- 4. SERVICES FEATURES -->
-<section class="services-section">
-    <div class="container">
-        <div class="section-title">
-            <span>¿Por qué elegirnos?</span>
-            <h2>Soluciones Integrales</h2>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Verificación 100%</h3>
-                <p>Todos los profesionales y empresas pasan por un riguroso proceso de validación de identidad y certificaciones.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-rocket"></i>
-                <h3>Contratación Rápida</h3>
-                <p>Nuestro algoritmo reduce el tiempo de búsqueda en un 70%. Conecta con el talento ideal en cuestión de horas.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-comments-dollar"></i>
-                <h3>Sin Comisiones Ocultas</h3>
-                <p>Transparencia total. Lo que acuerdas es lo que pagas. Modelo de suscripción flexible para empresas.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 5. TESTIMONIALS -->
-<section class="testimonials-section">
-    <div class="container">
-        <div class="section-title">
-            <span>Testimonios</span>
-            <h2>Lo que dicen nuestros usuarios</h2>
-        </div>
-        
-        <div class="testimonials-wrapper">
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p class="testimonial-text">
-                    "Gracias a Future Work encontré un equipo de albañiles certificados para mi proyecto residencial en tiempo récord. La calidad del trabajo fue excepcional."
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-img" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
-                    <div class="author-info">
-                        <h4>Carlos Rodríguez</h4>
-                        <span>Gerente de Proyecto</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p class="testimonial-text">
-                    "Como arquitecta independiente, esta plataforma me ha permitido visibilizar mi portafolio y conseguir clientes de alto valor. ¡Totalmente recomendada!"
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-img" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg');"></div>
-                    <div class="author-info">
-                        <h4>Ana Sofía Méndez</h4>
-                        <span>Arquitecta</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 6. FINAL CTA -->
-<section class="cta-section">
-    <div class="cta-box" data-aos="zoom-in">
-        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem;">¿Listo para transformar tu futuro?</h2>
-        <a href="{{ route('register') }}" class="btn-neon" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
-            Comenzar Ahora <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
-        </a>
+<!-- 6. NEWSLETTER & CTA -->
+<section class="newsletter-section">
+    <div class="newsletter-content" data-aos="flip-up">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Únete a nuestra comunidad</h2>
+        <p style="color: var(--text-gray); margin-bottom: 2rem;">
+            Recibe las mejores ofertas de empleo y consejos profesionales directamente en tu correo.
+        </p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Tu correo electrónico" class="newsletter-input">
+            <button type="submit" class="btn-neon" style="border-radius: 50px;">Suscribirse</button>
+        </form>
     </div>
 </section>
 
 @endsection
 
 @section('scripts')
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    // Simple Scroll Reveal API
     document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = { threshold: 0.1 };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        const elements = document.querySelectorAll('.profession-card, .service-card, .testimonial-card');
-        elements.forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            el.style.transitionDelay = `${index * 100}ms`; // Stagger effect
-            observer.observe(el);
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            offset: 50,
+            once: true,
+            easing: 'ease-out-cubic'
         });
     });
 </script>
