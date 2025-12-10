@@ -5,7 +5,7 @@
 :root {
     --bg-dark: #020617;
     --bg-card: #0f172a;
-    --primary-neon: #facc15; /* Yellow/Gold for Electricity */
+    --primary-neon: #22d3ee; /* Cyan/Celeste Standard */
     --primary-cyan: #06b6d4;
     --primary-purple: #8b5cf6;
     --text-white: #ffffff;
@@ -45,12 +45,12 @@ body {
 }
 
 .hero-badge {
-    background: rgba(250, 204, 21, 0.1);
+    background: rgba(34, 211, 238, 0.1);
     color: var(--primary-neon);
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-weight: 600;
-    border: 1px solid rgba(250, 204, 21, 0.3);
+    border: 1px solid rgba(34, 211, 238, 0.3);
     display: inline-block;
     margin-bottom: 1.5rem;
 }
@@ -154,7 +154,7 @@ body {
 }
 
 .skill-card:hover {
-    background: rgba(250, 204, 21, 0.05);
+    background: rgba(34, 211, 238, 0.05);
     border-color: var(--primary-neon);
 }
 
@@ -236,7 +236,7 @@ body {
 }
 
 .job-link:hover {
-    background: rgba(250, 204, 21, 0.1);
+    background: rgba(34, 211, 238, 0.1);
     color: var(--primary-neon);
 }
 
@@ -256,12 +256,12 @@ body {
 .btn-neon {
     background: var(--primary-neon);
     color: black;
-    box-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
 }
 
 .btn-neon:hover {
     background: white;
-    box-shadow: 0 0 25px rgba(250, 204, 21, 0.5);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
 }
 
 .btn-outline {
