@@ -80,10 +80,10 @@
                     <ul class="dropdown-menu">
                         <li><h6 class="dropdown-header">Construcción</h6></li>
                         <li><a class="dropdown-item popular" href="{{ route('albanil') }}">
-                            <i class="fas fa-hammer"></i> Albañil
+                            <i class="fas fa-trowel"></i> Albañil
                         </a></li>
                         <li><a class="dropdown-item" href="{{ route('carpintero') }}">
-                            <i class="fas fa-saw"></i> Carpintero
+                            <i class="fas fa-hammer"></i> Carpintero
                         </a></li>
                         <li><a class="dropdown-item" href="{{ route('electricista') }}">
                             <i class="fas fa-bolt"></i> Electricista
